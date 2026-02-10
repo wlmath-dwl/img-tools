@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="ImgTools365" />
+    <meta name="theme-color" content="#4f46e5" />
+    <link rel="canonical" href="https://imgtools365.com/pages/image-convert.html" />
+    <link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-convert.html" />
+    <link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-convert.html" />
+    <link rel="alternate" hreflang="x-default" href="https://imgtools365.com/pages/image-convert.html" />
+    <meta name="description" content="免费在线图片格式转换工具，支持JPG/PNG/WebP互转，批量导出并自定义输出质量。纯浏览器本地处理，秒速完成，无需上传。" />
+    <meta name="keywords" content="图片格式转换,JPG转PNG,PNG转JPG,WebP转换,批量格式转换,免费图片转换,在线转换工具" />
+    <title>图片格式互转 - 免费在线格式转换工具 | ImgTools365</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ImgTools365" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:url" content="https://imgtools365.com/pages/image-convert.html" />
+    <meta property="og:title" content="图片格式互转 - 免费在线格式转换工具 | ImgTools365" />
+    <meta property="og:description" content="免费在线图片格式转换工具，支持JPG/PNG/WebP互转，批量导出并自定义输出质量。纯浏览器本地处理。" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@imgtools365" />
+    <meta name="twitter:title" content="图片格式互转 - 免费在线格式转换工具 | ImgTools365" />
+    <meta name="twitter:description" content="免费在线图片格式转换工具，支持JPG/PNG/WebP互转，批量导出并自定义输出质量。纯浏览器本地处理。" />
+
+    <!-- Schema.org 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "图片格式互转 - ImgTools365",
+      "url": "https://imgtools365.com/pages/image-convert.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web Browser",
+      "description": "免费在线图片格式转换工具，实现JPG、PNG、WebP秒速互转，支持批量导出并自定义输出质量。",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY"
+      },
+      "featureList": ["JPG/PNG/WebP互转", "批量格式转换", "自定义输出质量", "秒速转换"]
+    }
+    </script>
+    <script>
+      (function() {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const resolved = stored === 'dark' || stored === 'light' ? stored : (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', resolved);
+          document.documentElement.classList.toggle('dark', resolved === 'dark');
+        } catch {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/pages/image-convert/main.tsx"></script>
+  </body>
+</html>
+

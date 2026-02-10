@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="ImgTools365" />
+    <meta name="theme-color" content="#4f46e5" />
+    <link rel="canonical" href="https://imgtools365.com/pages/image-mosaic.html" />
+    <link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-mosaic.html" />
+    <link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-mosaic.html" />
+    <link rel="alternate" hreflang="x-default" href="https://imgtools365.com/pages/image-mosaic.html" />
+    <meta name="description" content="免费在线图片马赛克工具，支持画笔涂抹和矩形遮盖两种模式，提供马赛克和高斯模糊效果。保护照片敏感隐私信息，纯浏览器本地处理。" />
+    <meta name="keywords" content="图片马赛克,在线打码,隐私保护,图片模糊,敏感信息遮挡,免费马赛克工具,照片打码" />
+    <title>隐私马赛克 - 免费在线图片打码工具 | ImgTools365</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ImgTools365" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:url" content="https://imgtools365.com/pages/image-mosaic.html" />
+    <meta property="og:title" content="隐私马赛克 - 免费在线图片打码工具 | ImgTools365" />
+    <meta property="og:description" content="免费在线图片马赛克工具，支持画笔涂抹和矩形遮盖，保护照片敏感隐私信息。纯浏览器本地处理。" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@imgtools365" />
+    <meta name="twitter:title" content="隐私马赛克 - 免费在线图片打码工具 | ImgTools365" />
+    <meta name="twitter:description" content="免费在线图片马赛克工具，支持画笔涂抹和矩形遮盖，保护照片敏感隐私信息。纯浏览器本地处理。" />
+
+    <!-- Schema.org 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "隐私马赛克 - ImgTools365",
+      "url": "https://imgtools365.com/pages/image-mosaic.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web Browser",
+      "description": "免费在线图片马赛克工具，支持画笔涂抹和矩形遮盖两种模式，提供马赛克和高斯模糊效果。",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY"
+      },
+      "featureList": ["画笔涂抹打码", "矩形区域遮盖", "马赛克效果", "高斯模糊效果"]
+    }
+    </script>
+    <script>
+      (function() {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const resolved = stored === 'dark' || stored === 'light' ? stored : (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', resolved);
+          document.documentElement.classList.toggle('dark', resolved === 'dark');
+        } catch {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/pages/image-mosaic/main.tsx"></script>
+  </body>
+</html>
+

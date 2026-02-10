@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="ImgTools365" />
+    <meta name="theme-color" content="#4f46e5" />
+    <link rel="canonical" href="https://imgtools365.com/pages/image-compress.html" />
+    <link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-compress.html" />
+    <link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-compress.html" />
+    <link rel="alternate" hreflang="x-default" href="https://imgtools365.com/pages/image-compress.html" />
+    <meta name="description" content="免费在线图片压缩工具，支持JPG/PNG/WebP批量压缩，自由调节质量参数缩小文件大小。纯浏览器本地处理，无需上传，保护隐私。" />
+    <meta name="keywords" content="图片压缩,在线压缩图片,JPG压缩,PNG压缩,WebP压缩,批量压缩,图片瘦身,免费压缩工具" />
+    <title>图片批量压缩 - 免费在线图片压缩工具 | ImgTools365</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ImgTools365" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:url" content="https://imgtools365.com/pages/image-compress.html" />
+    <meta property="og:title" content="图片批量压缩 - 免费在线图片压缩工具 | ImgTools365" />
+    <meta property="og:description" content="免费在线图片压缩工具，支持JPG/PNG/WebP批量压缩，自由调节质量参数。纯浏览器本地处理，保护隐私。" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@imgtools365" />
+    <meta name="twitter:title" content="图片批量压缩 - 免费在线图片压缩工具 | ImgTools365" />
+    <meta name="twitter:description" content="免费在线图片压缩工具，支持JPG/PNG/WebP批量压缩，自由调节质量参数。纯浏览器本地处理，保护隐私。" />
+
+    <!-- Schema.org 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "图片批量压缩 - ImgTools365",
+      "url": "https://imgtools365.com/pages/image-compress.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web Browser",
+      "description": "免费在线图片压缩工具，支持JPG/PNG/WebP批量压缩，自由调节质量参数缩小文件大小。",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY"
+      },
+      "featureList": ["JPG/PNG/WebP压缩", "批量压缩", "自定义质量参数", "实时预览压缩效果"]
+    }
+    </script>
+    <script>
+      (function() {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const resolved = stored === 'dark' || stored === 'light' ? stored : (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', resolved);
+          document.documentElement.classList.toggle('dark', resolved === 'dark');
+        } catch {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/pages/image-compress/main.tsx"></script>
+  </body>
+</html>
+

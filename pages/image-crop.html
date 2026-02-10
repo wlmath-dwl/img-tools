@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="ImgTools365" />
+    <meta name="theme-color" content="#4f46e5" />
+    <link rel="canonical" href="https://imgtools365.com/pages/image-crop.html" />
+    <link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-crop.html" />
+    <link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-crop.html" />
+    <link rel="alternate" hreflang="x-default" href="https://imgtools365.com/pages/image-crop.html" />
+    <meta name="description" content="免费在线图片裁剪工具，支持16:9/4:3/1:1等预设比例、圆形裁剪和像素级精确控制。批量裁剪一键同步，纯浏览器本地处理，无需上传。" />
+    <meta name="keywords" content="图片裁剪,在线裁图,图片裁切,圆形裁剪,批量裁剪,比例裁剪,免费裁图工具,照片裁剪" />
+    <title>图片精确裁剪 - 免费在线裁图工具 | ImgTools365</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ImgTools365" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:url" content="https://imgtools365.com/pages/image-crop.html" />
+    <meta property="og:title" content="图片精确裁剪 - 免费在线裁图工具 | ImgTools365" />
+    <meta property="og:description" content="免费在线图片裁剪工具，支持预设比例、圆形裁剪和像素级精确控制。纯浏览器本地处理，无需上传。" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@imgtools365" />
+    <meta name="twitter:title" content="图片精确裁剪 - 免费在线裁图工具 | ImgTools365" />
+    <meta name="twitter:description" content="免费在线图片裁剪工具，支持预设比例、圆形裁剪和像素级精确控制。纯浏览器本地处理，无需上传。" />
+
+    <!-- Schema.org 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "图片精确裁剪 - ImgTools365",
+      "url": "https://imgtools365.com/pages/image-crop.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web Browser",
+      "description": "免费在线图片裁剪工具，支持16:9/4:3/1:1等预设比例、圆形裁剪和像素级精确控制。",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY"
+      },
+      "featureList": ["预设比例裁剪", "圆形裁剪", "像素级精确控制", "批量同步应用"]
+    }
+    </script>
+    <script>
+      (function() {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const resolved = stored === 'dark' || stored === 'light' ? stored : (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', resolved);
+          document.documentElement.classList.toggle('dark', resolved === 'dark');
+        } catch {}
+      })();
+    </script>
+    <script>
+      (function() {
+        // 禁止 Ctrl+滚轮 缩放页面
+        window.addEventListener('wheel', function (e) {
+          if (e.ctrlKey) e.preventDefault();
+        }, { passive: false });
+  
+        // 禁止 Ctrl++/-/= 缩放页面
+        window.addEventListener('keydown', function (e) {
+          if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=')) {
+            e.preventDefault();
+          }
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/pages/image-crop/main.tsx"></script>
+  </body>
+</html>
+

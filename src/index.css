@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+/* Tailwind v4：让 `dark:` 由 `.dark` class 驱动（而不是 prefers-color-scheme） */
+@custom-variant dark {
+  &:where(.dark, .dark *) {
+    @slot;
+  }
+}
+
+/* Tailwind v4 推荐在 CSS 中注入插件，确保 dev/build 行为一致 */
+@plugin "daisyui";
+
+@layer base {
+  :root {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* 覆盖 daisyUI 的 primary 主色（默认偏紫），统一为科技青 #06B6D4 */
+  html[data-theme],
+  body[data-theme] {
+    --color-primary: #06b6d4;
+    --color-primary-content: #ffffff;
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  html {
+    touch-action: manipulation;
+    -ms-touch-action: manipulation;
+  }
+
+  body {
+    @apply m-0 min-w-[320px] bg-gray-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100;
+    touch-action: manipulation;
+    -ms-touch-action: manipulation;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+}
+
+@layer components {
+  .page {
+    @apply max-w-[1040px] mx-auto px-[24px] py-10;
+  }
+
+  .btn-primary {
+    /* 主色：科技青（#06B6D4 / cyan-500） */
+    @apply bg-gradient-to-r from-cyan-500 to-sky-600 hover:from-cyan-600 hover:to-sky-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+
+  .btn-primary.btn-lg {
+    @apply px-6 py-3 text-lg;
+  }
+
+  .drop-zone {
+    @apply border-2 border-dashed border-cyan-400 dark:border-cyan-500 rounded-2xl p-10 bg-cyan-50/30 dark:bg-slate-800/30 hover:bg-cyan-100/30 dark:hover:bg-slate-700/30 transition-all duration-300;
+  }
+
+  .hero-container {
+    @apply max-w-2xl mx-auto px-4;
+  }
+
+  .seo-hidden {
+    @apply hidden;
+  }
+
+  .card-equal-height {
+    @apply flex flex-col h-full;
+  }
+
+  .header {
+    @apply flex items-center justify-between gap-4 mb-[18px] bg-white dark:bg-slate-800 p-4 rounded-lg;
+  }
+
+  .brand-title {
+    @apply text-lg font-bold tracking-wide;
+  }
+
+  .brand-subtitle {
+    @apply mt-0.5 text-xs text-slate-500 dark:text-slate-400;
+  }
+
+  .nav {
+    @apply flex gap-2.5 flex-wrap justify-end;
+  }
+
+  .nav-link {
+    @apply px-2.5 py-2 border border-slate-200 rounded-[10px] bg-white dark:bg-slate-900 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 transition-colors;
+  }
+
+  .main {
+    @apply grid gap-6;
+  }
+
+  .h1 {
+    @apply m-0 text-[22px] font-extrabold;
+  }
+
+  .h2 {
+    @apply m-0 mb-2.5 text-base font-bold;
+  }
+
+  .muted {
+    @apply text-slate-500 dark:text-slate-400 text-xs;
+  }
+
+  .error {
+    @apply mt-2.5 text-red-700 dark:text-red-400 text-[13px];
+  }
+
+  .preview {
+    @apply overflow-auto border border-dashed border-slate-200 rounded-xl p-3 bg-gray-50 dark:bg-slate-900 dark:border-slate-700;
+  }
+
+  canvas {
+    @apply max-w-full h-auto block;
+  }
+
+  .list {
+    @apply m-0 pl-[18px] text-slate-700 dark:text-slate-300 text-sm;
+  }
+
+  .code {
+    @apply font-mono text-[13px] text-slate-900 dark:text-slate-100 grid gap-1.5;
+  }
+
+}

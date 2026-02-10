@@ -1,0 +1,14 @@
+# robots.txt for ImgTools365
+# https://imgtools365.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# 禁止抓取静态资源目录
+Disallow: /assets/
+
+# Sitemap 位置
+Sitemap: https://imgtools365.com/sitemap.xml
+
+# 爬虫速率限制（可选，防止过度抓取）
+Crawl-delay: 1

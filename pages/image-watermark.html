@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="ImgTools365" />
+    <meta name="theme-color" content="#4f46e5" />
+    <link rel="canonical" href="https://imgtools365.com/pages/image-watermark.html" />
+    <link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-watermark.html" />
+    <link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-watermark.html" />
+    <link rel="alternate" hreflang="x-default" href="https://imgtools365.com/pages/image-watermark.html" />
+    <meta name="description" content="免费在线图片水印工具，支持文字水印和图片Logo水印，提供全屏平铺模式。批量添加水印保护版权，纯浏览器本地处理，无需上传。" />
+    <meta name="keywords" content="图片水印,批量水印,文字水印,Logo水印,版权保护,免费水印工具,在线加水印" />
+    <title>批量添加水印 - 免费在线图片水印工具 | ImgTools365</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ImgTools365" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:url" content="https://imgtools365.com/pages/image-watermark.html" />
+    <meta property="og:title" content="批量添加水印 - 免费在线图片水印工具 | ImgTools365" />
+    <meta property="og:description" content="免费在线图片水印工具，支持文字和Logo水印，提供全屏平铺模式。批量添加保护版权，纯浏览器本地处理。" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@imgtools365" />
+    <meta name="twitter:title" content="批量添加水印 - 免费在线图片水印工具 | ImgTools365" />
+    <meta name="twitter:description" content="免费在线图片水印工具，支持文字和Logo水印，提供全屏平铺模式。批量添加保护版权，纯浏览器本地处理。" />
+
+    <!-- Schema.org 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "批量添加水印 - ImgTools365",
+      "url": "https://imgtools365.com/pages/image-watermark.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web Browser",
+      "description": "免费在线图片水印工具，支持文字水印和图片Logo水印，提供全屏平铺模式，高效完成版权保护。",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY"
+      },
+      "featureList": ["文字水印", "图片Logo水印", "全屏平铺模式", "批量添加水印"]
+    }
+    </script>
+    <script>
+      (function() {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const resolved = stored === 'dark' || stored === 'light' ? stored : (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', resolved);
+          document.documentElement.classList.toggle('dark', resolved === 'dark');
+        } catch {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/pages/image-watermark/main.tsx"></script>
+  </body>
+</html>
+

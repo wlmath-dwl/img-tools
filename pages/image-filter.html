@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="ImgTools365" />
+    <meta name="theme-color" content="#4f46e5" />
+    <link rel="canonical" href="https://imgtools365.com/pages/image-filter.html" />
+    <link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-filter.html" />
+    <link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-filter.html" />
+    <link rel="alternate" hreflang="x-default" href="https://imgtools365.com/pages/image-filter.html" />
+    <meta name="description" content="免费在线图片滤镜调色工具，精准调节亮度、对比度、饱和度、色温。内置高质感预设滤镜，支持多图批量美化。纯浏览器本地处理。" />
+    <meta name="keywords" content="图片滤镜,在线调色,亮度对比度,饱和度调节,预设滤镜,批量美化,免费滤镜工具,照片调色" />
+    <title>图片滤镜调色 - 免费在线照片美化工具 | ImgTools365</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ImgTools365" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:url" content="https://imgtools365.com/pages/image-filter.html" />
+    <meta property="og:title" content="图片滤镜调色 - 免费在线照片美化工具 | ImgTools365" />
+    <meta property="og:description" content="免费在线图片滤镜调色工具，精准调节亮度、对比度、饱和度，内置预设滤镜，支持多图批量美化。" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@imgtools365" />
+    <meta name="twitter:title" content="图片滤镜调色 - 免费在线照片美化工具 | ImgTools365" />
+    <meta name="twitter:description" content="免费在线图片滤镜调色工具，精准调节亮度、对比度、饱和度，内置预设滤镜，支持多图批量美化。" />
+
+    <!-- Schema.org 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "图片滤镜调色 - ImgTools365",
+      "url": "https://imgtools365.com/pages/image-filter.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web Browser",
+      "description": "免费在线图片滤镜调色工具，精准调节亮度、对比度、饱和度、色温，内置高质感预设滤镜。",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY"
+      },
+      "featureList": ["亮度/对比度/饱和度调节", "色温调节", "预设滤镜", "批量美化"]
+    }
+    </script>
+    <script>
+      (function() {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const resolved = stored === 'dark' || stored === 'light' ? stored : (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', resolved);
+          document.documentElement.classList.toggle('dark', resolved === 'dark');
+        } catch {}
+      })();
+    </script>
+    <script>
+      (function() {
+        // 禁止 Ctrl+滚轮 缩放页面
+        window.addEventListener('wheel', function (e) {
+          if (e.ctrlKey) e.preventDefault();
+        }, { passive: false });
+  
+        // 禁止 Ctrl++/-/= 缩放页面
+        window.addEventListener('keydown', function (e) {
+          if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=')) {
+            e.preventDefault();
+          }
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/pages/image-filter/main.tsx"></script>
+  </body>
+</html>

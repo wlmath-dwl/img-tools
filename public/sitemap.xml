@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- 中文首页 -->
+  <url>
+    <loc>https://imgtools365.com/</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imgtools365.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imgtools365.com/"/>
+  </url>
+  
+  <!-- 英文首页 -->
+  <url>
+    <loc>https://imgtools365.com/en/</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imgtools365.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imgtools365.com/"/>
+  </url>
+  
+  <!-- 中文功能页 -->
+  <url>
+    <loc>https://imgtools365.com/pages/image-compress.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-compress.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-compress.html"/>
+  </url>
+  
+  <url>
+    <loc>https://imgtools365.com/pages/image-convert.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-convert.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-convert.html"/>
+  </url>
+  
+  <url>
+    <loc>https://imgtools365.com/pages/image-crop.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-crop.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-crop.html"/>
+  </url>
+  
+  <url>
+    <loc>https://imgtools365.com/pages/image-filter.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-filter.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-filter.html"/>
+  </url>
+  
+  <url>
+    <loc>https://imgtools365.com/pages/image-mosaic.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-mosaic.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-mosaic.html"/>
+  </url>
+  
+  <url>
+    <loc>https://imgtools365.com/pages/image-pdf.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-pdf.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-pdf.html"/>
+  </url>
+  
+  <url>
+    <loc>https://imgtools365.com/pages/image-watermark.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-watermark.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-watermark.html"/>
+  </url>
+  
+  <!-- 英文功能页 -->
+  <url>
+    <loc>https://imgtools365.com/en/pages/image-compress.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-compress.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-compress.html"/>
+  </url>
+  
+  <url>
+    <loc>https://imgtools365.com/en/pages/image-convert.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-convert.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-convert.html"/>
+  </url>
+  
+  <url>
+    <loc>https://imgtools365.com/en/pages/image-crop.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-crop.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-crop.html"/>
+  </url>
+  
+  <url>
+    <loc>https://imgtools365.com/en/pages/image-filter.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-filter.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-filter.html"/>
+  </url>
+  
+  <url>
+    <loc>https://imgtools365.com/en/pages/image-mosaic.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-mosaic.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-mosaic.html"/>
+  </url>
+  
+  <url>
+    <loc>https://imgtools365.com/en/pages/image-pdf.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-pdf.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-pdf.html"/>
+  </url>
+  
+  <url>
+    <loc>https://imgtools365.com/en/pages/image-watermark.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://imgtools365.com/pages/image-watermark.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imgtools365.com/en/pages/image-watermark.html"/>
+  </url>
+  
+</urlset>
