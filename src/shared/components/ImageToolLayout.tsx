@@ -2,6 +2,7 @@ import { type ComponentChildren } from "preact";
 import { useEffect, useMemo, useRef, useState } from "preact/hooks";
 import { useI18n } from "../../i18n/context";
 import { locales } from "../../i18n/locales";
+import { getLocaleDir } from "../locale-path";
 import { Toolbar } from "./Toolbar";
 import { ImageUploadArea, type ImageUploadAreaTexts } from "./ImageUploadArea";
 import {
@@ -13,6 +14,7 @@ import { CanvasToolbar } from "./CanvasToolbar.tsx";
 import { ImageViewer } from "./ImageViewer";
 import { ProcessingOverlay } from "./ProcessingOverlay";
 import { ImageThumbStrip, type ImageThumbItem } from "./ImageThumbStrip";
+import { LocaleSuggestionBanner } from "./LocaleSuggestionBanner";
 import { PrivacyShieldIcon } from "../icons";
 import { downloadBlob } from "../image";
 
@@ -203,6 +205,7 @@ export function ImageToolLayout({
     const baseUrl = "https://imgtools365.com";
     const currentPath = window.location.pathname;
     const pageName = currentPath.split("/").pop() || "";
+    const normalizedPath = currentPath === "/index.html" ? "/" : currentPath;
 
     // Canonical
     let canonical = document.querySelector('link[rel="canonical"]');
@@ -211,10 +214,9 @@ export function ImageToolLayout({
       canonical.setAttribute("rel", "canonical");
       document.head.appendChild(canonical);
     }
-    const langPath = locale === "zh-CN" ? "" : `/${locale}`;
     const pagePath =
       pageName && pageName !== "index.html" ? `/pages/${pageName}` : "";
-    canonical.setAttribute("href", `${baseUrl}${langPath}${pagePath}`);
+    canonical.setAttribute("href", `${baseUrl}${normalizedPath}`);
 
     // Hreflang
     // 先移除旧的
@@ -225,9 +227,9 @@ export function ImageToolLayout({
     locales.forEach((l) => {
       const link = document.createElement("link");
       link.setAttribute("rel", "alternate");
-      link.setAttribute("hreflang", l);
-      const lPath = l === "zh-CN" ? "" : `/${l}`;
-      link.setAttribute("href", `${baseUrl}${lPath}${pagePath}`);
+      link.setAttribute("hreflang", l === "en-US" ? "en" : l);
+      const localeDir = getLocaleDir(l);
+      link.setAttribute("href", `${baseUrl}/${localeDir}${pagePath}`);
       document.head.appendChild(link);
     });
 
@@ -609,6 +611,7 @@ export function ImageToolLayout({
           }}
         />
       </div>
+      <LocaleSuggestionBanner />
 
       <div class="flex-1 w-full flex flex-col min-h-0 overflow-hidden">
         {!ready ? (

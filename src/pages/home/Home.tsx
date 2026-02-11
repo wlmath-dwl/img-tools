@@ -3,8 +3,10 @@ import { useEffect } from "preact/hooks";
 import { useI18n } from "../../i18n/context";
 import { locales } from "../../i18n/locales";
 import type { TranslationKey } from "../../i18n/types";
+import { getLocaleDir } from "../../shared/locale-path";
 import { Header } from "../../shared/components/Header";
 import { Footer } from "../../shared/components/Footer";
+import { LocaleSuggestionBanner } from "../../shared/components/LocaleSuggestionBanner";
 import {
   CropIcon,
   CompressIcon,
@@ -56,6 +58,8 @@ export function Home() {
 
     // 动态生成 Canonical 和 Hreflang
     const baseUrl = "https://imgtools365.com";
+    const currentPath = window.location.pathname;
+    const normalizedPath = currentPath === "/index.html" ? "/" : currentPath;
     
     // Canonical
     let canonical = document.querySelector('link[rel="canonical"]');
@@ -64,8 +68,7 @@ export function Home() {
       canonical.setAttribute("rel", "canonical");
       document.head.appendChild(canonical);
     }
-    const langPath = locale === "zh-CN" ? "" : `/${locale}`;
-    canonical.setAttribute("href", `${baseUrl}${langPath}/`);
+    canonical.setAttribute("href", `${baseUrl}${normalizedPath}`);
 
     // Hreflang
     document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(el => el.remove());
@@ -73,9 +76,9 @@ export function Home() {
     locales.forEach(l => {
       const link = document.createElement("link");
       link.setAttribute("rel", "alternate");
-      link.setAttribute("hreflang", l);
-      const lPath = l === "zh-CN" ? "" : `/${l}`;
-      link.setAttribute("href", `${baseUrl}${lPath}/`);
+      link.setAttribute("hreflang", l === "en-US" ? "en" : l);
+      const localeDir = getLocaleDir(l);
+      link.setAttribute("href", `${baseUrl}/${localeDir}/`);
       document.head.appendChild(link);
     });
 
@@ -151,6 +154,7 @@ export function Home() {
   return (
     <div class="w-full min-h-screen flex flex-col">
       <Header />
+      <LocaleSuggestionBanner />
 
       <main class="flex-1 min-h-[calc(100vh-4rem)] flex flex-col gap-3.5">
         <div class="max-w-[1040px] w-full mx-auto px-[18px] py-7 flex flex-col gap-3.5">

@@ -4,6 +4,7 @@ import { canvasToBlob, downloadBlob, fileToImageInfo, revokeImageInfo, type Imag
 import { ImageToolLayout } from '../../shared/components/ImageToolLayout'
 import { DownloadIcon } from '../../shared/icons/DownloadIcon'
 import { TrashIcon } from '../../shared/icons'
+import { PremiumSlider } from '../../shared/components/PremiumSlider'
 
 type OutputType = 'image/jpeg' | 'image/png' | 'image/webp'
 
@@ -235,22 +236,15 @@ export function ImageConvertPage() {
         </div>
 
         {format === 'image/png' ? null : (
-          <div class="flex flex-col gap-2">
-            <label class="text-sm font-medium text-slate-600 dark:text-slate-300">
-              {t('imageConvert.quality')}（{Math.round(quality)}%）
-            </label>
-            <input
-              type="range"
-              class="range range-primary w-full"
-              value={Math.round(quality)}
-              min={10}
-              max={100}
-              step={1}
-              onInput={(e) =>
-                setQuality(Number((e.currentTarget as HTMLInputElement).value))
-              }
-            />
-          </div>
+          <PremiumSlider
+            label={`${t('imageConvert.quality')}（${Math.round(quality)}%）`}
+            value={Math.round(quality)}
+            min={10}
+            max={100}
+            step={1}
+            showValue
+            onInput={setQuality}
+          />
         )}
 
         {error ? (
@@ -263,6 +257,8 @@ export function ImageConvertPage() {
     </ImageToolLayout>
   )
 }
+
+
 
 
 

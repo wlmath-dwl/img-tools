@@ -60,14 +60,14 @@ export function I18nProvider({
 }: I18nProviderProps) {
   // 1) SSR 传入 locale（保证预渲染正确）
   // 2) 客户端优先读路径（/en/、/de-DE/），确保路由语言优先
-  // 3) 再读 HTML/body 上的 lang/data-locale（hydration 兜底）
-  // 4) 最后读 localStorage/浏览器语言
+  // 3) 再读 localStorage/浏览器语言（保证用户偏好一致）
+  // 4) 最后读 HTML/body 上的 lang/data-locale（hydration 兜底）
   const initial = useMemo<Locale>(() => {
     return (
       initialLocale ||
       detectLocaleFromPathname() ||
-      detectLocaleFromDocument() ||
-      getLocale()
+      getLocale() ||
+      detectLocaleFromDocument()
     );
   }, [initialLocale]);
 

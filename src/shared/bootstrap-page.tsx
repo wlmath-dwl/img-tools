@@ -16,9 +16,10 @@ function normalizeLocale(v: string | null | undefined): Locale | null {
 function resolveInitialLocale(): Locale {
   return (
     getLocaleFromPathname(window.location.pathname) ||
+    // 优先用户已保存偏好/浏览器语言，避免不同 HTML 模板 lang 导致页面语言不一致
+    getLocale() ||
     normalizeLocale(document.body?.dataset?.locale) ||
-    normalizeLocale(document.documentElement.lang) ||
-    getLocale()
+    normalizeLocale(document.documentElement.lang)
   );
 }
 

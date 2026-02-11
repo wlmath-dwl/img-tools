@@ -110,13 +110,18 @@ function toHreflang(locale: Locale) {
   return locale === 'en-US' ? 'en' : locale
 }
 
+function xDefaultAbsoluteUrl(pagePath: string) {
+  if (pagePath === 'index.html') return `${BASE_URL}/`
+  return `${BASE_URL}/${pagePath}`
+}
+
 function buildAlternateLinks(pagePath: string) {
   const links = locales.map((loc) => {
     const href = localizedAbsoluteUrl(loc, pagePath)
     return `  <link rel="alternate" hreflang="${toHreflang(loc)}" href="${href}" />`
   })
   links.push(
-    `  <link rel="alternate" hreflang="x-default" href="${localizedAbsoluteUrl('zh-CN', pagePath)}" />`
+    `  <link rel="alternate" hreflang="x-default" href="${xDefaultAbsoluteUrl(pagePath)}" />`
   )
   return links.join('\n')
 }
@@ -250,7 +255,24 @@ function generateSitemapXml() {
     const isHome = page.htmlPath === 'index.html'
     const changefreq = isHome ? 'weekly' : 'monthly'
     const priority = isHome ? '1.0' : '0.8'
-    const xDefault = localizedAbsoluteUrl('zh-CN', page.htmlPath)
+    const xDefault = xDefaultAbsoluteUrl(page.htmlPath)
+
+    // x-default 入口也作为独立 URL 输出到 sitemap，便于 Google 抓取默认路径
+    rows.push('  <url>')
+    rows.push(`    <loc>${xDefault}</loc>`)
+    rows.push(`    <lastmod>${today}</lastmod>`)
+    rows.push(`    <changefreq>${changefreq}</changefreq>`)
+    rows.push(`    <priority>${priority}</priority>`)
+    for (const altLocale of locales) {
+      rows.push(
+        `    <xhtml:link rel="alternate" hreflang="${toHreflang(altLocale)}" href="${localizedAbsoluteUrl(altLocale, page.htmlPath)}"/>`
+      )
+    }
+    rows.push(
+      `    <xhtml:link rel="alternate" hreflang="x-default" href="${xDefault}"/>`
+    )
+    rows.push('  </url>')
+    rows.push('')
 
     for (const locale of locales) {
       const loc = localizedAbsoluteUrl(locale, page.htmlPath)

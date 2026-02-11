@@ -8,6 +8,7 @@ import {
 import { useI18n } from "../../i18n/context";
 import { canvasToBlob, type ImageInfo } from "../../shared/image";
 import { ImageToolLayout } from "../../shared/components/ImageToolLayout";
+import { PremiumSlider } from "../../shared/components/PremiumSlider";
 import type { CanvasImageViewerViewState } from "../../shared/components/CanvasImageViewer";
 import { useImageItems } from "../../shared/useImageItems";
 import { BrushIcon, SelectionCursorIcon } from "../../shared/icons";
@@ -938,77 +939,47 @@ export function ImageMosaicPage() {
 
         {effectType === "mosaic" ? (
           <>
-            <div class="flex flex-col gap-2">
-              <label class="text-sm font-medium text-slate-600 dark:text-slate-400">
-                {t("imageMosaic.strength")}（{Math.round(strength)}）
-              </label>
-              <input
-                type="range"
-                class="range range-primary w-full"
-                value={Math.round(strength)}
-                min={10}
-                max={80}
-                step={1}
-                onInput={(e) =>
-                  setStrength(Number((e.currentTarget as HTMLInputElement).value))
-                }
-              />
-            </div>
-            <div class="flex flex-col gap-2">
-              <label class="text-sm font-medium text-slate-600 dark:text-slate-400">
-                {t("imageMosaic.size")}（{Math.round(brushSize)}px）
-              </label>
-              <input
-                type="range"
-                class="range range-primary w-full"
-                value={Math.round(brushSize)}
-                min={6}
-                max={80}
-                step={1}
-                onInput={(e) =>
-                  setBrushSize(Number((e.currentTarget as HTMLInputElement).value))
-                }
-              />
-            </div>
+            <PremiumSlider
+              label={`${t("imageMosaic.strength")}（${Math.round(strength)}）`}
+              value={Math.round(strength)}
+              min={10}
+              max={80}
+              step={1}
+              showValue
+              onInput={setStrength}
+            />
+            <PremiumSlider
+              label={`${t("imageMosaic.size")}（${Math.round(brushSize)}px）`}
+              value={Math.round(brushSize)}
+              min={6}
+              max={150}
+              step={1}
+              showValue
+              onInput={setBrushSize}
+            />
           </>
         ) : null}
 
         {effectType === "blur" ? (
           <>
-            <div class="flex flex-col gap-2">
-              <label class="text-sm font-medium text-slate-600 dark:text-slate-400">
-                {t("imageMosaic.blurStrength")}（{Math.round(blurStrength)}）
-              </label>
-              <input
-                type="range"
-                class="range range-primary w-full"
-                value={Math.round(blurStrength)}
-                min={2}
-                max={24}
-                step={1}
-                onInput={(e) =>
-                  setBlurStrength(
-                    Number((e.currentTarget as HTMLInputElement).value),
-                  )
-                }
-              />
-            </div>
-            <div class="flex flex-col gap-2">
-              <label class="text-sm font-medium text-slate-600 dark:text-slate-400">
-                {t("imageMosaic.size")}（{Math.round(brushSize)}px）
-              </label>
-              <input
-                type="range"
-                class="range range-primary w-full"
-                value={Math.round(brushSize)}
-                min={6}
-                max={80}
-                step={1}
-                onInput={(e) =>
-                  setBrushSize(Number((e.currentTarget as HTMLInputElement).value))
-                }
-              />
-            </div>
+            <PremiumSlider
+              label={`${t("imageMosaic.blurStrength")}（${Math.round(blurStrength)}）`}
+              value={Math.round(blurStrength)}
+              min={2}
+              max={24}
+              step={1}
+              showValue
+              onInput={setBlurStrength}
+            />
+            <PremiumSlider
+              label={`${t("imageMosaic.size")}（${Math.round(brushSize)}px）`}
+              value={Math.round(brushSize)}
+              min={6}
+              max={150}
+              step={1}
+              showValue
+              onInput={setBrushSize}
+            />
           </>
         ) : null}
 
@@ -1016,7 +987,7 @@ export function ImageMosaicPage() {
           <div class="flex items-center gap-3 mt-2">
             <button
               type="button"
-              class="btn btn-outline btn-sm"
+              class="btn btn-sm w-full btn-error text-white mt-6"
               onClick={() => setIsClearConfirmOpen(true)}
             >
               {t("imageMosaic.clear")}
@@ -1064,6 +1035,11 @@ export function ImageMosaicPage() {
     </ImageToolLayout>
   );
 }
+
+
+
+
+
 
 
 

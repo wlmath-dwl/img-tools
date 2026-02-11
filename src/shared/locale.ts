@@ -21,12 +21,9 @@ export function getLocale(): Locale {
   if (stored && (locales as readonly string[]).includes(stored)) {
     return stored
   }
-  
-  // 尝试从浏览器语言检测
-  const browserLang = navigator.language || navigator.languages?.[0]
-  if (browserLang?.startsWith('zh')) return 'zh-CN'
-  if (browserLang?.startsWith('en')) return 'en-US'
-  
+
+  // 无本地偏好时固定使用默认语言（en-US），
+  // 浏览器语言检测交给 LocaleSuggestionBanner 做“提示切换”
   return defaultLocale
 }
 

@@ -14,6 +14,7 @@ import {
 } from "../../shared/image";
 import { ImageToolLayout } from "../../shared/components/ImageToolLayout";
 import { ColorPicker } from "../../shared/components/ColorPicker";
+import { PremiumSlider } from "../../shared/components/PremiumSlider";
 import type { CanvasImageViewerViewState } from "../../shared/components/CanvasImageViewer";
 import { useImageItems } from "../../shared/useImageItems";
 
@@ -1110,43 +1111,25 @@ export function ImageWatermarkPage() {
                 ) : null}
               </div>
 
-              <div class="flex flex-col gap-2">
-                <label class="text-sm font-medium text-slate-600 dark:text-slate-400">
-                  {t("imageWatermark.opacity")}：{Math.round(opacity)}%
-                </label>
-                <input
-                  type="range"
-                  class="range range-primary w-full"
-                  value={Math.round(opacity)}
-                  min={10}
-                  max={100}
-                  step={1}
-                  onInput={(e) =>
-                    setOpacity(
-                      Number((e.currentTarget as HTMLInputElement).value),
-                    )
-                  }
-                />
-              </div>
+              <PremiumSlider
+                label={`${t("imageWatermark.opacity")}：${Math.round(opacity)}%`}
+                value={Math.round(opacity)}
+                min={10}
+                max={100}
+                step={1}
+                showValue
+                onInput={setOpacity}
+              />
 
-              <div class="flex flex-col gap-2">
-                <label class="text-sm font-medium text-slate-600 dark:text-slate-400">
-                  {t("imageWatermark.rotation")}：{Math.round(rotation)}°
-                </label>
-                <input
-                  type="range"
-                  class="range range-primary w-full"
-                  value={Math.round(rotation)}
-                  min={-180}
-                  max={180}
-                  step={1}
-                  onInput={(e) =>
-                    setRotation(
-                      Number((e.currentTarget as HTMLInputElement).value),
-                    )
-                  }
-                />
-              </div>
+              <PremiumSlider
+                label={`${t("imageWatermark.rotation")}：${Math.round(rotation)}°`}
+                value={Math.round(rotation)}
+                min={-180}
+                max={180}
+                step={1}
+                showValue
+                onInput={setRotation}
+              />
             </div>
           </div>
 
@@ -1190,66 +1173,37 @@ export function ImageWatermarkPage() {
                   </div>
                 </div>
                 {logoInfo ? (
-                  <div class="flex flex-col gap-2">
-                    <label class="text-sm font-medium text-slate-600 dark:text-slate-400">
-                      {t("imageWatermark.logoSize")}：
-                      {Math.round(logoScale * 100)}%
-                    </label>
-                    <input
-                      type="range"
-                      class="range range-primary w-full"
-                      value={Math.round(logoScale * 100)}
-                      min={10}
-                      max={120}
-                      step={1}
-                      onInput={(e) =>
-                        setLogoScale(
-                          Number((e.currentTarget as HTMLInputElement).value) /
-                            100,
-                        )
-                      }
-                    />
-                  </div>
+                  <PremiumSlider
+                    label={`${t("imageWatermark.logoSize")}：${Math.round(logoScale * 100)}%`}
+                    value={Math.round(logoScale * 100)}
+                    min={10}
+                    max={120}
+                    step={1}
+                    showValue
+                    onInput={(value) => setLogoScale(value / 100)}
+                  />
                 ) : null}
               </div>
 
-              <div class="flex flex-col gap-2">
-                <label class="text-sm font-medium text-slate-600 dark:text-slate-400">
-                  {t("imageWatermark.opacity")}：{Math.round(opacity)}%
-                </label>
-                <input
-                  type="range"
-                  class="range range-primary w-full"
-                  value={Math.round(opacity)}
-                  min={10}
-                  max={100}
-                  step={1}
-                  onInput={(e) =>
-                    setOpacity(
-                      Number((e.currentTarget as HTMLInputElement).value),
-                    )
-                  }
-                />
-              </div>
+              <PremiumSlider
+                label={`${t("imageWatermark.opacity")}：${Math.round(opacity)}%`}
+                value={Math.round(opacity)}
+                min={10}
+                max={100}
+                step={1}
+                showValue
+                onInput={setOpacity}
+              />
 
-              <div class="flex flex-col gap-2">
-                <label class="text-sm font-medium text-slate-600 dark:text-slate-400">
-                  {t("imageWatermark.rotation")}：{Math.round(rotation)}°
-                </label>
-                <input
-                  type="range"
-                  class="range range-primary w-full"
-                  value={Math.round(rotation)}
-                  min={-180}
-                  max={180}
-                  step={1}
-                  onInput={(e) =>
-                    setRotation(
-                      Number((e.currentTarget as HTMLInputElement).value),
-                    )
-                  }
-                />
-              </div>
+              <PremiumSlider
+                label={`${t("imageWatermark.rotation")}：${Math.round(rotation)}°`}
+                value={Math.round(rotation)}
+                min={-180}
+                max={180}
+                step={1}
+                showValue
+                onInput={setRotation}
+              />
             </div>
           </div>
         </div>
@@ -1435,6 +1389,9 @@ export function ImageWatermarkPage() {
     </ImageToolLayout>
   );
 }
+
+
+
 
 
 
