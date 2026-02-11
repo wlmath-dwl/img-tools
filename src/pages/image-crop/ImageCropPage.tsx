@@ -492,8 +492,9 @@ export function ImageCropPage() {
               <div class="text-sm font-medium text-slate-700 dark:text-slate-300">{t('imageCrop.customRatio')}</div>
               <div class="flex items-center gap-3">
                 <div class="flex items-center gap-2 flex-1">
-                  <label class="text-sm font-medium text-slate-700 dark:text-slate-300 whitespace-nowrap">{t('imageCrop.width.label')}</label>
+                  <label for="crop-ratio-width" class="text-sm font-medium text-slate-700 dark:text-slate-300 whitespace-nowrap">{t('imageCrop.width.label')}</label>
                   <input
+                    id="crop-ratio-width"
                     type="number"
                     min={1}
                     value={customRatioW ?? 1}
@@ -516,8 +517,9 @@ export function ImageCropPage() {
                   />
                 </div>
                 <div class="flex items-center gap-2 flex-1">
-                  <label class="text-sm font-medium text-slate-700 dark:text-slate-300 whitespace-nowrap">{t('imageCrop.height.label')}</label>
+                  <label for="crop-ratio-height" class="text-sm font-medium text-slate-700 dark:text-slate-300 whitespace-nowrap">{t('imageCrop.height.label')}</label>
                   <input
+                    id="crop-ratio-height"
                     type="number"
                     min={1}
                     value={customRatioH ?? 1}
@@ -540,12 +542,12 @@ export function ImageCropPage() {
                   />
                 </div>
               </div>
-              <div class="text-sm text-slate-500 dark:text-slate-400">
+              <div class="text-sm text-slate-600 dark:text-slate-300">
                 {t('imageCrop.currentCrop', { width: Math.round(rect.w), height: Math.round(rect.h) })}
               </div>
             </div>
           ) : (
-            <div class="text-sm text-slate-500 dark:text-slate-400">
+            <div class="text-sm text-slate-600 dark:text-slate-300">
               当前裁切：{Math.round(rect.w)}×{Math.round(rect.h)} px
             </div>
           )}
@@ -565,6 +567,8 @@ export function ImageCropPage() {
     </ImageToolLayout>
   )
 }
+
+
 
 
 

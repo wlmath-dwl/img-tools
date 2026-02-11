@@ -17,6 +17,7 @@ export const trTR: Record<TranslationKey, string> = {
   "common.success": "Başarılı",
   "common.warning": "Uyarı",
   "common.info": "Bilgi",
+    "common.actions": "Actions",
   "common.applyToAll": "Tümüne uygula",
   "common.applyToAllConfirm":
     "Mevcut ayarlar tüm resimlere uygulanacak, onaylıyor musunuz?",

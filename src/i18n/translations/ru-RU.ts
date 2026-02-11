@@ -17,6 +17,7 @@ export const ruRU: Record<TranslationKey, string> = {
   "common.success": "Успешно",
   "common.warning": "Предупреждение",
   "common.info": "Информация",
+    "common.actions": "Actions",
   "common.applyToAll": "Применить ко всем",
   "common.applyToAllConfirm":
     "Применить текущие настройки ко всем изображениям?",

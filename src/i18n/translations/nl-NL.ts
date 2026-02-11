@@ -17,6 +17,7 @@ export const nlNL: Record<TranslationKey, string> = {
   "common.success": "Gelukt",
   "common.warning": "Waarschuwing",
   "common.info": "Informatie",
+    "common.actions": "Actions",
   "common.applyToAll": "Toepassen op alles",
   "common.applyToAllConfirm":
     "Huidige instellingen toepassen op alle afbeeldingen?",

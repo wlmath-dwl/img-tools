@@ -17,6 +17,7 @@ export const ukUA: Record<TranslationKey, string> = {
   "common.success": "Успішно",
   "common.warning": "Попередження",
   "common.info": "Інформація",
+    "common.actions": "Actions",
   "common.applyToAll": "Застосувати до всіх",
   "common.applyToAllConfirm":
     "Застосувати поточні налаштування до всіх зображень?",

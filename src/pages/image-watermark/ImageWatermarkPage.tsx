@@ -1002,7 +1002,7 @@ export function ImageWatermarkPage() {
                   class="w-full min-h-[44px] px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 text-sm resize-y"
                   placeholder={t("imageWatermark.textPlaceholder")}
                 />
-                <div class="text-xs text-slate-500 dark:text-slate-400">
+                <div class="text-xs text-slate-600 dark:text-slate-300">
                   支持多行（回车换行）
                 </div>
               </div>
@@ -1071,7 +1071,7 @@ export function ImageWatermarkPage() {
                     onChange: setStrokeEnabled,
                     label: "描边",
                   })}
-                  <span class="text-xs text-slate-500 dark:text-slate-400">
+                  <span class="text-xs text-slate-600 dark:text-slate-300">
                     背景复杂/小字号建议开启
                   </span>
                 </div>
@@ -1170,6 +1170,7 @@ export function ImageWatermarkPage() {
                     type="file"
                     accept="image/*"
                     class="hidden"
+                    aria-label={t("imageWatermark.selectLogo")}
                     onChange={(e) => {
                       const input = e.currentTarget;
                       const file = input.files?.[0];
@@ -1184,7 +1185,7 @@ export function ImageWatermarkPage() {
                   >
                     {t("imageWatermark.selectLogo")}
                   </button>
-                  <div class="text-xs text-slate-500 dark:text-slate-400 truncate">
+                  <div class="text-xs text-slate-600 dark:text-slate-300 truncate">
                     {logoInfo ? logoInfo.name : t("imageWatermark.logoHint")}
                   </div>
                 </div>
@@ -1357,7 +1358,7 @@ export function ImageWatermarkPage() {
                     )
                   }
                 />
-                <div class="text-xs text-slate-500 dark:text-slate-400">
+                <div class="text-xs text-slate-600 dark:text-slate-300">
                   用于快捷定位时距离边缘的间距
                 </div>
               </div>
@@ -1434,6 +1435,7 @@ export function ImageWatermarkPage() {
     </ImageToolLayout>
   );
 }
+
 
 
 

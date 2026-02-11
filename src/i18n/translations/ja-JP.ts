@@ -17,6 +17,7 @@ export const jaJP: Record<TranslationKey, string> = {
   "common.success": "成功",
   "common.warning": "警告",
   "common.info": "情報",
+    "common.actions": "Actions",
   "common.applyToAll": "すべてに適用",
   "common.applyToAllConfirm": "現在の設定をすべての画像に適用しますか？",
   "imageCrop.mode": "クロップモード",

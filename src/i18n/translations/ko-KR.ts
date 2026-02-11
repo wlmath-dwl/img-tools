@@ -17,6 +17,7 @@ export const koKR: Record<TranslationKey, string> = {
   "common.success": "성공",
   "common.warning": "경고",
   "common.info": "정보",
+    "common.actions": "Actions",
   "common.applyToAll": "전체 적용",
   "common.applyToAllConfirm": "현재 설정을 모든 이미지에 적용하시겠습니까?",
 

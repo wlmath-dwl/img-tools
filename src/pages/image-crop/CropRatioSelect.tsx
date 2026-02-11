@@ -67,7 +67,7 @@ export function CropRatioSelect({
             <div class="min-w-0 flex-1 text-left">
               <div class="truncate font-medium text-sm">{selected.label}</div>
             </div>
-            <span class="text-slate-400 dark:text-slate-500 text-xs shrink-0">
+            <span class="text-slate-600 dark:text-slate-300 text-xs shrink-0">
               {isOpen ? '▲' : '▼'}
             </span>
           </button>

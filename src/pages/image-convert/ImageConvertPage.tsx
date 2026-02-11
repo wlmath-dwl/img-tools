@@ -168,7 +168,7 @@ export function ImageConvertPage() {
                   <div class="text-sm font-medium text-slate-900 dark:text-slate-100 truncate mb-1">
                     {it.info.name}
                   </div>
-                  <div class="text-xs text-slate-500 dark:text-slate-400">
+                  <div class="text-xs text-slate-600 dark:text-slate-300">
                     {it.info.width}×{it.info.height}px
                   </div>
                 </div>
@@ -218,7 +218,7 @@ export function ImageConvertPage() {
     >
       <div class="flex flex-col gap-4">
         <div class="flex flex-col gap-2">
-          <label class="text-sm font-medium text-slate-600 dark:text-slate-400">
+          <label class="text-sm font-medium text-slate-600 dark:text-slate-300">
             {t('imageConvert.outputFormat')}
           </label>
           <select
@@ -236,7 +236,7 @@ export function ImageConvertPage() {
 
         {format === 'image/png' ? null : (
           <div class="flex flex-col gap-2">
-            <label class="text-sm font-medium text-slate-600 dark:text-slate-400">
+            <label class="text-sm font-medium text-slate-600 dark:text-slate-300">
               {t('imageConvert.quality')}（{Math.round(quality)}%）
             </label>
             <input

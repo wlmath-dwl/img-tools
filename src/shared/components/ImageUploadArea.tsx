@@ -199,10 +199,12 @@ export function ImageUploadArea({
         accept={acceptedTypes}
         multiple={allowMultiple}
         class="hidden"
+        aria-label={buttonLabel}
         onChange={handleFileChange}
       />
     </div>
   );
 }
+
 
 

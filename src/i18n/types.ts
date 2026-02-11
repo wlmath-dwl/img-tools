@@ -15,6 +15,7 @@ export type TranslationKey =
     | "common.success"
     | "common.warning"
     | "common.info"
+    | "common.actions"
     | "common.applyToAll"
     | "common.applyToAllConfirm"
     | "imageCrop.mode"

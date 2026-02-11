@@ -17,6 +17,7 @@ export const zhTW: Record<TranslationKey, string> = {
   "common.success": "成功",
   "common.warning": "警告",
   "common.info": "資訊",
+    "common.actions": "Actions",
   "common.applyToAll": "套用到全部",
   "common.applyToAllConfirm": "確定要將目前設定套用到所有圖片嗎？",
 

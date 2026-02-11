@@ -303,10 +303,10 @@ export function ImageCompressPage() {
                         </div>
                         {isDone ? (
                           <div class="flex items-center gap-2 flex-wrap">
-                            <span class="text-sm text-slate-500 dark:text-slate-400">
+                            <span class="text-sm text-slate-600 dark:text-slate-300">
                               {formatBytes(it.file.size)}
                             </span>
-                            <span class="text-slate-400 dark:text-slate-500">→</span>
+                            <span class="text-slate-600 dark:text-slate-300">→</span>
                             <span class="text-sm text-slate-600 dark:text-slate-300 font-medium">
                               {formatBytes(outputBytes)}
                             </span>
@@ -324,7 +324,7 @@ export function ImageCompressPage() {
                                 style={{ width: `${progress}%` }}
                               />
                             </div>
-                            <div class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+                            <div class="mt-1 text-xs text-slate-600 dark:text-slate-300">
                               {isProcessing
                                 ? t('imageCompress.compressing', { progress })
                                 : isError

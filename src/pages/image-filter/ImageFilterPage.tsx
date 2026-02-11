@@ -536,15 +536,6 @@ export function ImageFilterPage() {
       onPrimaryAction={onExport}
       onPrimaryActionAll={buildAllExports}
       primaryActionLabel={t('imageFilter.download')}
-      rightInfo={
-        info ? (
-          <div class="text-sm text-slate-500 dark:text-slate-400">
-            {t('imageFilter.originalSize', { width: info.width, height: info.height })}
-          </div>
-        ) : (
-          <div class="text-sm text-slate-500 dark:text-slate-400">{t('imageFilter.hint')}</div>
-        )
-      }
       info={canvasInfo}
       onFilesSelect={async (files) => {
         setError(null)
@@ -605,7 +596,7 @@ export function ImageFilterPage() {
           <div class="flex-1 overflow-y-auto">
             <div class="flex flex-col gap-3">
               <div class="flex flex-col gap-2">
-                <label class="text-sm font-medium text-slate-600 dark:text-slate-400">
+                <label class="text-sm font-medium text-slate-600 dark:text-slate-300">
                   {t('imageFilter.brightness')}（-100~100）
                 </label>
                 <input
@@ -623,7 +614,7 @@ export function ImageFilterPage() {
                 />
               </div>
               <div class="flex flex-col gap-2">
-                <label class="text-sm font-medium text-slate-600 dark:text-slate-400">
+                <label class="text-sm font-medium text-slate-600 dark:text-slate-300">
                   {t('imageFilter.contrast')}（-100~100）
                 </label>
                 <input
@@ -641,7 +632,7 @@ export function ImageFilterPage() {
                 />
               </div>
               <div class="flex flex-col gap-2">
-                <label class="text-sm font-medium text-slate-600 dark:text-slate-400">
+                <label class="text-sm font-medium text-slate-600 dark:text-slate-300">
                   {t('imageFilter.saturation')}（-100~100）
                 </label>
                 <input
@@ -659,7 +650,7 @@ export function ImageFilterPage() {
                 />
               </div>
               <div class="flex flex-col gap-2">
-                <label class="text-sm font-medium text-slate-600 dark:text-slate-400">
+                <label class="text-sm font-medium text-slate-600 dark:text-slate-300">
                   {t('imageFilter.sharpness')}（0~100）
                 </label>
                 <input
@@ -691,6 +682,7 @@ export function ImageFilterPage() {
     </ImageToolLayout>
   )
 }
+
 
 
 

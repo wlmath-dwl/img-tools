@@ -181,7 +181,7 @@ export function ProcessingOverlay({
               <button
                 type="button"
                 class={`h-11 px-6 rounded-xl font-semibold transition-colors ${status === 'processing'
-                  ? 'bg-slate-200 text-slate-500 dark:bg-white/20 dark:text-white/70 cursor-not-allowed'
+                  ? 'bg-slate-200 text-slate-600 dark:bg-white/20 dark:text-white/80 cursor-not-allowed'
                   : 'bg-slate-900 text-white hover:bg-slate-800 dark:bg-white dark:text-slate-950 dark:hover:bg-white/90'
                   }`}
                 disabled={status === 'processing'}

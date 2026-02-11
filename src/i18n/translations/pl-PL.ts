@@ -17,6 +17,7 @@ export const plPL: Record<TranslationKey, string> = {
   "common.success": "Sukces",
   "common.warning": "Ostrzeżenie",
   "common.info": "Informacja",
+    "common.actions": "Actions",
   "common.applyToAll": "Zastosuj do wszystkich",
   "common.applyToAllConfirm":
     "Zastosować bieżące ustawienia do wszystkich obrazów?",

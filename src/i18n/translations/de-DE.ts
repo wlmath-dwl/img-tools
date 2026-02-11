@@ -17,6 +17,7 @@ export const deDE: Record<TranslationKey, string> = {
   "common.success": "Erfolgreich",
   "common.warning": "Warnung",
   "common.info": "Information",
+    "common.actions": "Actions",
   "common.applyToAll": "Auf alle anwenden",
   "common.applyToAllConfirm":
     "Aktuelle Einstellungen auf alle Bilder anwenden?",

@@ -87,7 +87,7 @@
   }
 
   .brand-subtitle {
-    @apply mt-0.5 text-xs text-slate-500 dark:text-slate-400;
+    @apply mt-0.5 text-xs text-slate-600 dark:text-slate-300;
   }
 
   .nav {
@@ -111,7 +111,7 @@
   }
 
   .muted {
-    @apply text-slate-500 dark:text-slate-400 text-xs;
+    @apply text-slate-600 dark:text-slate-300 text-xs;
   }
 
   .error {

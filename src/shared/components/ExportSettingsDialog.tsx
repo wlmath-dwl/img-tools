@@ -221,7 +221,7 @@ export function ExportSettingsDialog({
           <div class="flex flex-col gap-4">
         {showFormat ? (
           <div class="flex flex-col gap-2">
-            <div class="text-xs font-semibold tracking-wide text-slate-500 dark:text-slate-400">
+            <div class="text-xs font-semibold tracking-wide text-slate-600 dark:text-slate-300">
               格式
             </div>
             <div class="flex flex-wrap gap-2">
@@ -244,7 +244,7 @@ export function ExportSettingsDialog({
                 )
               })}
             </div>
-            <div class="text-xs text-slate-500 dark:text-slate-400">
+            <div class="text-xs text-slate-600 dark:text-slate-300">
               预计体积：{estimatedSize}
             </div>
           </div>
@@ -259,11 +259,11 @@ export function ExportSettingsDialog({
 
         {showQuality ? (
           <div class="flex flex-col gap-2">
-            <div class="text-xs font-semibold tracking-wide text-slate-500 dark:text-slate-400">
+            <div class="text-xs font-semibold tracking-wide text-slate-600 dark:text-slate-300">
               质量
             </div>
             <div class="flex flex-col gap-2">
-              <div class="text-sm font-medium text-slate-600 dark:text-slate-400">
+              <div class="text-sm font-medium text-slate-600 dark:text-slate-300">
                 质量（{quality}%）
               </div>
               <input
@@ -280,7 +280,7 @@ export function ExportSettingsDialog({
               />
             </div>
             {resolvedFormat === 'image/png' ? (
-              <div class="text-xs text-slate-500 dark:text-slate-400">PNG 使用无损输出</div>
+              <div class="text-xs text-slate-600 dark:text-slate-300">PNG 使用无损输出</div>
             ) : null}
           </div>
         ) : typeof fixedQuality === 'number' ? (
@@ -305,13 +305,13 @@ export function ExportSettingsDialog({
               onClick={() => setIsSizeOpen((v) => !v)}
             >
               <span>尺寸（可选）</span>
-              <span class="text-xs text-slate-500 dark:text-slate-400">{isSizeOpen ? '▲' : '▼'}</span>
+              <span class="text-xs text-slate-600 dark:text-slate-300">{isSizeOpen ? '▲' : '▼'}</span>
             </button>
             {isSizeOpen && (
               <div class="flex flex-col gap-3 rounded-xl border border-slate-200 dark:border-slate-700 p-3">
                 <div class="grid grid-cols-2 gap-3">
                   <div class="flex flex-col gap-1">
-                    <label class="text-xs text-slate-500 dark:text-slate-400">宽度</label>
+                    <label class="text-xs text-slate-600 dark:text-slate-300">宽度</label>
                     <input
                       type="number"
                       min={1}
@@ -332,7 +332,7 @@ export function ExportSettingsDialog({
                     />
                   </div>
                   <div class="flex flex-col gap-1">
-                    <label class="text-xs text-slate-500 dark:text-slate-400">高度</label>
+                    <label class="text-xs text-slate-600 dark:text-slate-300">高度</label>
                     <input
                       type="number"
                       min={1}
@@ -366,7 +366,7 @@ export function ExportSettingsDialog({
                 </label>
               </div>
             )}
-            <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+            <div class="flex items-center justify-between text-xs text-slate-600 dark:text-slate-300">
               <span>输出尺寸</span>
               <span>{sizeText}</span>
             </div>
@@ -381,7 +381,7 @@ export function ExportSettingsDialog({
               onClick={() => setIsAdvancedOpen((v) => !v)}
             >
               <span>高级设置</span>
-              <span class="text-xs text-slate-500 dark:text-slate-400">{isAdvancedOpen ? '▲' : '▼'}</span>
+              <span class="text-xs text-slate-600 dark:text-slate-300">{isAdvancedOpen ? '▲' : '▼'}</span>
             </button>
             {isAdvancedOpen ? (
               <div class="flex flex-col gap-2 rounded-xl border border-slate-200 dark:border-slate-700 p-3">

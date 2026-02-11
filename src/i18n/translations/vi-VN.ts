@@ -17,6 +17,7 @@ export const viVN: Record<TranslationKey, string> = {
   "common.success": "Thành công",
   "common.warning": "Cảnh báo",
   "common.info": "Thông tin",
+    "common.actions": "Actions",
   "common.applyToAll": "Áp dụng cho tất cả",
   "common.applyToAllConfirm": "Áp dụng cài đặt hiện tại cho tất cả ảnh?",
 

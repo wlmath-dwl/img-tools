@@ -17,6 +17,7 @@ export const esMX: Record<TranslationKey, string> = {
   "common.success": "Éxito",
   "common.warning": "Advertencia",
   "common.info": "Información",
+    "common.actions": "Actions",
   "common.applyToAll": "Aplicar a todos",
   "common.applyToAllConfirm":
     "¿Aplicar la configuración actual a todas las imágenes?",

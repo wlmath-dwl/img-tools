@@ -539,6 +539,7 @@ export function ImageToolLayout({
           accept={acceptedTypes}
           multiple
           class="hidden"
+          aria-label={t("layout.addImages")}
           onChange={(e) => {
             const input = e.currentTarget;
             const files = Array.from(input.files || []);
@@ -704,7 +705,7 @@ export function ImageToolLayout({
                 </div>
                 <button
                   type="button"
-                  class="text-sm text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100"
+                  class="text-sm text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100"
                   onClick={() => setIsDrawerOpen(false)}
                 >
                   {t("common.close")}
@@ -893,6 +894,7 @@ export function ImageToolLayout({
     </div>
   );
 }
+
 
 
 

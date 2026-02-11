@@ -17,6 +17,7 @@ export const itIT: Record<TranslationKey, string> = {
   "common.success": "Operazione completata",
   "common.warning": "Avviso",
   "common.info": "Informazione",
+    "common.actions": "Actions",
   "common.applyToAll": "Applica a tutti",
   "common.applyToAllConfirm":
     "Applica le impostazioni correnti a tutte le immagini?",

@@ -17,6 +17,7 @@ export const ptBR: Record<TranslationKey, string> = {
   "common.success": "Sucesso",
   "common.warning": "Aviso",
   "common.info": "Informação",
+    "common.actions": "Actions",
   "common.applyToAll": "Aplicar a todos",
   "common.applyToAllConfirm":
     "Aplicar as configurações atuais a todas as imagens?",

@@ -17,6 +17,7 @@ export const idID: Record<TranslationKey, string> = {
   "common.success": "Berhasil",
   "common.warning": "Peringatan",
   "common.info": "Informasi",
+    "common.actions": "Actions",
   "common.applyToAll": "Terapkan ke semua",
   "common.applyToAllConfirm": "Terapkan pengaturan saat ini ke semua gambar?",
 
