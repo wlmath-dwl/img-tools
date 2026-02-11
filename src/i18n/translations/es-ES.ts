@@ -53,6 +53,9 @@ export const esES: Record<TranslationKey, string> = {
   "home.usp.privacy.title": "Privacidad",
   "home.usp.privacy.desc":
     "Procesamiento completamente local, los archivos nunca se suben a servidores - tus datos permanecen bajo tu control",
+  "home.usp.fast.title": "Respuesta ultrarrápida",
+  "home.usp.fast.desc":
+    "Sin subidas ni descargas, procesamiento instantáneo",
   "home.usp.global.title": "Soporte global",
   "home.usp.global.desc":
     "Más de 10 idiomas compatibles, modo claro/oscuro compatible - experiencia fluida para usuarios de todo el mundo",

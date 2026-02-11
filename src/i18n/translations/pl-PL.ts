@@ -59,6 +59,9 @@ export const plPL: Record<TranslationKey, string> = {
   "home.usp.free.title": "100% darmowe",
   "home.usp.free.desc":
     "Bez znaków wodnych, bez limitów rozmiaru, bez rejestracji",
+  "home.usp.global.title": "Wsparcie globalne",
+  "home.usp.global.desc":
+    "Obsługuje ponad 10 języków i tryb jasny/ciemny, zapewniając płynne działanie dla użytkowników na całym świecie.",
 
   "home.tool.crop.desc":
     "Stałe stosunki 16:9, 4:3, 1:1, kadrowanie kołowe i kontrola pikseli, synchronizacja na wszystkich obrazach jednym kliknięciem",

@@ -35,14 +35,14 @@ function detectLocaleFromPathname(): Locale | null {
 
 export function I18nProvider({ children, locale: initialLocale }: I18nProviderProps) {
   // 1) SSR 传入 locale（保证预渲染正确）
-  // 2) 客户端优先读 HTML/body 上的 lang/data-locale（保证 hydration 不闪）
-  // 3) 再读路径（/en/ 目录）
+  // 2) 客户端优先读路径（/en/、/de-DE/），确保路由语言优先
+  // 3) 再读 HTML/body 上的 lang/data-locale（hydration 兜底）
   // 4) 最后读 localStorage/浏览器语言
   const initial = useMemo<Locale>(() => {
     return (
       initialLocale ||
-      detectLocaleFromDocument() ||
       detectLocaleFromPathname() ||
+      detectLocaleFromDocument() ||
       getLocale()
     )
   }, [initialLocale])

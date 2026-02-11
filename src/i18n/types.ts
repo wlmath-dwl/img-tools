@@ -242,6 +242,8 @@ export type TranslationKey =
     | "home.usp.privacy.desc"
     | "home.usp.fast.title"
     | "home.usp.fast.desc"
+    | "home.usp.global.title"
+    | "home.usp.global.desc"
     | "home.usp.free.title"
     | "home.usp.free.desc"
     | "home.tool.crop.desc"

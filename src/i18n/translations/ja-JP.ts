@@ -48,6 +48,9 @@ export const jaJP: Record<TranslationKey, string> = {
   "home.usp.privacy.title": "プライバシー保護",
   "home.usp.privacy.desc":
     "すべての処理はローカル実行、ファイルはサーバーにアップロードされず、データは完全にあなたがコントロール",
+  "home.usp.fast.title": "超高速処理",
+  "home.usp.fast.desc":
+    "アップロード/ダウンロード不要で、処理はほぼ瞬時に完了",
   "home.usp.global.title": "多言語対応",
   "home.usp.global.desc":
     "10以上の言語をサポート、ライト/ダークモード対応 - 世界中のユーザーがスムーズに利用可能",

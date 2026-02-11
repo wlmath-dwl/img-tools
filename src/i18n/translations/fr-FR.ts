@@ -58,6 +58,9 @@ export const frFR: Record<TranslationKey, string> = {
   "home.usp.free.title": "100% gratuit",
   "home.usp.free.desc":
     "Pas de filigrane, pas de limite de taille, pas d’inscription",
+  "home.usp.global.title": "Support global",
+  "home.usp.global.desc":
+    "Prend en charge plus de 10 langues et les thèmes clair/sombre, pour une expérience fluide partout.",
 
   "home.tool.crop.desc":
     "Ratios fixes 16:9, 4:3, 1:1, recadrage circulaire & contrôle pixel, synchronisation sur toutes les images en un clic",

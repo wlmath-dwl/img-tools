@@ -59,6 +59,9 @@ export const itIT: Record<TranslationKey, string> = {
   "home.usp.free.title": "100% gratuito",
   "home.usp.free.desc":
     "Nessuna filigrana, nessun limite di dimensione, nessuna registrazione",
+  "home.usp.global.title": "Supporto globale",
+  "home.usp.global.desc":
+    "Supporta oltre 10 lingue e il tema chiaro/scuro, per un'esperienza fluida per utenti di tutto il mondo.",
 
   "home.tool.crop.desc":
     "Rapporti fissi 16:9, 4:3, 1:1, ritaglio circolare e controllo pixel, sincronizzazione su tutte le immagini con un clic",

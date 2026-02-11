@@ -50,6 +50,8 @@ export const zhTW: Record<TranslationKey, string> = {
 
   "home.usp.privacy.title": "安全隱私",
   "home.usp.privacy.desc": "全程本地處理，檔案永不上傳伺服器，你的資料完全由你掌控",
+  "home.usp.fast.title": "極速回應",
+  "home.usp.fast.desc": "無需上傳下載，處理幾乎即時完成",
   "home.usp.global.title": "多語言適配",
   "home.usp.global.desc": "支援 10+ 種語言，適配明暗模式，全球用戶都能流暢使用",
   "home.usp.free.title": "完全免費",

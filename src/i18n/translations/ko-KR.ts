@@ -52,6 +52,8 @@ export const koKR: Record<TranslationKey, string> = {
   "home.usp.privacy.title": "개인정보 보호",
   "home.usp.privacy.desc":
     "전처리 로컬에서 완료, 파일은 서버에 절대 업로드되지 않음 - 데이터가 완전히 당신의 통제 하에 있습니다",
+  "home.usp.fast.title": "초고속 처리",
+  "home.usp.fast.desc": "업로드/다운로드 없이 즉시 처리됩니다",
   "home.usp.global.title": "글로벌 지원",
   "home.usp.global.desc":
     "10개 이상 언어 지원, 라이트/다크 모드 호환 - 전 세계 사용자를 위한 원활한 경험",

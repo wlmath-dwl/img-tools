@@ -58,6 +58,9 @@ export const nlNL: Record<TranslationKey, string> = {
   "home.usp.free.title": "100% gratis",
   "home.usp.free.desc":
     "Geen watermerken, geen groottelimiet, geen registratie",
+  "home.usp.global.title": "Wereldwijde ondersteuning",
+  "home.usp.global.desc":
+    "Ondersteunt meer dan 10 talen en licht/donker thema, voor een soepele ervaring wereldwijd.",
 
   "home.tool.crop.desc":
     "Vaste verhoudingen 16:9, 4:3, 1:1, ronde uitsnede en pixelcontrole, synchronisatie op alle afbeeldingen met één klik",

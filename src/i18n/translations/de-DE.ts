@@ -53,6 +53,9 @@ export const deDE: Record<TranslationKey, string> = {
   "home.usp.privacy.title": "Datenschutz",
   "home.usp.privacy.desc":
     "Vollständig lokale Verarbeitung, Dateien werden nie auf Server hochgeladen - Ihre Daten bleiben unter Ihrer Kontrolle",
+  "home.usp.fast.title": "Blitzschnell",
+  "home.usp.fast.desc":
+    "Kein Upload/Download erforderlich, Verarbeitung in Sekundenschnelle",
   "home.usp.global.title": "Globale Unterstützung",
   "home.usp.global.desc":
     "Über 10 Sprachen unterstützt, Hell/Dunkel-Modus kompatibel - nahtlose Erfahrung für Benutzer weltweit",

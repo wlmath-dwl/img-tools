@@ -57,6 +57,9 @@ export const trTR: Record<TranslationKey, string> = {
   "home.usp.fast.desc": "Yükleme/indirme yok, anında işlem",
   "home.usp.free.title": "%100 ücretsiz",
   "home.usp.free.desc": "Filigran yok, boyut sınırı yok, kayıt gerekmiyor",
+  "home.usp.global.title": "Küresel destek",
+  "home.usp.global.desc":
+    "10+ dili ve açık/koyu temayı destekler, dünya çapında kullanıcılar için akıcı deneyim sunar.",
 
   "home.tool.crop.desc":
     "Sabit oranlar 16:9, 4:3, 1:1, dairesel kırpma ve piksel kontrolü, tek tıkla tüm resimlere senkronize et",

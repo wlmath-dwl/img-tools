@@ -52,6 +52,8 @@ export const enUS: Record<TranslationKey, string> = {
   "home.usp.privacy.title": "Privacy First",
   "home.usp.privacy.desc":
     "All processing done locally, files never uploaded - your data stays in your control",
+  "home.usp.fast.title": "Lightning Fast",
+  "home.usp.fast.desc": "No upload/download, processing done instantly",
   "home.usp.global.title": "Global Support",
   "home.usp.global.desc":
     "10+ languages supported, light/dark mode compatible - seamless experience for worldwide users",

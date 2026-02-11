@@ -57,6 +57,9 @@ export const viVN: Record<TranslationKey, string> = {
   "home.usp.free.title": "100% miễn phí",
   "home.usp.free.desc":
     "Không watermark, không giới hạn kích thước, không cần đăng ký",
+  "home.usp.global.title": "Hỗ trợ toàn cầu",
+  "home.usp.global.desc":
+    "Hỗ trợ hơn 10 ngôn ngữ và chế độ sáng/tối, mang lại trải nghiệm mượt mà cho người dùng toàn cầu.",
 
   "home.tool.crop.desc":
     "Tỷ lệ cố định 16:9, 4:3, 1:1, cắt tròn và điều chỉnh theo pixel, đồng bộ tất cả ảnh chỉ với một cú nhấp",

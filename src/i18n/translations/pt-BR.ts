@@ -58,6 +58,9 @@ export const ptBR: Record<TranslationKey, string> = {
   "home.usp.free.title": "100% gratuito",
   "home.usp.free.desc":
     "Sem marcas d’água, sem limites de tamanho, sem cadastro",
+  "home.usp.global.title": "Suporte global",
+  "home.usp.global.desc":
+    "Suporta mais de 10 idiomas e tema claro/escuro, oferecendo experiência fluida para usuários no mundo todo.",
 
   "home.tool.crop.desc":
     "Proporções predefinidas 16:9, 4:3, 1:1, corte circular e controle por pixel, sincronize em todas as imagens com um clique",

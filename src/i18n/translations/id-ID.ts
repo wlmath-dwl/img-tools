@@ -56,6 +56,9 @@ export const idID: Record<TranslationKey, string> = {
   "home.usp.fast.desc": "Tanpa unggah/unduh, proses instan",
   "home.usp.free.title": "100% gratis",
   "home.usp.free.desc": "Tanpa watermark, tanpa batas ukuran, tanpa registrasi",
+  "home.usp.global.title": "Dukungan global",
+  "home.usp.global.desc":
+    "Mendukung 10+ bahasa dan mode terang/gelap, nyaman digunakan oleh pengguna di seluruh dunia.",
 
   "home.tool.crop.desc":
     "Rasio tetap 16:9, 4:3, 1:1, potong lingkaran & kontrol per piksel, sinkronkan semua gambar dengan satu klik",

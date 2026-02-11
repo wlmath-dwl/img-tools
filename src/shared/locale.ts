@@ -30,8 +30,3 @@ export function setLocale(locale: Locale) {
   document.body?.setAttribute('data-locale', locale)
 }
 
-// 初始化语言
-if (typeof window !== 'undefined') {
-  const locale = getLocale()
-  setLocale(locale)
-}

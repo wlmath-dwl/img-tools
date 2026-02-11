@@ -58,6 +58,9 @@ export const esMX: Record<TranslationKey, string> = {
   "home.usp.free.title": "100% gratuito",
   "home.usp.free.desc":
     "Sin marcas de agua, sin límites de tamaño, sin registro",
+  "home.usp.global.title": "Soporte global",
+  "home.usp.global.desc":
+    "Compatible con más de 10 idiomas y tema claro/oscuro, para una experiencia fluida para usuarios de todo el mundo.",
 
   "home.tool.crop.desc":
     "Proporciones predefinidas 16:9, 4:3, 1:1, recorte circular y control por píxel, sincroniza en todas las imágenes con un clic",
