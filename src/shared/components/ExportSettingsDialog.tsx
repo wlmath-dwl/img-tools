@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'preact/hooks'
+import { PremiumSlider } from './PremiumSlider'
 
 export type OutputType = 'image/png' | 'image/jpeg' | 'image/webp'
 
@@ -262,23 +263,15 @@ export function ExportSettingsDialog({
             <div class="text-xs font-semibold tracking-wide text-slate-600 dark:text-slate-300">
               质量
             </div>
-            <div class="flex flex-col gap-2">
-              <div class="text-sm font-medium text-slate-600 dark:text-slate-300">
-                质量（{quality}%）
-              </div>
-              <input
-                type="range"
-                class="range range-primary w-full"
-                value={quality}
-                min={10}
-                max={100}
-                step={1}
-                disabled={resolvedFormat === 'image/png'}
-                onInput={(e) =>
-                  setQuality(Number((e.currentTarget as HTMLInputElement).value))
-                }
-              />
-            </div>
+            <PremiumSlider
+              label={`质量（${quality}%）`}
+              value={quality}
+              min={10}
+              max={100}
+              step={1}
+              disabled={resolvedFormat === 'image/png'}
+              onInput={setQuality}
+            />
             {resolvedFormat === 'image/png' ? (
               <div class="text-xs text-slate-600 dark:text-slate-300">PNG 使用无损输出</div>
             ) : null}
@@ -434,3 +427,5 @@ export function ExportSettingsDialog({
     </dialog>
   )
 }
+
+

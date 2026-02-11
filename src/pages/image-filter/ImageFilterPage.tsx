@@ -3,6 +3,7 @@ import { useI18n } from '../../i18n/context'
 import { canvasToBlob, revokeImageInfo, type ImageInfo } from '../../shared/image'
 import { ImageToolLayout } from '../../shared/components/ImageToolLayout'
 import { type OutputType } from '../../shared/components/ExportSettingsDialog'
+import { PremiumSlider } from '../../shared/components/PremiumSlider'
 
 // 获取默认导出设置（从 localStorage 读取或使用默认值）
 function getDefaultExportSettings() {
@@ -595,78 +596,42 @@ export function ImageFilterPage() {
           </div>
           <div class="flex-1 overflow-y-auto">
             <div class="flex flex-col gap-3">
-              <div class="flex flex-col gap-2">
-                <label class="text-sm font-medium text-slate-600 dark:text-slate-300">
-                  {t('imageFilter.brightness')}（-100~100）
-                </label>
-                <input
-                  type="range"
-                  class="range range-primary w-full"
-                  value={params.brightness}
-                  min={-100}
-                  max={100}
-                  step={1}
-                  onInput={(e) =>
-                    updateParams({
-                      brightness: Number((e.currentTarget as HTMLInputElement).value),
-                    })
-                  }
-                />
-              </div>
-              <div class="flex flex-col gap-2">
-                <label class="text-sm font-medium text-slate-600 dark:text-slate-300">
-                  {t('imageFilter.contrast')}（-100~100）
-                </label>
-                <input
-                  type="range"
-                  class="range range-primary w-full"
-                  value={params.contrast}
-                  min={-100}
-                  max={100}
-                  step={1}
-                  onInput={(e) =>
-                    updateParams({
-                      contrast: Number((e.currentTarget as HTMLInputElement).value),
-                    })
-                  }
-                />
-              </div>
-              <div class="flex flex-col gap-2">
-                <label class="text-sm font-medium text-slate-600 dark:text-slate-300">
-                  {t('imageFilter.saturation')}（-100~100）
-                </label>
-                <input
-                  type="range"
-                  class="range range-primary w-full"
-                  value={params.saturation}
-                  min={-100}
-                  max={100}
-                  step={1}
-                  onInput={(e) =>
-                    updateParams({
-                      saturation: Number((e.currentTarget as HTMLInputElement).value),
-                    })
-                  }
-                />
-              </div>
-              <div class="flex flex-col gap-2">
-                <label class="text-sm font-medium text-slate-600 dark:text-slate-300">
-                  {t('imageFilter.sharpness')}（0~100）
-                </label>
-                <input
-                  type="range"
-                  class="range range-primary w-full"
-                  value={params.sharpness}
-                  min={0}
-                  max={100}
-                  step={1}
-                  onInput={(e) =>
-                    updateParams({
-                      sharpness: Number((e.currentTarget as HTMLInputElement).value),
-                    })
-                  }
-                />
-              </div>
+              <PremiumSlider
+                label={`${t('imageFilter.brightness')}（-100~100）`}
+                value={params.brightness}
+                min={-100}
+                max={100}
+                step={1}
+                showValue
+                onInput={(value) => updateParams({ brightness: value })}
+              />
+              <PremiumSlider
+                label={`${t('imageFilter.contrast')}（-100~100）`}
+                value={params.contrast}
+                min={-100}
+                max={100}
+                step={1}
+                showValue
+                onInput={(value) => updateParams({ contrast: value })}
+              />
+              <PremiumSlider
+                label={`${t('imageFilter.saturation')}（-100~100）`}
+                value={params.saturation}
+                min={-100}
+                max={100}
+                step={1}
+                showValue
+                onInput={(value) => updateParams({ saturation: value })}
+              />
+              <PremiumSlider
+                label={`${t('imageFilter.sharpness')}（0~100）`}
+                value={params.sharpness}
+                min={0}
+                max={100}
+                step={1}
+                showValue
+                onInput={(value) => updateParams({ sharpness: value })}
+              />
             </div>
           </div>
 
@@ -682,6 +647,8 @@ export function ImageFilterPage() {
     </ImageToolLayout>
   )
 }
+
+
 
 
 
