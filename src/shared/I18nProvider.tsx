@@ -2,15 +2,34 @@ import { type ComponentChildren } from "preact";
 import { useEffect, useMemo, useState } from "preact/hooks";
 import { I18nContext } from "../i18n/context";
 import { getLocale, setLocale } from "./locale";
-import { t as translate } from "../i18n/translations";
 import { locales, type Locale } from "../i18n/locales";
 import type { TranslationKey } from "../i18n/types";
 import { getLocaleFromPathname } from "./locale-path";
+import {
+  loadLocaleMessages,
+  type TranslationMessages,
+} from "../i18n/translations/runtime";
 
 type I18nProviderProps = {
   children: ComponentChildren;
   locale?: Locale;
+  messages?: TranslationMessages;
+  fallbackMessages?: TranslationMessages;
 };
+
+function translate(
+  messages: TranslationMessages,
+  fallbackMessages: TranslationMessages,
+  key: TranslationKey,
+  params?: Record<string, string | number>,
+): string {
+  const text = messages[key] ?? fallbackMessages[key] ?? key;
+
+  if (!params) return text;
+  return text.replace(/\{(\w+)\}/g, (_: string, paramKey: string) => {
+    return String(params[paramKey] || `{${paramKey}}`);
+  });
+}
 
 function normalizeLocale(v: string | null | undefined): Locale | null {
   if (!v) return null;
@@ -36,6 +55,8 @@ function detectLocaleFromPathname(): Locale | null {
 export function I18nProvider({
   children,
   locale: initialLocale,
+  messages: initialMessages,
+  fallbackMessages: initialFallbackMessages,
 }: I18nProviderProps) {
   // 1) SSR 传入 locale（保证预渲染正确）
   // 2) 客户端优先读路径（/en/、/de-DE/），确保路由语言优先
@@ -51,11 +72,45 @@ export function I18nProvider({
   }, [initialLocale]);
 
   const [locale, setLocaleState] = useState<Locale>(initial);
+  const [loadedLocale, setLoadedLocale] = useState<Locale | null>(
+    initialMessages ? initial : null,
+  );
+  const [messages, setMessages] = useState<TranslationMessages>(
+    initialMessages || {},
+  );
+  const [fallbackMessages, setFallbackMessages] = useState<TranslationMessages>(
+    initialFallbackMessages || initialMessages || {},
+  );
 
   useEffect(() => {
     // locale 变化时同步到 localStorage + <html lang>
     setLocale(locale);
   }, [locale]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function syncMessages(nextLocale: Locale) {
+      const nextMessages = await loadLocaleMessages(nextLocale);
+      const nextFallbackMessages =
+        nextLocale === "zh-CN"
+          ? nextMessages
+          : await loadLocaleMessages("zh-CN");
+
+      if (cancelled) return;
+      setMessages(nextMessages);
+      setFallbackMessages(nextFallbackMessages);
+      setLoadedLocale(nextLocale);
+    }
+
+    if (loadedLocale !== locale) {
+      void syncMessages(locale);
+    }
+
+    return () => {
+      cancelled = true;
+    };
+  }, [locale, loadedLocale]);
 
   // 使用 useMemo 确保 value 对象在 locale 变化时才更新
   const value = useMemo(
@@ -63,9 +118,9 @@ export function I18nProvider({
       locale,
       setLocale: setLocaleState,
       t: (key: TranslationKey, params?: Record<string, string | number>) =>
-        translate(locale, key, params),
+        translate(messages, fallbackMessages, key, params),
     }),
-    [locale],
+    [locale, messages, fallbackMessages],
   );
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;

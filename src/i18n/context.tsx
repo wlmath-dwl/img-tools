@@ -2,7 +2,6 @@ import { createContext } from "preact";
 import { useContext } from "preact/hooks";
 import type { Locale } from "./locales";
 import type { TranslationKey } from "./types";
-import { t as translate } from "./translations";
 
 type I18nContextValue = {
   locale: Locale;
@@ -13,7 +12,13 @@ type I18nContextValue = {
 export const I18nContext = createContext<I18nContextValue>({
   locale: "zh-CN",
   setLocale: () => {},
-  t: (key, params) => translate("zh-CN", key, params),
+  t: (key, params) => {
+    const text = key;
+    if (!params) return text;
+    return text.replace(/\{(\w+)\}/g, (_: string, paramKey: string) => {
+      return String(params[paramKey] || `{${paramKey}}`);
+    });
+  },
 });
 
 export function useI18n() {

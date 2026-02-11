@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url'
 import { createServer } from 'vite'
 import { locales } from '../src/i18n/locales'
 import type { Locale } from '../src/i18n/locales'
-import { t as translate } from '../src/i18n/translations'
+import { t as translate, translations } from '../src/i18n/translations'
 import { getLocaleDir } from '../src/shared/locale-path'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -330,7 +330,11 @@ async function prerender() {
 
           // 预渲染组件为 HTML 字符串（传入 locale）
           const appHtml = render(
-            h(I18nProvider, { locale: locale as Locale },
+            h(I18nProvider, {
+              locale: locale as Locale,
+              messages: translations[locale as Locale],
+              fallbackMessages: translations['zh-CN'],
+            },
               h(Component, {})
             )
           )
