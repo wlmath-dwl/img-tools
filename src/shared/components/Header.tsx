@@ -6,27 +6,26 @@ import { setLocale } from "../locale";
 import { buildLocalizedRelativePath } from "../locale-path";
 import { DarkModeIcon, LightModeIcon, GlobeIcon } from "../icons";
 
+function resolveTheme(theme: Theme): "light" | "dark" {
+  if (theme === "auto") {
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  }
+  return theme;
+}
+
 export function Header() {
   const { locale, setLocale: setLocaleContext } = useI18n();
-  const [theme, setThemeState] = useState<Theme>(getTheme());
+  const [theme, setThemeState] = useState<"light" | "dark">(() =>
+    resolveTheme(getTheme()),
+  );
   const [isLangOpen, setIsLangOpen] = useState(false);
   const langRootRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     applyTheme(theme);
   }, [theme]);
-
-  // 确保主题只可能是 light 或 dark（移除 auto）
-  useEffect(() => {
-    if (theme === "auto") {
-      const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)",
-      ).matches;
-      const actualTheme = prefersDark ? "dark" : "light";
-      setThemeState(actualTheme);
-      setTheme(actualTheme);
-    }
-  }, []);
 
   function handleThemeToggle() {
     const newTheme = theme === "light" ? "dark" : "light";
@@ -49,9 +48,6 @@ export function Header() {
       window.location.href = buildLocalizedRelativePath(path, newLocale);
     }
   }
-
-  // 确保主题是 light 或 dark
-  const currentTheme = theme === "auto" ? "light" : theme;
 
   // 语言下拉：点击外部关闭（避免只靠 focus-within 导致“点不了/点不到”）
   useEffect(() => {
@@ -82,7 +78,7 @@ export function Header() {
           height="40"
           viewBox="0 0 180 40"
           xmlns="http://www.w3.org/2000/svg"
-          class={`${currentTheme === 'dark' ? 'hidden' : 'block'}`}
+          class="block dark:hidden"
         >
           <text y="28" font-family="system-ui, sans-serif" font-size="24" letter-spacing="-0.5">
             <tspan font-weight="800" fill="#111111">Img</tspan>
@@ -97,7 +93,7 @@ export function Header() {
           height="40"
           viewBox="0 0 180 40"
           xmlns="http://www.w3.org/2000/svg"
-          class={`${currentTheme === 'light' ? 'hidden' : 'block'}`}
+          class="hidden dark:block"
         >
           <text y="28" font-family="system-ui, sans-serif" font-size="24" letter-spacing="-0.5">
             <tspan font-weight="800" fill="#ffffff">Img</tspan>
@@ -140,16 +136,17 @@ export function Header() {
           class="p-2 hover:opacity-80 transition-opacity"
           onClick={handleThemeToggle}
           aria-label={
-            currentTheme === "light" ? "切换到深色模式" : "切换到浅色模式"
+            theme === "light" ? "切换到深色模式" : "切换到浅色模式"
           }
-          title={currentTheme === "light" ? "切换到深色模式" : "切换到浅色模式"}
+          title={theme === "light" ? "切换到深色模式" : "切换到浅色模式"}
         >
-          {/* 图标显示“将要切换到的模式”，与 title/aria 文案保持一致 */}
-          {currentTheme === "light" ? (
+          {/* 图标展示跟随当前主题，优先用 CSS dark 类消除刷新错位 */}
+          <span class="inline dark:hidden">
             <LightModeIcon size={24} color="#d97706" />
-          ) : (
+          </span>
+          <span class="hidden dark:inline">
             <DarkModeIcon size={24} color="#fde68a" />
-          )}
+          </span>
         </button>
       </div>
     </header>
