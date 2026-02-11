@@ -8,7 +8,6 @@ function normalizeLocaleSegment(segment: string): Locale | null {
 }
 
 export function getLocaleDir(locale: Locale): string {
-  if (locale === 'zh-CN') return ''
   if (locale === 'en-US') return 'en'
   return locale
 }
@@ -27,7 +26,7 @@ export function buildLocalizedRelativePath(pathname: string, targetLocale: Local
   const isToolPage = segments.includes('pages')
   const file = pathname.endsWith('/') ? 'index.html' : (segments[segments.length - 1] || 'index.html')
   const currentLocale = getLocaleFromPathname(pathname)
-  const hasLocaleDir = !!currentLocale && currentLocale !== 'zh-CN'
+  const hasLocaleDir = !!currentLocale
   const depth = isToolPage ? (hasLocaleDir ? 2 : 1) : (hasLocaleDir ? 1 : 0)
   const toRoot = depth === 0 ? './' : '../'.repeat(depth)
   const targetDir = getLocaleDir(targetLocale)

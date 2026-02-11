@@ -33,7 +33,7 @@ document.cookie = `locale=de-DE; Path=/; Max-Age=${60 * 60 * 24 * 30}; SameSite=
 
 ## 国家与语言对应
 
-- **简中**：CN → 根路径 `/`
+- **简中**：CN → `/zh-CN/`
 - **繁中**：TW, HK, MO → `/zh-TW/`
 - **英文**：US, GB, CA, AU, NZ 等 → `/en/`
 - **日韩**：JP → `/ja-JP/`，KR → `/ko-KR/`

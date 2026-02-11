@@ -8,7 +8,7 @@
  * 规则：
  * - 仅处理 "/" 和 "/index.html"
  * - 按 cf.country 映射到对应语言子目录，找不到则默认 /en/
- * - zh-CN 使用根路径 /
+ * - 所有语言均使用目录路径（例如 /zh-CN/）
  * - Bot 不重定向，SEO 爬虫正常抓取
  * - 优先 cookie.locale（用户手动切换语言时写入）
  */
@@ -107,7 +107,6 @@ const COUNTRY_TO_LOCALE = {
 };
 
 function localeToDir(locale) {
-  if (locale === "zh-CN") return "";
   if (locale === "en-US") return "en";
   return locale;
 }

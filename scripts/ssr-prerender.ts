@@ -297,7 +297,7 @@ async function prerender() {
       baseHtmlByPage.set(page.htmlPath, readFileSync(zhPath, 'utf-8'))
     }
 
-    // 为每种语言预渲染（zh-CN 根目录，其它语言使用独立目录）
+    // 为每种语言预渲染（所有语言都使用独立目录）
     const prerenderLocales = locales
 
     for (const locale of prerenderLocales) {
@@ -308,12 +308,9 @@ async function prerender() {
           const baseHtml = baseHtmlByPage.get(page.htmlPath)
           if (!baseHtml) continue
 
-          // 输出路径：中文在根目录，其它语言在 dist/<localeDir>/ 下
+          // 输出路径：所有语言都在 dist/<localeDir>/ 下
           const localeDir = getLocaleDir(locale)
-          const outPath =
-            locale === 'zh-CN'
-              ? resolve(distDir, page.htmlPath)
-              : resolve(distDir, `${localeDir}/${page.htmlPath}`)
+          const outPath = resolve(distDir, `${localeDir}/${page.htmlPath}`)
 
           ensureDir(dirname(outPath))
 
@@ -340,10 +337,7 @@ async function prerender() {
 
           // 选择正确的 HTML 模板（en 需要调整 lang + 资源路径 + SEO 元数据）
           const depth: 'root' | 'pages' = page.htmlPath === 'index.html' ? 'root' : 'pages'
-          const htmlTemplate =
-            locale === 'zh-CN'
-              ? baseHtml
-              : toLocalizedHtmlFromZhHtml(baseHtml, depth, page.htmlPath, locale)
+          const htmlTemplate = toLocalizedHtmlFromZhHtml(baseHtml, depth, page.htmlPath, locale)
 
           // 将预渲染的 HTML 注入到 <div id="app"></div> 中（模板应为空容器）
           const updatedHtml =
@@ -352,9 +346,7 @@ async function prerender() {
               : htmlTemplate.replace(/<div id="app">\s*<\/div>/, `<div id="app">${appHtml}</div>`)
 
           writeFileSync(outPath, updatedHtml, 'utf-8')
-          const displayPath = locale === 'zh-CN' 
-            ? page.htmlPath 
-            : `${localeDir}/${page.htmlPath}`
+          const displayPath = `${localeDir}/${page.htmlPath}`
           console.log(`✅ 已预渲染: ${displayPath}`)
         } catch (error) {
           console.error(`❌ 预渲染失败 ${page.htmlPath} (${locale}):`, error)
