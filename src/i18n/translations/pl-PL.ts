@@ -10,6 +10,7 @@ export const plPL: Record<TranslationKey, string> = {
   "common.cancel": "Anuluj",
   "common.confirm": "Potwierdź",
   "common.download": "Pobierz",
+  "common.downloadAll": "Pobierz wszystko",
   "common.upload": "Wgraj",
   "common.loading": "Ładowanie…",
   "common.error": "Błąd",
@@ -86,9 +87,9 @@ export const plPL: Record<TranslationKey, string> = {
   "home.how.step2.desc":
     "Przeciągnij obrazy, aby uporządkować strony PDF i uzyskać idealny wynik.",
   "home.how.step3.title": "Eksportuj natychmiast",
-  "home.how.step3.descPrefix": "Kliknij «Utwórz», a PDF zostanie zapisany ",
-  "home.how.step3.descEmphasis": "lokalnie w kilka sekund",
-  "home.how.step3.descSuffix": ", bez oczekiwania.",
+  "home.how.step3.descPrefix": "Kliknij «Utwórz», a PDF zostanie ",
+  "home.how.step3.descEmphasis": "wygenerowany lokalnie",
+  "home.how.step3.descSuffix": ", następnie wyeksportowany i pobrany.",
 
   "home.process.title": "Jak to działa",
   "home.process.step1": "Wgraj obrazy",
@@ -145,7 +146,6 @@ export const plPL: Record<TranslationKey, string> = {
   "imageConvert.supportedFormats": "Obsługiwane formaty",
   "imageConvert.outputFormat": "Format wyjściowy",
   "imageConvert.quality": "Jakość (JPG/WebP)",
-  "imageConvert.downloadAll": "Pobierz wszystko",
   "imageConvert.clear": "Wyczyść",
   "imageConvert.addMore": "Dodaj więcej",
   "imageConvert.formatJpg": "JPG (mniejszy rozmiar)",
@@ -245,7 +245,6 @@ export const plPL: Record<TranslationKey, string> = {
 
   "imagePdf.title": "Obraz na PDF",
   "imagePdf.addImages": "Dodaj obrazy",
-  "imagePdf.export": "Eksportuj",
   "imagePdf.uploadButton": "Wgraj obrazy",
   "imagePdf.uploadDesc":
     "Przeciągnij tutaj lub kliknij, aby wybrać. Obsługiwane JPG / PNG / WEBP",
@@ -266,8 +265,8 @@ export const plPL: Record<TranslationKey, string> = {
   "imagePdf.quality.lossless": "Bezstratna",
   "imagePdf.quality.lossy": "Ze stratami",
   "imagePdf.filename": "Nazwa pliku",
-  "imagePdf.filename.placeholder": "Nazwa pliku eksportowanego",
-  "imagePdf.exporting": "Eksport PDF…",
+  "imagePdf.filename.placeholder": "Nazwa pliku do pobrania",
+  "imagePdf.exporting": "Pobieranie PDF…",
   "imagePdf.loading": "Ładowanie…",
   "imagePdf.rotate": "Obróć o 90°",
   "imagePdf.delete": "Usuń",
@@ -289,7 +288,6 @@ export const plPL: Record<TranslationKey, string> = {
 
   "layout.processing": "Przetwarzanie…",
   "layout.exportingImage": "Eksport obrazu…",
-  "layout.downloadAll": "Pobierz wszystko",
   "layout.download": "Pobierz",
   "layout.failed": "Przetwarzanie nie powiodło się",
   "layout.config": "Ustawienia",
@@ -301,6 +299,9 @@ export const plPL: Record<TranslationKey, string> = {
   "layout.previewGenerateFailed": "Generowanie podglądu nie powiodło się",
   "layout.applyToAllNotImplemented":
     "Funkcja «Zastosuj do wszystkich» nie zaimplementowana",
+  "layout.reselectConfirmTitle": "Ponownie wybierz obrazy",
+  "layout.reselectConfirmMessage": "Ponowny wybór wyczyści bieżące obrazy i wymaga ponownego przetworzenia. Kontynuować?",
+  "layout.reselectConfirmButton": "Potwierdź ponowny wybór",
 
   "pdf.margin.none": "Brak",
   "pdf.margin.narrow": "Wąski",
@@ -347,3 +348,8 @@ export const plPL: Record<TranslationKey, string> = {
   "theme.dark": "Ciemny",
   "theme.auto": "Automatyczny",
 };
+
+
+
+
+

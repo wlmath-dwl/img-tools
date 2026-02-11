@@ -10,6 +10,7 @@ export const deDE: Record<TranslationKey, string> = {
   "common.cancel": "Abbrechen",
   "common.confirm": "Bestätigen",
   "common.download": "Herunterladen",
+  "common.downloadAll": "Alle herunterladen",
   "common.upload": "Hochladen",
   "common.loading": "Wird geladen...",
   "common.error": "Fehler",
@@ -49,14 +50,15 @@ export const deDE: Record<TranslationKey, string> = {
   "home.upload.desc":
     "Ziehen Sie Bilder hierher oder klicken Sie zum Auswählen. Unterstützt Stapelupload JPG / PNG / WEBP",
 
-  "home.usp.privacy.title": "Sicher & Privat",
+  "home.usp.privacy.title": "Datenschutz",
   "home.usp.privacy.desc":
-    "Dateien verbleiben auf Ihrem Gerät, vollständig im Browser verarbeitet",
-  "home.usp.fast.title": "Sehr schnell",
-  "home.usp.fast.desc": "Kein Upload/Download, sofortige Verarbeitung",
+    "Vollständig lokale Verarbeitung, Dateien werden nie auf Server hochgeladen - Ihre Daten bleiben unter Ihrer Kontrolle",
+  "home.usp.global.title": "Globale Unterstützung",
+  "home.usp.global.desc":
+    "Über 10 Sprachen unterstützt, Hell/Dunkel-Modus kompatibel - nahtlose Erfahrung für Benutzer weltweit",
   "home.usp.free.title": "100 % kostenlos",
   "home.usp.free.desc":
-    "Keine Wasserzeichen, keine Größenlimits, keine Registrierung",
+    "Keine Wasserzeichen, keine Größenlimits, keine Anmeldung erforderlich - Kernfunktionen immer kostenlos",
 
   "home.tool.crop.desc":
     "Feste Verhältnisse 16:9, 4:3, 1:1, Kreiszuschnitt & Pixelgenaue Steuerung, Synchronisierung aller Bilder mit einem Klick",
@@ -86,8 +88,8 @@ export const deDE: Record<TranslationKey, string> = {
     "Ziehen Sie Bilder, um PDF‑Seiten anzuordnen und perfekte Ergebnisse zu erzielen.",
   "home.how.step3.title": "Sofort exportieren",
   "home.how.step3.descPrefix": "Klicken Sie auf „Erstellen“, und das PDF wird ",
-  "home.how.step3.descEmphasis": "lokal in wenigen Sekunden gespeichert",
-  "home.how.step3.descSuffix": ", ohne Wartezeit.",
+  "home.how.step3.descEmphasis": "lokal generiert",
+  "home.how.step3.descSuffix": ", dann exportiert und heruntergeladen.",
 
   "home.process.title": "Funktionsweise",
   "home.process.step1": "Bilder hochladen",
@@ -144,7 +146,6 @@ export const deDE: Record<TranslationKey, string> = {
   "imageConvert.supportedFormats": "Unterstützte Formate",
   "imageConvert.outputFormat": "Ausgabeformat",
   "imageConvert.quality": "Qualität (JPG/WebP)",
-  "imageConvert.downloadAll": "Alle herunterladen",
   "imageConvert.clear": "Leeren",
   "imageConvert.addMore": "Weitere hinzufügen",
   "imageConvert.formatJpg": "JPG (kleinere Größe)",
@@ -244,7 +245,6 @@ export const deDE: Record<TranslationKey, string> = {
 
   "imagePdf.title": "Bild zu PDF",
   "imagePdf.addImages": "Bilder hinzufügen",
-  "imagePdf.export": "Exportieren",
   "imagePdf.uploadButton": "Bilder hochladen",
   "imagePdf.uploadDesc":
     "Hierher ziehen oder klicken zum Auswählen. Unterstützt JPG / PNG / WEBP", // 修正：正确 key 是 imagePdf.uploadDesc 而非 imagePdf.upload.desc
@@ -265,8 +265,8 @@ export const deDE: Record<TranslationKey, string> = {
   "imagePdf.quality.lossless": "Verlustfrei",
   "imagePdf.quality.lossy": "Verbehaftet",
   "imagePdf.filename": "Dateiname",
-  "imagePdf.filename.placeholder": "Export‑Dateiname",
-  "imagePdf.exporting": "PDF wird exportiert...",
+  "imagePdf.filename.placeholder": "Herunterladen-Dateiname",
+  "imagePdf.exporting": "PDF wird heruntergeladen...",
   "imagePdf.loading": "Wird geladen…",
   "imagePdf.rotate": "90° drehen",
   "imagePdf.delete": "Löschen",
@@ -288,7 +288,6 @@ export const deDE: Record<TranslationKey, string> = {
 
   "layout.processing": "Wird verarbeitet…",
   "layout.exportingImage": "Bild wird exportiert...",
-  "layout.downloadAll": "Alle herunterladen",
   "layout.download": "Herunterladen",
   "layout.failed": "Verarbeitung fehlgeschlagen",
   "layout.config": "Einstellungen",
@@ -300,6 +299,9 @@ export const deDE: Record<TranslationKey, string> = {
   "layout.previewGenerateFailed": "Vorschauerstellung fehlgeschlagen",
   "layout.applyToAllNotImplemented":
     "Funktion „Auf alle anwenden“ noch nicht implementiert",
+  "layout.reselectConfirmTitle": "Bilder neu auswählen",
+  "layout.reselectConfirmMessage": "Neue Auswahl löscht aktuelle Bilder; eine erneute Verarbeitung ist nötig. Fortfahren?",
+  "layout.reselectConfirmButton": "Neu auswählen bestätigen",
 
   "pdf.margin.none": "Kein Rand",
   "pdf.margin.narrow": "Schmal",
@@ -346,3 +348,8 @@ export const deDE: Record<TranslationKey, string> = {
   "theme.dark": "Dunkel",
   "theme.auto": "Automatisch",
 };
+
+
+
+
+

@@ -10,6 +10,7 @@ export const idID: Record<TranslationKey, string> = {
   "common.cancel": "Batal",
   "common.confirm": "Konfirmasi",
   "common.download": "Unduh",
+  "common.downloadAll": "Unduh semua",
   "common.upload": "Unggah",
   "common.loading": "Memuat...",
   "common.error": "Error",
@@ -83,9 +84,9 @@ export const idID: Record<TranslationKey, string> = {
   "home.how.step2.desc":
     "Seret gambar untuk menyusun halaman PDF dan dapatkan hasil sempurna.",
   "home.how.step3.title": "Ekspor instan",
-  "home.how.step3.descPrefix": "Klik 'Buat' dan PDF akan disimpan ",
-  "home.how.step3.descEmphasis": "lokal dalam beberapa detik",
-  "home.how.step3.descSuffix": ", tanpa menunggu.",
+  "home.how.step3.descPrefix": "Klik 'Buat' dan PDF akan ",
+  "home.how.step3.descEmphasis": "dihasilkan secara lokal",
+  "home.how.step3.descSuffix": ", lalu ekspor dan unduh.",
 
   "home.process.title": "Cara kerja",
   "home.process.step1": "Unggah gambar",
@@ -141,7 +142,6 @@ export const idID: Record<TranslationKey, string> = {
   "imageConvert.supportedFormats": "Format didukung",
   "imageConvert.outputFormat": "Format keluaran",
   "imageConvert.quality": "Kualitas (JPG/WebP)",
-  "imageConvert.downloadAll": "Unduh semua",
   "imageConvert.clear": "Bersihkan",
   "imageConvert.addMore": "Tambah lagi",
   "imageConvert.formatJpg": "JPG (ukuran lebih kecil)",
@@ -241,7 +241,6 @@ export const idID: Record<TranslationKey, string> = {
 
   "imagePdf.title": "Gambar ke PDF",
   "imagePdf.addImages": "Tambah gambar",
-  "imagePdf.export": "Ekspor",
   "imagePdf.uploadButton": "Unggah gambar",
   "imagePdf.uploadDesc":
     "Seret ke sini atau klik untuk memilih. Mendukung JPG / PNG / WEBP",
@@ -262,8 +261,8 @@ export const idID: Record<TranslationKey, string> = {
   "imagePdf.quality.lossless": "Tanpa kehilangan",
   "imagePdf.quality.lossy": "Dengan kehilangan",
   "imagePdf.filename": "Nama file",
-  "imagePdf.filename.placeholder": "Nama file ekspor",
-  "imagePdf.exporting": "Mengekspor PDF...",
+  "imagePdf.filename.placeholder": "Nama file unduhan",
+  "imagePdf.exporting": "Mengunduh PDF...",
   "imagePdf.loading": "Memuat…",
   "imagePdf.rotate": "Putar 90°",
   "imagePdf.delete": "Hapus",
@@ -285,7 +284,6 @@ export const idID: Record<TranslationKey, string> = {
 
   "layout.processing": "Memproses…",
   "layout.exportingImage": "Mengekspor gambar...",
-  "layout.downloadAll": "Unduh semua",
   "layout.download": "Unduh",
   "layout.failed": "Proses gagal",
   "layout.config": "Pengaturan",
@@ -297,6 +295,9 @@ export const idID: Record<TranslationKey, string> = {
   "layout.previewGenerateFailed": "Gagal membuat pratinjau",
   "layout.applyToAllNotImplemented":
     "Fitur 'Terapkan ke semua' belum diimplementasikan",
+  "layout.reselectConfirmTitle": "Pilih ulang gambar",
+  "layout.reselectConfirmMessage": "Memilih ulang akan menghapus gambar saat ini dan memerlukan pemrosesan ulang. Lanjutkan?",
+  "layout.reselectConfirmButton": "Konfirmasi pilih ulang",
 
   "pdf.margin.none": "Tidak ada",
   "pdf.margin.narrow": "Sempit",
@@ -343,3 +344,8 @@ export const idID: Record<TranslationKey, string> = {
   "theme.dark": "Gelap",
   "theme.auto": "Otomatis",
 };
+
+
+
+
+

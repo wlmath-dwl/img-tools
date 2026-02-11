@@ -10,6 +10,7 @@ export const esES: Record<TranslationKey, string> = {
   "common.cancel": "Cancelar",
   "common.confirm": "Confirmar",
   "common.download": "Descargar",
+  "common.downloadAll": "Descargar todo",
   "common.upload": "Subir",
   "common.loading": "Cargando...",
   "common.error": "Error",
@@ -49,14 +50,15 @@ export const esES: Record<TranslationKey, string> = {
   "home.upload.desc":
     "Arrastra imágenes aquí o haz clic para seleccionar. Se admite carga por lotes JPG / PNG / WEBP",
 
-  "home.usp.privacy.title": "Seguro y privado",
+  "home.usp.privacy.title": "Privacidad",
   "home.usp.privacy.desc":
-    "Los archivos permanecen locales, procesados completamente en tu navegador",
-  "home.usp.fast.title": "Muy rápido",
-  "home.usp.fast.desc": "Sin subidas ni descargas, procesamiento instantáneo",
+    "Procesamiento completamente local, los archivos nunca se suben a servidores - tus datos permanecen bajo tu control",
+  "home.usp.global.title": "Soporte global",
+  "home.usp.global.desc":
+    "Más de 10 idiomas compatibles, modo claro/oscuro compatible - experiencia fluida para usuarios de todo el mundo",
   "home.usp.free.title": "100% gratuito",
   "home.usp.free.desc":
-    "Sin marcas de agua, sin límites de tamaño, sin registro",
+    "Sin marcas de agua, sin límites de tamaño, sin inicio de sesión requerido - funciones principales siempre gratuitas",
 
   "home.tool.crop.desc":
     "Relaciones predefinidas 16:9, 4:3, 1:1, recorte circular y control por píxel, sincroniza en todas las imágenes con un clic",
@@ -85,9 +87,9 @@ export const esES: Record<TranslationKey, string> = {
   "home.how.step2.desc":
     "Arrastra imágenes para reordenar las páginas del PDF y obtener resultados perfectos.",
   "home.how.step3.title": "Exportar al instante",
-  "home.how.step3.descPrefix": "Haz clic en 'Crear' y el PDF se guarda ",
-  "home.how.step3.descEmphasis": "localmente en segundos",
-  "home.how.step3.descSuffix": ", sin esperas.",
+  "home.how.step3.descPrefix": "Haz clic en 'Crear' y el PDF se ",
+  "home.how.step3.descEmphasis": "generará localmente",
+  "home.how.step3.descSuffix": ", luego exporta y descarga.",
 
   "home.process.title": "Cómo funciona",
   "home.process.step1": "Subir imágenes",
@@ -143,7 +145,6 @@ export const esES: Record<TranslationKey, string> = {
   "imageConvert.supportedFormats": "Formatos admitidos",
   "imageConvert.outputFormat": "Formato de salida",
   "imageConvert.quality": "Calidad (JPG/WebP)",
-  "imageConvert.downloadAll": "Descargar todo",
   "imageConvert.clear": "Limpiar",
   "imageConvert.addMore": "Añadir más",
   "imageConvert.formatJpg": "JPG (menor tamaño)",
@@ -243,7 +244,6 @@ export const esES: Record<TranslationKey, string> = {
 
   "imagePdf.title": "Imagen a PDF",
   "imagePdf.addImages": "Añadir imágenes",
-  "imagePdf.export": "Exportar",
   "imagePdf.uploadButton": "Subir imágenes",
   "imagePdf.uploadDesc":
     "Arrastra aquí o haz clic para seleccionar. Se admite JPG / PNG / WEBP",
@@ -264,8 +264,8 @@ export const esES: Record<TranslationKey, string> = {
   "imagePdf.quality.lossless": "Sin pérdidas",
   "imagePdf.quality.lossy": "Con pérdidas",
   "imagePdf.filename": "Nombre de archivo",
-  "imagePdf.filename.placeholder": "Nombre de exportación",
-  "imagePdf.exporting": "Exportando PDF...",
+  "imagePdf.filename.placeholder": "Nombre de descarga",
+  "imagePdf.exporting": "Descargando PDF...",
   "imagePdf.loading": "Cargando…",
   "imagePdf.rotate": "Rotar 90°",
   "imagePdf.delete": "Eliminar",
@@ -287,7 +287,6 @@ export const esES: Record<TranslationKey, string> = {
 
   "layout.processing": "Procesando…",
   "layout.exportingImage": "Exportando imagen...",
-  "layout.downloadAll": "Descargar todo",
   "layout.download": "Descargar",
   "layout.failed": "Error en el procesamiento",
   "layout.config": "Configuración",
@@ -299,6 +298,9 @@ export const esES: Record<TranslationKey, string> = {
   "layout.previewGenerateFailed": "Error al generar vista previa",
   "layout.applyToAllNotImplemented":
     "Función 'Aplicar a todo' no implementada aún",
+  "layout.reselectConfirmTitle": "Reseleccionar imágenes",
+  "layout.reselectConfirmMessage": "Al reseleccionar se borrarán las imágenes actuales y será necesario reprocesarlas. ¿Continuar?",
+  "layout.reselectConfirmButton": "Confirmar reselección",
 
   "pdf.margin.none": "Ninguno",
   "pdf.margin.narrow": "Estrecho",
@@ -345,3 +347,9 @@ export const esES: Record<TranslationKey, string> = {
   "theme.dark": "Oscuro",
   "theme.auto": "Automático",
 };
+
+
+
+
+
+

@@ -519,14 +519,13 @@ export function ImagePdfPage() {
       onBackToHome={() => (window.location.href = "../index.html")}
       onReselect={items.length > 0 ? clearAll : undefined}
       secondaryActionLabel={items.length > 0 ? t("common.reselect") : undefined}
-      primaryActionLabel={t('imagePdf.export')}
+      primaryActionLabel={t('common.download')}
       primaryDisabled={items.length === 0 || isExporting}
       onPrimaryAction={items.length > 0 ? buildPdf : undefined}
       hasContent={items.length > 0}
       onFilesSelect={addFiles}
       acceptedTypes="image/jpeg,image/png,image/webp"
       uploadTexts={{
-        buttonLabel: t('imagePdf.uploadButton'),
         description: t('imagePdf.uploadDesc'),
       }}
       centerPanel={
@@ -647,6 +646,8 @@ export function ImagePdfPage() {
     </ImageToolLayout>
   );
 }
+
+
 
 
 

@@ -10,6 +10,7 @@ export const viVN: Record<TranslationKey, string> = {
   "common.cancel": "Hủy",
   "common.confirm": "Xác nhận",
   "common.download": "Tải xuống",
+  "common.downloadAll": "Tải tất cả",
   "common.upload": "Tải lên",
   "common.loading": "Đang tải...",
   "common.error": "Lỗi",
@@ -83,9 +84,9 @@ export const viVN: Record<TranslationKey, string> = {
   "home.how.step2.title": "Sắp xếp trang",
   "home.how.step2.desc": "Kéo ảnh để sắp xếp trang PDF và có kết quả hoàn hảo.",
   "home.how.step3.title": "Xuất ngay lập tức",
-  "home.how.step3.descPrefix": "Nhấp 'Tạo' và PDF sẽ được lưu ",
-  "home.how.step3.descEmphasis": "cục bộ trong vài giây",
-  "home.how.step3.descSuffix": ", không cần chờ đợi.",
+  "home.how.step3.descPrefix": "Nhấp 'Tạo' và PDF sẽ được ",
+  "home.how.step3.descEmphasis": "tạo cục bộ",
+  "home.how.step3.descSuffix": ", sau đó xuất và tải xuống.",
 
   "home.process.title": "Cách hoạt động",
   "home.process.step1": "Tải ảnh lên",
@@ -141,7 +142,6 @@ export const viVN: Record<TranslationKey, string> = {
   "imageConvert.supportedFormats": "Định dạng hỗ trợ",
   "imageConvert.outputFormat": "Định dạng xuất",
   "imageConvert.quality": "Chất lượng (JPG/WebP)",
-  "imageConvert.downloadAll": "Tải tất cả",
   "imageConvert.clear": "Xóa hết",
   "imageConvert.addMore": "Thêm ảnh",
   "imageConvert.formatJpg": "JPG (kích thước nhỏ)",
@@ -241,7 +241,6 @@ export const viVN: Record<TranslationKey, string> = {
 
   "imagePdf.title": "Chuyển ảnh sang PDF",
   "imagePdf.addImages": "Thêm ảnh",
-  "imagePdf.export": "Xuất file",
   "imagePdf.uploadButton": "Tải ảnh lên",
   "imagePdf.uploadDesc":
     "Kéo vào đây hoặc nhấp để chọn. Hỗ trợ JPG / PNG / WEBP",
@@ -262,8 +261,8 @@ export const viVN: Record<TranslationKey, string> = {
   "imagePdf.quality.lossless": "Không mất dữ liệu",
   "imagePdf.quality.lossy": "Có mất dữ liệu",
   "imagePdf.filename": "Tên file",
-  "imagePdf.filename.placeholder": "Tên file xuất",
-  "imagePdf.exporting": "Đang xuất PDF...",
+  "imagePdf.filename.placeholder": "Tên file tải xuống",
+  "imagePdf.exporting": "Đang tải xuống PDF...",
   "imagePdf.loading": "Đang tải…",
   "imagePdf.rotate": "Xoay 90°",
   "imagePdf.delete": "Xóa",
@@ -285,7 +284,6 @@ export const viVN: Record<TranslationKey, string> = {
 
   "layout.processing": "Đang xử lý…",
   "layout.exportingImage": "Đang xuất ảnh...",
-  "layout.downloadAll": "Tải tất cả",
   "layout.download": "Tải xuống",
   "layout.failed": "Xử lý thất bại",
   "layout.config": "Cài đặt",
@@ -297,6 +295,9 @@ export const viVN: Record<TranslationKey, string> = {
   "layout.previewGenerateFailed": "Tạo xem trước thất bại",
   "layout.applyToAllNotImplemented":
     "Chức năng 'Áp dụng cho tất cả' chưa được triển khai",
+  "layout.reselectConfirmTitle": "Chọn lại ảnh",
+  "layout.reselectConfirmMessage": "Chọn lại sẽ xóa ảnh hiện tại và cần xử lý lại. Tiếp tục?",
+  "layout.reselectConfirmButton": "Xác nhận chọn lại",
 
   "pdf.margin.none": "Không có lề",
   "pdf.margin.narrow": "Lề hẹp",
@@ -343,3 +344,8 @@ export const viVN: Record<TranslationKey, string> = {
   "theme.dark": "Tối",
   "theme.auto": "Tự động",
 };
+
+
+
+
+

@@ -10,6 +10,7 @@ export const koKR: Record<TranslationKey, string> = {
   "common.cancel": "취소",
   "common.confirm": "확인",
   "common.download": "다운로드",
+  "common.downloadAll": "전체 다운로드",
   "common.upload": "업로드",
   "common.loading": "로딩 중...",
   "common.error": "오류",
@@ -48,13 +49,15 @@ export const koKR: Record<TranslationKey, string> = {
   "home.upload.desc":
     "이미지를 여기에 드래그하거나 클릭하여 선택하세요. JPG / PNG / WEBP 일괄 업로드 지원",
 
-  "home.usp.privacy.title": "안전한 개인정보",
+  "home.usp.privacy.title": "개인정보 보호",
   "home.usp.privacy.desc":
-    "파일을 서버에 업로드하지 않고 브라우저에서 직접 처리",
-  "home.usp.fast.title": "초고속 처리",
-  "home.usp.fast.desc": "업로드/다운로드 불필요, 즉시 처리 완료",
+    "전처리 로컬에서 완료, 파일은 서버에 절대 업로드되지 않음 - 데이터가 완전히 당신의 통제 하에 있습니다",
+  "home.usp.global.title": "글로벌 지원",
+  "home.usp.global.desc":
+    "10개 이상 언어 지원, 라이트/다크 모드 호환 - 전 세계 사용자를 위한 원활한 경험",
   "home.usp.free.title": "완전 무료",
-  "home.usp.free.desc": "워터마크 없음, 파일 크기 제한 없음, 회원가입 불필요",
+  "home.usp.free.desc":
+    "워터마크 없음, 파일 크기 제한 없음, 로그인 필요 없음 - 핵심 기능은 항상 무료",
 
   "home.tool.crop.desc":
     "16:9, 4:3, 1:1 등 프리셋 비율 제공, 원형 자르기 및 픽셀 단위 정밀 제어 지원, 한 번의 클릭으로 전체 이미지에 동기화",
@@ -83,8 +86,8 @@ export const koKR: Record<TranslationKey, string> = {
     "이미지를 드래그하여 PDF 페이지 순서를 자유롭게 조정하고 결과를 최적화하세요.",
   "home.how.step3.title": "즉시 내보내기",
   "home.how.step3.descPrefix": "'생성'을 클릭하면 PDF 문서가 ",
-  "home.how.step3.descEmphasis": "로컬에서 즉시 저장",
-  "home.how.step3.descSuffix": "되며 다운로드 대기 시간이 없습니다.",
+  "home.how.step3.descEmphasis": "로컬에서 즉시 생성",
+  "home.how.step3.descSuffix": "된 후 내보내기 및 다운로드됩니다.",
 
   "home.process.title": "사용 절차",
   "home.process.step1": "이미지 업로드",
@@ -139,7 +142,6 @@ export const koKR: Record<TranslationKey, string> = {
   "imageConvert.supportedFormats": "지원 형식",
   "imageConvert.outputFormat": "출력 형식",
   "imageConvert.quality": "품질 (JPG/WebP)",
-  "imageConvert.downloadAll": "전체 다운로드",
   "imageConvert.clear": "초기화",
   "imageConvert.addMore": "더 추가",
   "imageConvert.formatJpg": "JPG (용량 작음)",
@@ -239,7 +241,6 @@ export const koKR: Record<TranslationKey, string> = {
 
   "imagePdf.title": "이미지를 PDF로",
   "imagePdf.addImages": "이미지 추가",
-  "imagePdf.export": "내보내기",
   "imagePdf.uploadButton": "이미지 업로드",
   "imagePdf.uploadDesc":
     "이미지를 여기에 드래그하거나 클릭하여 선택하세요. JPG / PNG / WEBP 지원",
@@ -260,8 +261,8 @@ export const koKR: Record<TranslationKey, string> = {
   "imagePdf.quality.lossless": "무손실",
   "imagePdf.quality.lossy": "손실 압축",
   "imagePdf.filename": "파일명",
-  "imagePdf.filename.placeholder": "내보낼 파일명",
-  "imagePdf.exporting": "PDF 내보내는 중...",
+  "imagePdf.filename.placeholder": "다운로드 파일명",
+  "imagePdf.exporting": "PDF 다운로드 중...",
   "imagePdf.loading": "로딩 중…",
   "imagePdf.rotate": "90° 회전",
   "imagePdf.delete": "삭제",
@@ -283,7 +284,6 @@ export const koKR: Record<TranslationKey, string> = {
 
   "layout.processing": "처리 중…",
   "layout.exportingImage": "이미지 내보내는 중...",
-  "layout.downloadAll": "전체 다운로드",
   "layout.download": "다운로드",
   "layout.failed": "처리 실패",
   "layout.config": "설정",
@@ -295,6 +295,9 @@ export const koKR: Record<TranslationKey, string> = {
   "layout.previewGenerateFailed": "미리보기 생성 실패",
   "layout.applyToAllNotImplemented":
     "전체 적용 기능은 아직 구현되지 않았습니다",
+  "layout.reselectConfirmTitle": "이미지 다시 선택",
+  "layout.reselectConfirmMessage": "다시 선택하면 현재 이미지가 삭제되고 재처리가 필요합니다. 계속하시겠습니까?",
+  "layout.reselectConfirmButton": "다시 선택 확인",
 
   "pdf.margin.none": "여백 없음",
   "pdf.margin.narrow": "좁은 여백",
@@ -341,3 +344,9 @@ export const koKR: Record<TranslationKey, string> = {
   "theme.dark": "다크",
   "theme.auto": "자동",
 };
+
+
+
+
+
+

@@ -10,6 +10,7 @@ export const enUS: Record<TranslationKey, string> = {
   "common.cancel": "Cancel",
   "common.confirm": "Confirm",
   "common.download": "Download",
+  "common.downloadAll": "Download All",
   "common.upload": "Upload",
   "common.loading": "Loading...",
   "common.error": "Error",
@@ -48,13 +49,15 @@ export const enUS: Record<TranslationKey, string> = {
   "home.upload.desc":
     "Drag & drop images here or click to select, supports JPG / PNG / WEBP batch upload",
 
-  "home.usp.privacy.title": "Safe & Private",
+  "home.usp.privacy.title": "Privacy First",
   "home.usp.privacy.desc":
-    "Files stay local, processed entirely in your browser",
-  "home.usp.fast.title": "Lightning Fast",
-  "home.usp.fast.desc": "No upload/download, processing done instantly",
+    "All processing done locally, files never uploaded - your data stays in your control",
+  "home.usp.global.title": "Global Support",
+  "home.usp.global.desc":
+    "10+ languages supported, light/dark mode compatible - seamless experience for worldwide users",
   "home.usp.free.title": "100% Free",
-  "home.usp.free.desc": "No watermarks, no file limits, no registration",
+  "home.usp.free.desc":
+    "No watermarks, no file limits, no login required - core features always free",
 
   "home.tool.crop.desc":
     "Preset ratios 16:9, 4:3, 1:1, supports circle crop & pixel-level control, sync to all images with one click",
@@ -83,9 +86,9 @@ export const enUS: Record<TranslationKey, string> = {
   "home.how.step2.desc":
     "Drag images to reorder PDF pages for perfect results.",
   "home.how.step3.title": "Export Instantly",
-  "home.how.step3.descPrefix": "Click 'Create' and PDF is saved ",
-  "home.how.step3.descEmphasis": "locally in seconds",
-  "home.how.step3.descSuffix": ", no waiting required.",
+  "home.how.step3.descPrefix": "Click 'Create' and PDF will be ",
+  "home.how.step3.descEmphasis": "generated locally",
+  "home.how.step3.descSuffix": ", then export and download.",
 
   "home.process.title": "How It Works",
   "home.process.step1": "Upload Images",
@@ -139,7 +142,6 @@ export const enUS: Record<TranslationKey, string> = {
   "imageConvert.supportedFormats": "Supported formats",
   "imageConvert.outputFormat": "Output Format",
   "imageConvert.quality": "Quality (JPG/WebP)",
-  "imageConvert.downloadAll": "Download All",
   "imageConvert.clear": "Clear",
   "imageConvert.addMore": "Add More",
   "imageConvert.formatJpg": "JPG (smaller size)",
@@ -239,7 +241,6 @@ export const enUS: Record<TranslationKey, string> = {
 
   "imagePdf.title": "Image to PDF",
   "imagePdf.addImages": "Add Images",
-  "imagePdf.export": "Export",
   "imagePdf.uploadButton": "Upload Images",
   "imagePdf.uploadDesc":
     "Drag & drop here or click to select, supports JPG / PNG / WEBP",
@@ -260,8 +261,8 @@ export const enUS: Record<TranslationKey, string> = {
   "imagePdf.quality.lossless": "Lossless",
   "imagePdf.quality.lossy": "Lossy",
   "imagePdf.filename": "Filename",
-  "imagePdf.filename.placeholder": "Export filename",
-  "imagePdf.exporting": "Exporting PDF...",
+  "imagePdf.filename.placeholder": "Download filename",
+  "imagePdf.exporting": "Downloading PDF...",
   "imagePdf.loading": "Loading…",
   "imagePdf.rotate": "Rotate 90°",
   "imagePdf.delete": "Delete",
@@ -283,7 +284,6 @@ export const enUS: Record<TranslationKey, string> = {
 
   "layout.processing": "Processing…",
   "layout.exportingImage": "Exporting image...",
-  "layout.downloadAll": "Download All",
   "layout.download": "Download",
   "layout.failed": "Processing Failed",
   "layout.config": "Settings",
@@ -294,6 +294,9 @@ export const enUS: Record<TranslationKey, string> = {
     "All processing done locally in your browser, images never uploaded to servers",
   "layout.previewGenerateFailed": "Preview generation failed",
   "layout.applyToAllNotImplemented": "Apply to All not yet implemented",
+  "layout.reselectConfirmTitle": "Reselect Images",
+  "layout.reselectConfirmMessage": "Reselecting will clear current images and require reprocessing. Continue?",
+  "layout.reselectConfirmButton": "Confirm Reselect",
 
   "pdf.margin.none": "None",
   "pdf.margin.narrow": "Narrow",
@@ -340,3 +343,10 @@ export const enUS: Record<TranslationKey, string> = {
   "theme.dark": "Dark",
   "theme.auto": "Auto",
 };
+
+
+
+
+
+
+

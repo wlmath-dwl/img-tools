@@ -10,6 +10,7 @@ export const nlNL: Record<TranslationKey, string> = {
   "common.cancel": "Annuleren",
   "common.confirm": "Bevestigen",
   "common.download": "Downloaden",
+  "common.downloadAll": "Alles downloaden",
   "common.upload": "Uploaden",
   "common.loading": "Bezig met laden…",
   "common.error": "Fout",
@@ -86,8 +87,8 @@ export const nlNL: Record<TranslationKey, string> = {
     "Sleep afbeeldingen om PDF-pagina’s te ordenen voor een perfect resultaat.",
   "home.how.step3.title": "Direct exporteren",
   "home.how.step3.descPrefix": "Klik op «Aanmaken» en de PDF wordt lokaal ",
-  "home.how.step3.descEmphasis": "opgeslagen in enkele seconden",
-  "home.how.step3.descSuffix": ", zonder wachttijd.",
+  "home.how.step3.descEmphasis": "gegenereerd",
+  "home.how.step3.descSuffix": ", vervolgens geëxporteerd en gedownload.",
 
   "home.process.title": "Hoe werkt het",
   "home.process.step1": "Afbeeldingen uploaden",
@@ -144,7 +145,6 @@ export const nlNL: Record<TranslationKey, string> = {
   "imageConvert.supportedFormats": "Ondersteunde formaten",
   "imageConvert.outputFormat": "Uitvoerformaat",
   "imageConvert.quality": "Kwaliteit (JPG/WebP)",
-  "imageConvert.downloadAll": "Alles downloaden",
   "imageConvert.clear": "Wissen",
   "imageConvert.addMore": "Meer toevoegen",
   "imageConvert.formatJpg": "JPG (kleiner formaat)",
@@ -244,7 +244,6 @@ export const nlNL: Record<TranslationKey, string> = {
 
   "imagePdf.title": "Afbeelding naar PDF",
   "imagePdf.addImages": "Afbeeldingen toevoegen",
-  "imagePdf.export": "Exporteren",
   "imagePdf.uploadButton": "Afbeeldingen uploaden",
   "imagePdf.uploadDesc":
     "Sleep hierheen of klik om te selecteren. Ondersteunt JPG / PNG / WEBP",
@@ -265,8 +264,8 @@ export const nlNL: Record<TranslationKey, string> = {
   "imagePdf.quality.lossless": "Verliesloos",
   "imagePdf.quality.lossy": "Met verlies",
   "imagePdf.filename": "Bestandsnaam",
-  "imagePdf.filename.placeholder": "Naam voor geëxporteerd bestand",
-  "imagePdf.exporting": "PDF exporteren…",
+  "imagePdf.filename.placeholder": "Naam voor gedownload bestand",
+  "imagePdf.exporting": "PDF downloaden…",
   "imagePdf.loading": "Bezig met laden…",
   "imagePdf.rotate": "Draai 90°",
   "imagePdf.delete": "Verwijderen",
@@ -288,7 +287,6 @@ export const nlNL: Record<TranslationKey, string> = {
 
   "layout.processing": "Verwerken…",
   "layout.exportingImage": "Afbeelding exporteren…",
-  "layout.downloadAll": "Alles downloaden",
   "layout.download": "Downloaden",
   "layout.failed": "Verwerking mislukt",
   "layout.config": "Instellingen",
@@ -300,6 +298,9 @@ export const nlNL: Record<TranslationKey, string> = {
   "layout.previewGenerateFailed": "Voorbeeld genereren mislukt",
   "layout.applyToAllNotImplemented":
     "Functie «Toepassen op alles» niet geïmplementeerd",
+  "layout.reselectConfirmTitle": "Afbeeldingen opnieuw selecteren",
+  "layout.reselectConfirmMessage": "Opnieuw selecteren wist de huidige afbeeldingen en vereist opnieuw verwerken. Doorgaan?",
+  "layout.reselectConfirmButton": "Bevestig opnieuw selecteren",
 
   "pdf.margin.none": "Geen",
   "pdf.margin.narrow": "Smal",
@@ -346,3 +347,8 @@ export const nlNL: Record<TranslationKey, string> = {
   "theme.dark": "Donker",
   "theme.auto": "Automatisch",
 };
+
+
+
+
+

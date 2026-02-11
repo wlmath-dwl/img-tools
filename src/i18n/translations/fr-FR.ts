@@ -10,6 +10,7 @@ export const frFR: Record<TranslationKey, string> = {
   "common.cancel": "Annuler",
   "common.confirm": "Confirmer",
   "common.download": "Télécharger",
+  "common.downloadAll": "Tout télécharger",
   "common.upload": "Importer",
   "common.loading": "Chargement…",
   "common.error": "Erreur",
@@ -49,9 +50,9 @@ export const frFR: Record<TranslationKey, string> = {
   "home.upload.desc":
     "Glissez des images ici ou cliquez pour sélectionner. Import par lot JPG / PNG / WEBP",
 
-  "home.usp.privacy.title": "Sécurisé & Privé",
+  "home.usp.privacy.title": "Confidentialité",
   "home.usp.privacy.desc":
-    "Les fichiers restent sur votre appareil, traités entièrement dans le navigateur",
+    "Traitement entièrement local, les fichiers ne sont jamais téléchargés sur un serveur - vos données restent sous votre contrôle",
   "home.usp.fast.title": "Très rapide",
   "home.usp.fast.desc": "Pas d’import/export, traitement instantané",
   "home.usp.free.title": "100% gratuit",
@@ -86,9 +87,9 @@ export const frFR: Record<TranslationKey, string> = {
     "Glissez les images pour ordonner les pages PDF et obtenir un résultat parfait.",
   "home.how.step3.title": "Exporter instantanément",
   "home.how.step3.descPrefix":
-    "Cliquez sur « Créer » et le PDF sera enregistré ",
-  "home.how.step3.descEmphasis": "localement en quelques secondes",
-  "home.how.step3.descSuffix": ", sans attente.",
+    "Cliquez sur « Créer » et le PDF sera ",
+  "home.how.step3.descEmphasis": "généré localement",
+  "home.how.step3.descSuffix": ", puis exporté et téléchargé.",
 
   "home.process.title": "Comment ça marche",
   "home.process.step1": "Importer des images",
@@ -145,7 +146,6 @@ export const frFR: Record<TranslationKey, string> = {
   "imageConvert.supportedFormats": "Formats pris en charge",
   "imageConvert.outputFormat": "Format de sortie",
   "imageConvert.quality": "Qualité (JPG/WebP)",
-  "imageConvert.downloadAll": "Tout télécharger",
   "imageConvert.clear": "Vider",
   "imageConvert.addMore": "Ajouter d’autres",
   "imageConvert.formatJpg": "JPG (taille réduite)",
@@ -245,7 +245,6 @@ export const frFR: Record<TranslationKey, string> = {
 
   "imagePdf.title": "Image vers PDF",
   "imagePdf.addImages": "Ajouter des images",
-  "imagePdf.export": "Exporter",
   "imagePdf.uploadButton": "Importer des images",
   "imagePdf.uploadDesc":
     "Glissez ici ou cliquez pour sélectionner. Prend en charge JPG / PNG / WEBP",
@@ -266,8 +265,8 @@ export const frFR: Record<TranslationKey, string> = {
   "imagePdf.quality.lossless": "Sans perte",
   "imagePdf.quality.lossy": "Avec perte",
   "imagePdf.filename": "Nom du fichier",
-  "imagePdf.filename.placeholder": "Nom du fichier exporté",
-  "imagePdf.exporting": "Export du PDF en cours…",
+  "imagePdf.filename.placeholder": "Nom du fichier à télécharger",
+  "imagePdf.exporting": "Téléchargement du PDF en cours…",
   "imagePdf.loading": "Chargement…",
   "imagePdf.rotate": "Pivoter 90°",
   "imagePdf.delete": "Supprimer",
@@ -289,7 +288,6 @@ export const frFR: Record<TranslationKey, string> = {
 
   "layout.processing": "Traitement en cours…",
   "layout.exportingImage": "Export de l’image en cours…",
-  "layout.downloadAll": "Tout télécharger",
   "layout.download": "Télécharger",
   "layout.failed": "Échec du traitement",
   "layout.config": "Paramètres",
@@ -301,6 +299,9 @@ export const frFR: Record<TranslationKey, string> = {
   "layout.previewGenerateFailed": "Échec de la génération de l’aperçu",
   "layout.applyToAllNotImplemented":
     "Fonction « Appliquer à tout » non implémentée",
+  "layout.reselectConfirmTitle": "Resélectionner les images",
+  "layout.reselectConfirmMessage": "La resélection effacera les images actuelles et nécessitera un retraitement. Continuer ?",
+  "layout.reselectConfirmButton": "Confirmer la resélection",
 
   "pdf.margin.none": "Aucune",
   "pdf.margin.narrow": "Étroite",
@@ -347,3 +348,9 @@ export const frFR: Record<TranslationKey, string> = {
   "theme.dark": "Sombre",
   "theme.auto": "Automatique",
 };
+
+
+
+
+
+

@@ -1,15 +1,15 @@
-import { type JSX } from 'preact'
+import { type JSX } from "preact";
 
 type CloseIconProps = {
-  size?: number
-  color?: string
-  class?: string
-}
+  size?: number;
+  color?: string;
+  class?: string;
+};
 
 // 关闭：“X”
 export function CloseIcon({
   size = 24,
-  color = 'currentColor',
+  color = "currentColor",
   class: className,
 }: CloseIconProps): JSX.Element {
   return (
@@ -36,6 +36,5 @@ export function CloseIcon({
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }
-

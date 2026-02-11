@@ -10,6 +10,7 @@ export const jaJP: Record<TranslationKey, string> = {
   "common.cancel": "キャンセル",
   "common.confirm": "確定",
   "common.download": "ダウンロード",
+  "common.downloadAll": "すべてをダウンロード",
   "common.upload": "アップロード",
   "common.loading": "読み込み中...",
   "common.error": "エラー",
@@ -44,14 +45,15 @@ export const jaJP: Record<TranslationKey, string> = {
   "home.upload.button": "画像をアップロードしてPDFに変換",
   "home.upload.desc":
     "ここに画像をドラッグアンドドロップまたはクリックして選択、JPG/PNG/WEBPの一括アップロードに対応",
-  "home.usp.privacy.title": "安全なプライバシー",
+  "home.usp.privacy.title": "プライバシー保護",
   "home.usp.privacy.desc":
-    "ファイルはサーバーに送信されず、ブラウザ上で処理完了",
-  "home.usp.fast.title": "高速レスポンス",
-  "home.usp.fast.desc": "アップロード・ダウンロード不要、処理は瞬時に完了",
+    "すべての処理はローカル実行、ファイルはサーバーにアップロードされず、データは完全にあなたがコントロール",
+  "home.usp.global.title": "多言語対応",
+  "home.usp.global.desc":
+    "10以上の言語をサポート、ライト/ダークモード対応 - 世界中のユーザーがスムーズに利用可能",
   "home.usp.free.title": "完全無料",
   "home.usp.free.desc":
-    "ウォーターマークなし、ファイルサイズ制限なし、登録不要",
+    "ウォーターマークなし、ファイルサイズ制限なし、ログイン不要、コア機能はずっと無料",
   "home.tool.crop.desc":
     "16:9、4:3、1:1などのプリセット比率に対応、円形クロップとピクセル単位の調整をサポート、ワンクリックで全画像に同期",
   "home.tool.compress.desc":
@@ -79,8 +81,8 @@ export const jaJP: Record<TranslationKey, string> = {
     "画像を自由にドラッグしてPDFページの順序を調整し、生成結果が期待通りになるようにします。",
   "home.how.step3.title": "瞬時エクスポート",
   "home.how.step3.descPrefix": "「生成」をクリックすると、PDFドキュメントは",
-  "home.how.step3.descEmphasis": "ローカルで瞬時に保存",
-  "home.how.step3.descSuffix": "され、ダウンロードを待つ必要はありません。",
+  "home.how.step3.descEmphasis": "ローカルで生成",
+  "home.how.step3.descSuffix": "され、エクスポートしてダウンロードします。",
   "home.process.title": "使用フロー",
   "home.process.step1": "画像をアップロード",
   "home.process.step2": "処理方式を選択",
@@ -132,7 +134,6 @@ export const jaJP: Record<TranslationKey, string> = {
   "imageConvert.supportedFormats": "対応フォーマット",
   "imageConvert.outputFormat": "出力フォーマット",
   "imageConvert.quality": "品質（JPG/WebP）",
-  "imageConvert.downloadAll": "すべてをダウンロード",
   "imageConvert.clear": "クリア",
   "imageConvert.addMore": "さらに追加",
   "imageConvert.formatJpg": "JPG（サイズが小さい）",
@@ -229,7 +230,6 @@ export const jaJP: Record<TranslationKey, string> = {
   "imageFilter.vignette": "ビネット",
   "imagePdf.title": "画像をPDFに変換",
   "imagePdf.addImages": "画像を追加",
-  "imagePdf.export": "エクスポート",
   "imagePdf.uploadButton": "画像をアップロード",
   "imagePdf.uploadDesc":
     "ここに画像をドラッグアンドドロップまたはクリックして選択、JPG/PNG/WEBPに対応",
@@ -250,8 +250,8 @@ export const jaJP: Record<TranslationKey, string> = {
   "imagePdf.quality.lossless": "ロスレス",
   "imagePdf.quality.lossy": "ロッシー",
   "imagePdf.filename": "ファイル名",
-  "imagePdf.filename.placeholder": "エクスポートファイル名",
-  "imagePdf.exporting": "PDFをエクスポート中...",
+  "imagePdf.filename.placeholder": "ダウンロードファイル名",
+  "imagePdf.exporting": "PDFをダウンロード中...",
   "imagePdf.loading": "読み込み中…",
   "imagePdf.rotate": "90°回転",
   "imagePdf.delete": "削除",
@@ -270,7 +270,6 @@ export const jaJP: Record<TranslationKey, string> = {
   "viewer.flipV": "垂直反転",
   "layout.processing": "処理中…",
   "layout.exportingImage": "画像をエクスポート中...",
-  "layout.downloadAll": "すべてをダウンロード",
   "layout.download": "ダウンロード",
   "layout.failed": "処理失敗",
   "layout.config": "設定",
@@ -281,6 +280,9 @@ export const jaJP: Record<TranslationKey, string> = {
     "すべての処理はブラウザ上でローカル実行され、画像はサーバーにアップロードされません",
   "layout.previewGenerateFailed": "プレビュー生成に失敗しました",
   "layout.applyToAllNotImplemented": "すべてに適用機能は未実装です",
+  "layout.reselectConfirmTitle": "画像を再選択",
+  "layout.reselectConfirmMessage": "再選択すると現在の画像がクリアされ、再処理が必要になります。続行しますか？",
+  "layout.reselectConfirmButton": "再選択する",
   "pdf.margin.none": "余白なし",
   "pdf.margin.narrow": "狭い余白",
   "pdf.margin.wide": "広い余白",
@@ -320,3 +322,10 @@ export const jaJP: Record<TranslationKey, string> = {
   "theme.dark": "ダーク",
   "theme.auto": "オート",
 };
+
+
+
+
+
+
+

@@ -1,12 +1,16 @@
-import { type JSX } from 'preact'
+import { type JSX } from "preact";
 
 type DownloadIconProps = {
-  size?: number
-  color?: string
-  class?: string
-}
+  size?: number;
+  color?: string;
+  class?: string;
+};
 
-export function DownloadIcon({ size = 24, color = 'currentColor', class: className }: DownloadIconProps): JSX.Element {
+export function DownloadIcon({
+  size = 23,
+  color = "currentColor",
+  class: className,
+}: DownloadIconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -49,5 +53,5 @@ export function DownloadIcon({ size = 24, color = 'currentColor', class: classNa
         stroke-linejoin="round"
       />
     </svg>
-  )
+  );
 }

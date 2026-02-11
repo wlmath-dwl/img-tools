@@ -6,30 +6,30 @@ type ToolbarProps = {
     title: string
     rightInfo?: ComponentChildren
     onBackToHome?: () => void
-    onPreview?: () => void
-    previewActionLabel?: string
     onReselect?: () => void
     secondaryActionLabel?: string
+    secondaryDisabled?: boolean
     primaryActionLabel?: string
     primaryDisabled?: boolean
     onPrimaryAction?: () => unknown | Promise<unknown>
     onAddFiles?: () => void
     addFilesLabel?: string
+    addFilesDisabled?: boolean
 }
 
 export function Toolbar({
     title,
     rightInfo,
     onBackToHome,
-    onPreview,
-    previewActionLabel,
     onReselect,
     secondaryActionLabel,
+    secondaryDisabled,
     primaryActionLabel,
     primaryDisabled,
     onPrimaryAction,
     onAddFiles,
     addFilesLabel,
+    addFilesDisabled,
 }: ToolbarProps) {
     const { t } = useI18n()
 
@@ -62,22 +62,27 @@ export function Toolbar({
                 </div>
 
                 <div class="flex items-center justify-end gap-2 flex-wrap min-w-0">
-                    {addFilesLabel && onAddFiles ? (
-                        <button type="button" class="btn btn-sm" onClick={onAddFiles}>
+                    {addFilesLabel ? (
+                        <button
+                            type="button"
+                            class="btn btn-sm"
+                            onClick={onAddFiles}
+                            disabled={addFilesDisabled}
+                        >
                             {addFilesLabel}
                         </button>
                     ) : null}
-                    {previewActionLabel && onPreview ? (
-                        <button type="button" class="btn btn-sm" onClick={onPreview}>
-                            {previewActionLabel}
-                        </button>
-                    ) : null}
-                    {secondaryActionLabel && onReselect ? (
-                        <button type="button" class="btn btn-sm" onClick={onReselect}>
+                    {secondaryActionLabel ? (
+                        <button
+                            type="button"
+                            class="btn btn-sm"
+                            onClick={onReselect}
+                            disabled={secondaryDisabled}
+                        >
                             {secondaryActionLabel}
                         </button>
                     ) : null}
-                    {primaryActionLabel && onPrimaryAction ? (
+                    {primaryActionLabel ? (
                         <button
                             type="button"
                             class="btn btn-primary btn-sm"

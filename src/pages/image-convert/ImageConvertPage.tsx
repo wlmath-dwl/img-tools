@@ -3,6 +3,7 @@ import { useI18n } from '../../i18n/context'
 import { canvasToBlob, downloadBlob, fileToImageInfo, revokeImageInfo, type ImageInfo } from '../../shared/image'
 import { ImageToolLayout } from '../../shared/components/ImageToolLayout'
 import { DownloadIcon } from '../../shared/icons/DownloadIcon'
+import { TrashIcon } from '../../shared/icons'
 
 type OutputType = 'image/jpeg' | 'image/png' | 'image/webp'
 
@@ -89,6 +90,16 @@ export function ImageConvertPage() {
     setActiveId('')
   }
 
+  function removeItem(id: string) {
+    setItems((prev) => {
+      const target = prev.find((x) => x.id === id)
+      if (target) revokeImageInfo(target.info)
+      const next = prev.filter((x) => x.id !== id)
+      setActiveId((current) => (current === id ? (next[0]?.id ?? '') : current))
+      return next
+    })
+  }
+
   async function convertOne(it: ConvertItem) {
     const canvas = canvasRef.current ?? document.createElement('canvas')
     canvasRef.current = canvas
@@ -161,14 +172,24 @@ export function ImageConvertPage() {
                     {it.info.width}×{it.info.height}px
                   </div>
                 </div>
-                <button
-                  type="button"
-                  class="w-9 h-9 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors shrink-0"
-                  onClick={() => void handleDownloadOne(it)}
-                  title={t('common.download')}
-                >
-                  <DownloadIcon size={18} color="currentColor" />
-                </button>
+                <div class="flex items-center gap-1 shrink-0">
+                  <button
+                    type="button"
+                    class="w-9 h-9 flex items-center justify-center rounded-lg text-slate-700 hover:text-blue-600 hover:bg-blue-50 dark:text-slate-300 dark:hover:text-blue-400 dark:hover:bg-blue-900/30 transition-colors"
+                    onClick={() => void handleDownloadOne(it)}
+                    title={t('common.download')}
+                  >
+                    <DownloadIcon size={18} color="currentColor" />
+                  </button>
+                  <button
+                    type="button"
+                    class="w-9 h-9 flex items-center justify-center rounded-lg text-slate-700 hover:text-red-600 hover:bg-red-50 dark:text-slate-300 dark:hover:text-red-400 dark:hover:bg-red-900/20 transition-colors"
+                    onClick={() => removeItem(it.id)}
+                    title={t('common.delete')}
+                  >
+                    <TrashIcon size={20} color="currentColor" />
+                  </button>
+                </div>
               </div>
             )
           })}
@@ -184,7 +205,7 @@ export function ImageConvertPage() {
       onReselect={clearAll}
       secondaryActionLabel={t('common.reselect')}
       onPrimaryAction={buildAllExports}
-      primaryActionLabel={isDownloading ? t('imageConvert.processing') : t('imageConvert.downloadAll')}
+      primaryActionLabel={isDownloading ? t('imageConvert.processing') : t('common.downloadAll')}
       hasContent={hasContent}
       leftPanel={hasContent ? leftPanel : undefined}
       onFilesSelect={addFiles}
@@ -242,6 +263,7 @@ export function ImageConvertPage() {
     </ImageToolLayout>
   )
 }
+
 
 
 

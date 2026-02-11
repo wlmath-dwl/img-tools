@@ -5,6 +5,7 @@ import { ImageToolLayout } from "../../shared/components/ImageToolLayout";
 import { type OutputType } from "../../shared/components/ExportSettingsDialog";
 import { useImageItems } from "../../shared/useImageItems";
 import { DownloadIcon } from "../../shared/icons/DownloadIcon";
+import { TrashIcon } from "../../shared/icons";
 
 function extByType(t: OutputType) {
   if (t === "image/png") return "png";
@@ -236,6 +237,16 @@ export function ImageCompressPage() {
     }
   }
 
+  function handleRemoveOne(id: string) {
+    removeOne(id);
+    setJobs((prev) => {
+      if (!(id in prev)) return prev;
+      const next = { ...prev };
+      delete next[id];
+      return next;
+    });
+  }
+
   return (
     <ImageToolLayout
       title={t("imageCompress.title")}
@@ -277,70 +288,75 @@ export function ImageCompressPage() {
                 const outputBytes = job?.outputBytes ?? 0;
                 const saveRate = calcSaveRatePercent(it.file.size, outputBytes);
                 return (
-                  <div class="flex items-center gap-4 p-4 rounded-2xl border border-slate-200/70 dark:border-slate-700/70 bg-white dark:bg-slate-900/80 hover:shadow-lg hover:border-slate-300 dark:hover:border-slate-600 transition-all">
-                    <div class="w-14 h-14 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 shrink-0 shadow-sm">
-                      <img
-                        src={it.info.url}
-                        alt={it.info.name}
-                        class="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div class="flex-1 min-w-0">
-                      {/* 文件名 */}
-                      <div class="text-sm font-medium text-slate-900 dark:text-slate-100 truncate mb-2">
-                        {it.info.name}
+                  <div
+                    key={it.id}
+                    class="group flex items-center gap-4 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 bg-[#F9FAFB] dark:bg-slate-900/60 hover:shadow-md hover:border-slate-300 dark:hover:border-slate-600 transition-all"
+                  >
+                    {/* 左侧：缩略图 + 信息区 */}
+                    <div class="flex items-center gap-4 flex-1 min-w-0">
+                      <div class="w-14 h-14 shrink-0 rounded-lg overflow-hidden bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-sm">
+                        <img src={it.info.url} alt={it.info.name} class="w-full h-full object-cover aspect-square" />
                       </div>
-
-                      {/* 体积变化（数字加深） */}
-                      {isDone ? (
-                        <div class="text-sm text-slate-600 dark:text-slate-400">
-                          {t('imageCompress.original')}{" "}
-                          <span class="font-semibold text-slate-900 dark:text-slate-100">
-                            {formatBytes(it.file.size)}
-                          </span>
-                          {" → "}
-                          <span class="font-semibold text-slate-900 dark:text-slate-100">
-                            {formatBytes(outputBytes)}
-                          </span>
-                          {saveRate !== null ? (
-                            <span class="ml-2 font-semibold text-emerald-600 dark:text-emerald-400">
-                              {t('imageCompress.saved', { percent: formatPercent(saveRate) })}
-                            </span>
-                          ) : null}
+                      <div class="flex-1 min-w-0">
+                        <div class="text-sm font-semibold text-[#374151] dark:text-slate-100 truncate mb-1">
+                          {it.info.name}
                         </div>
-                      ) : null}
-
-                      {/* 压缩中/错误状态 */}
-                      {!isDone ? (
-                        <>
-                          <div class="mt-2 h-1.5 rounded-full bg-slate-200/80 dark:bg-slate-700/80 overflow-hidden">
-                            <div
-                              class={`h-full transition-all ${isError ? "bg-red-500" : "bg-blue-500"}`}
-                              style={{ width: `${progress}%` }}
-                            />
+                        {isDone ? (
+                          <div class="flex items-center gap-2 flex-wrap">
+                            <span class="text-sm text-slate-500 dark:text-slate-400">
+                              {formatBytes(it.file.size)}
+                            </span>
+                            <span class="text-slate-400 dark:text-slate-500">→</span>
+                            <span class="text-sm text-slate-600 dark:text-slate-300 font-medium">
+                              {formatBytes(outputBytes)}
+                            </span>
+                            {saveRate !== null ? (
+                              <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-400">
+                                {t('imageCompress.saved', { percent: formatPercent(saveRate) })}
+                              </span>
+                            ) : null}
                           </div>
-                          <div class="mt-1 text-xs text-slate-500 dark:text-slate-400">
-                            {isProcessing
-                              ? t('imageCompress.compressing', { progress })
-                              : isError
-                                ? (job?.error ?? t('imageCompress.failed'))
-                                : t('imageCompress.waiting')}
-                          </div>
-                        </>
-                      ) : null}
+                        ) : (
+                          <>
+                            <div class="mt-2 h-1.5 rounded-full bg-slate-200/80 dark:bg-slate-700/80 overflow-hidden">
+                              <div
+                                class={`h-full transition-all ${isError ? "bg-red-500" : "bg-blue-500"}`}
+                                style={{ width: `${progress}%` }}
+                              />
+                            </div>
+                            <div class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+                              {isProcessing
+                                ? t('imageCompress.compressing', { progress })
+                                : isError
+                                  ? (job?.error ?? t('imageCompress.failed'))
+                                  : t('imageCompress.waiting')}
+                            </div>
+                          </>
+                        )}
+                      </div>
                     </div>
 
-                    {/* 下载按钮放右侧 */}
-                    {isDone ? (
+                    {/* 右侧：幽灵按钮操作区，悬停高亮 */}
+                    <div class="flex items-center gap-1 shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">
+                      {isDone ? (
+                        <button
+                          type="button"
+                          class="w-9 h-9 flex items-center justify-center rounded-lg text-slate-700 hover:text-blue-600 hover:bg-blue-50 dark:text-slate-300 dark:hover:text-blue-400 dark:hover:bg-blue-900/30 transition-colors"
+                          onClick={() => handleDownloadOne(it.id)}
+                          title={t('common.download')}
+                        >
+                          <DownloadIcon size={18} color="currentColor" />
+                        </button>
+                      ) : null}
                       <button
                         type="button"
-                        class="w-9 h-9 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors shrink-0"
-                        onClick={() => handleDownloadOne(it.id)}
-                        title={t('imageCompress.download')}
+                        class="w-9 h-9 flex items-center justify-center rounded-lg text-slate-700 hover:text-red-600 hover:bg-red-50 dark:text-slate-300 dark:hover:text-red-400 dark:hover:bg-red-900/20 transition-colors"
+                        onClick={() => handleRemoveOne(it.id)}
+                        title={t('common.delete')}
                       >
-                        <DownloadIcon size={18} color="currentColor" />
+                        <TrashIcon size={20} color="currentColor" />
                       </button>
-                    ) : null}
+                    </div>
                   </div>
                 );
               })}

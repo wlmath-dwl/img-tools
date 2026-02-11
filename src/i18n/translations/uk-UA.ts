@@ -10,6 +10,7 @@ export const ukUA: Record<TranslationKey, string> = {
   "common.cancel": "Скасувати",
   "common.confirm": "Підтвердити",
   "common.download": "Завантажити",
+  "common.downloadAll": "Завантажити все",
   "common.upload": "Завантажити",
   "common.loading": "Завантаження…",
   "common.error": "Помилка",
@@ -85,9 +86,9 @@ export const ukUA: Record<TranslationKey, string> = {
   "home.how.step2.desc":
     "Перетягніть зображення, щоб впорядкувати сторінки PDF та отримати ідеальний результат.",
   "home.how.step3.title": "Миттєвий експорт",
-  "home.how.step3.descPrefix": "Натисніть «Створити», і PDF буде збережено ",
-  "home.how.step3.descEmphasis": "локально за кілька секунд",
-  "home.how.step3.descSuffix": ", без очікування.",
+  "home.how.step3.descPrefix": "Натисніть «Створити», і PDF буде ",
+  "home.how.step3.descEmphasis": "згенеровано локально",
+  "home.how.step3.descSuffix": ", потім експортовано та завантажено.",
 
   "home.process.title": "Як це працює",
   "home.process.step1": "Завантажити зображення",
@@ -145,7 +146,6 @@ export const ukUA: Record<TranslationKey, string> = {
   "imageConvert.supportedFormats": "Підтримувані формати",
   "imageConvert.outputFormat": "Вихідний формат",
   "imageConvert.quality": "Якість (JPG/WebP)",
-  "imageConvert.downloadAll": "Завантажити все",
   "imageConvert.clear": "Очистити",
   "imageConvert.addMore": "Додати ще",
   "imageConvert.formatJpg": "JPG (менший розмір)",
@@ -245,7 +245,6 @@ export const ukUA: Record<TranslationKey, string> = {
 
   "imagePdf.title": "Зображення у PDF",
   "imagePdf.addImages": "Додати зображення",
-  "imagePdf.export": "Експорт",
   "imagePdf.uploadButton": "Завантажити зображення",
   "imagePdf.uploadDesc":
     "Перетягніть сюди або натисніть для вибору. Підтримуються JPG / PNG / WEBP",
@@ -266,8 +265,8 @@ export const ukUA: Record<TranslationKey, string> = {
   "imagePdf.quality.lossless": "Без втрат",
   "imagePdf.quality.lossy": "З втратами",
   "imagePdf.filename": "Ім'я файлу",
-  "imagePdf.filename.placeholder": "Ім'я файлу для експорту",
-  "imagePdf.exporting": "Експорт PDF…",
+  "imagePdf.filename.placeholder": "Ім'я файлу для завантаження",
+  "imagePdf.exporting": "Завантаження PDF…",
   "imagePdf.loading": "Завантаження…",
   "imagePdf.rotate": "Повернути на 90°",
   "imagePdf.delete": "Видалити",
@@ -289,7 +288,6 @@ export const ukUA: Record<TranslationKey, string> = {
 
   "layout.processing": "Обробка…",
   "layout.exportingImage": "Експорт зображення…",
-  "layout.downloadAll": "Завантажити все",
   "layout.download": "Завантажити",
   "layout.failed": "Обробка не вдалася",
   "layout.config": "Налаштування",
@@ -301,6 +299,9 @@ export const ukUA: Record<TranslationKey, string> = {
   "layout.previewGenerateFailed": "Не вдалося створити попередній перегляд",
   "layout.applyToAllNotImplemented":
     "Функція «Застосувати до всіх» не реалізована",
+  "layout.reselectConfirmTitle": "Вибрати зображення знову",
+  "layout.reselectConfirmMessage": "При повторному виборі поточні зображення будуть видалені і потрібна нова обробка. Продовжити?",
+  "layout.reselectConfirmButton": "Підтвердити повторний вибір",
 
   "pdf.margin.none": "Без відступу",
   "pdf.margin.narrow": "Вузький",
@@ -347,3 +348,8 @@ export const ukUA: Record<TranslationKey, string> = {
   "theme.dark": "Темна",
   "theme.auto": "Автоматична",
 };
+
+
+
+
+

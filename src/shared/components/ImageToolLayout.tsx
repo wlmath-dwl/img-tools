@@ -16,16 +16,14 @@ import { PrivacyShieldIcon } from "../icons";
 import { downloadBlob } from "../image";
 
 type ToolbarConfig = {
-  // 预览按钮默认开启；某些页面（如格式转换）需要关闭
-  showPreview?: boolean;
   // 允许强制隐藏重选/主按钮（即使传了 label/handler）
   showReselect?: boolean;
   showPrimary?: boolean;
-  // 多图场景的“添加图片”按钮控制
+  // 顶栏“添加图片”按钮控制（默认开启；可显式设为 false 关闭）
   showAddFiles?: boolean;
   addFilesLabel?: string;
-  // 预览按钮文案（默认使用 i18n：common.preview）
-  previewLabel?: string;
+  // 底部操作栏预览按钮（多图缩略条场景）是否显示
+  showPreview?: boolean;
 };
 
 type ToolImageInfo = {
@@ -189,6 +187,7 @@ export function ImageToolLayout({
   const addFilesInputRef = useRef<HTMLInputElement | null>(null);
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
   const [isApplyAllOpen, setIsApplyAllOpen] = useState(false);
+  const [isReselectConfirmOpen, setIsReselectConfirmOpen] = useState(false);
 
   // 预览弹窗：可展示“处理后结果”（由页面生成 blob）
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
@@ -468,7 +467,14 @@ export function ImageToolLayout({
     images?.items.length ?? effectiveThumbStrip?.items.length ?? 0;
   const isMulti = totalImages > 1;
   const canBulkDownload = Boolean(onPrimaryActionAll);
-  const topPrimaryLabel = primaryActionLabel ?? t("common.download");
+  const topPrimaryLabel =
+    primaryActionLabel ??
+    (isMulti && canBulkDownload
+      ? (primaryActionLabelAll ?? t("common.downloadAll"))
+      : t("common.download"));
+  const topReselectLabel = secondaryActionLabel ?? t("common.reselect");
+  const showAddFilesButton =
+    Boolean(onFilesSelect && (toolbarConfig?.showAddFiles ?? true));
   const shouldUsePreview = Boolean(getPreviewBlob);
   const previewSource = shouldUsePreview
     ? (previewUrl ?? (previewError ? (effectiveInfo?.url ?? null) : null))
@@ -494,36 +500,26 @@ export function ImageToolLayout({
         <Toolbar
           title={title}
           onBackToHome={onBackToHome}
-          onPreview={
-            ready && showPreview && effectiveInfo && !isMulti
-              ? () => setIsPreviewOpen(true)
-              : undefined
-          }
-          previewActionLabel={
-            ready && showPreview && effectiveInfo && !isMulti
-              ? (toolbarConfig?.previewLabel ?? t("common.preview"))
-              : undefined
-          }
-          onReselect={
-            ready && showReselect && !isMulti ? onReselect : undefined
-          }
+          onReselect={() => setIsReselectConfirmOpen(true)}
           secondaryActionLabel={
-            ready && showReselect && !isMulti ? secondaryActionLabel : undefined
+            ready && showReselect ? topReselectLabel : undefined
           }
+          secondaryDisabled={!onReselect}
           onAddFiles={
-            ready && onFilesSelect && (isMulti || toolbarConfig?.showAddFiles)
+            ready && showAddFilesButton
               ? () => addFilesInputRef.current?.click()
               : undefined
           }
           addFilesLabel={
-            ready && (isMulti || toolbarConfig?.showAddFiles)
+            ready && showAddFilesButton
               ? (toolbarConfig?.addFilesLabel ?? t("layout.addImages"))
               : undefined
           }
+          addFilesDisabled={!onFilesSelect}
           primaryActionLabel={
             ready && showPrimary ? topPrimaryLabel : undefined
           }
-          primaryDisabled={ready && showPrimary ? primaryDisabled : undefined}
+          primaryDisabled={Boolean(primaryDisabled)}
           onPrimaryAction={
             ready && showPrimary
               ? () => {
@@ -562,7 +558,10 @@ export function ImageToolLayout({
               onImageSelect={onImageSelect}
               onFilesSelect={onFilesSelect}
               acceptedTypes={acceptedTypes}
-              texts={uploadTexts}
+              texts={{
+                buttonLabel: t("common.pickImages"),
+                description: uploadTexts?.description,
+              }}
             />
           </div>
         ) : (
@@ -631,7 +630,7 @@ export function ImageToolLayout({
                       disabled={!showPreview || !effectiveInfo}
                       onClick={() => setIsPreviewOpen(true)}
                     >
-                      {toolbarConfig?.previewLabel ?? t("common.preview")}
+                      {t("common.preview")}
                     </button>
                     <button
                       type="button"
@@ -769,6 +768,39 @@ export function ImageToolLayout({
         </form>
       </dialog>
 
+      <dialog class={`modal ${isReselectConfirmOpen ? "modal-open" : ""}`}>
+        <div class="modal-box">
+          <h3 class="font-bold text-lg">{t("layout.reselectConfirmTitle")}</h3>
+          <div class="py-4 text-sm text-slate-700 dark:text-slate-200">
+            {t("layout.reselectConfirmMessage")}
+          </div>
+          <div class="modal-action">
+            <button
+              type="button"
+              class="btn btn-outline btn-sm"
+              onClick={() => setIsReselectConfirmOpen(false)}
+            >
+              {t("common.cancel")}
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btn-sm"
+              onClick={() => {
+                setIsReselectConfirmOpen(false);
+                onReselect?.();
+              }}
+            >
+              {t("layout.reselectConfirmButton")}
+            </button>
+          </div>
+        </div>
+        <form method="dialog" class="modal-backdrop">
+          <button type="button" onClick={() => setIsReselectConfirmOpen(false)}>
+            close
+          </button>
+        </form>
+      </dialog>
+
       {/* 预览：全屏蒙层图片查看器（替代 Dialog 内容） */}
       {effectiveInfo ? (
         <ImageViewer
@@ -813,10 +845,10 @@ export function ImageToolLayout({
         }}
         primaryActionLabel={
           isBulkAction
-            ? (primaryActionLabelAll ?? t("layout.downloadAll"))
+            ? (primaryActionLabelAll ?? t("common.downloadAll"))
             : (primaryActionLabel ??
               (downloadPayloads && downloadPayloads.length > 1
-                ? t("layout.downloadAll")
+                ? t("common.downloadAll")
                 : t("layout.download")))
         }
         onPrimaryAction={async () => {
@@ -861,3 +893,6 @@ export function ImageToolLayout({
     </div>
   );
 }
+
+
+

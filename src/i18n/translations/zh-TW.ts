@@ -10,6 +10,7 @@ export const zhTW: Record<TranslationKey, string> = {
   "common.cancel": "取消",
   "common.confirm": "確定",
   "common.download": "下載",
+  "common.downloadAll": "下載全部",
   "common.upload": "上傳",
   "common.loading": "載入中...",
   "common.error": "錯誤",
@@ -48,11 +49,11 @@ export const zhTW: Record<TranslationKey, string> = {
   "home.upload.desc": "拖曳圖片至此或點擊選擇，支援 JPG / PNG / WEBP 批次上傳",
 
   "home.usp.privacy.title": "安全隱私",
-  "home.usp.privacy.desc": "檔案不上傳伺服器，於瀏覽器本機完成處理",
-  "home.usp.fast.title": "極速處理",
-  "home.usp.fast.desc": "不需上傳下載，處理瞬間完成",
+  "home.usp.privacy.desc": "全程本地處理，檔案永不上傳伺服器，你的資料完全由你掌控",
+  "home.usp.global.title": "多語言適配",
+  "home.usp.global.desc": "支援 10+ 種語言，適配明暗模式，全球用戶都能流暢使用",
   "home.usp.free.title": "完全免費",
-  "home.usp.free.desc": "無浮水印、無檔案大小限制、不需註冊",
+  "home.usp.free.desc": "無強制浮水印、無檔案大小限制，無需註冊登入，核心功能永久免費",
 
   "home.tool.crop.desc":
     "內建 16:9、4:3、1:1 等比例，支援圓形裁切與像素級精準控制，一鍵套用到全部圖片",
@@ -81,8 +82,8 @@ export const zhTW: Record<TranslationKey, string> = {
     "自由拖曳圖片調整 PDF 頁面順序，確保輸出結果符合預期。",
   "home.how.step3.title": "瞬間匯出",
   "home.how.step3.descPrefix": "點擊「產生」，PDF 檔案將於",
-  "home.how.step3.descEmphasis": "本機瞬間儲存",
-  "home.how.step3.descSuffix": "，不需等待下載。",
+  "home.how.step3.descEmphasis": "本機生成",
+  "home.how.step3.descSuffix": "，匯出下載。",
 
   "home.process.title": "使用流程",
   "home.process.step1": "上傳圖片",
@@ -134,7 +135,6 @@ export const zhTW: Record<TranslationKey, string> = {
   "imageConvert.supportedFormats": "支援格式",
   "imageConvert.outputFormat": "輸出格式",
   "imageConvert.quality": "品質（JPG/WebP）",
-  "imageConvert.downloadAll": "下載全部",
   "imageConvert.clear": "清空",
   "imageConvert.addMore": "繼續加入",
   "imageConvert.formatJpg": "JPG（體積較小）",
@@ -234,7 +234,6 @@ export const zhTW: Record<TranslationKey, string> = {
 
   "imagePdf.title": "圖片轉 PDF",
   "imagePdf.addImages": "加入圖片",
-  "imagePdf.export": "匯出",
   "imagePdf.uploadButton": "上傳圖片",
   "imagePdf.uploadDesc": "拖曳圖片至此或點擊選擇，支援 JPG / PNG / WEBP",
   "imagePdf.pageSize": "頁面尺寸",
@@ -254,8 +253,8 @@ export const zhTW: Record<TranslationKey, string> = {
   "imagePdf.quality.lossless": "無失真",
   "imagePdf.quality.lossy": "失真壓縮",
   "imagePdf.filename": "檔名",
-  "imagePdf.filename.placeholder": "匯出檔名",
-  "imagePdf.exporting": "匯出 PDF 中...",
+  "imagePdf.filename.placeholder": "下載檔名",
+  "imagePdf.exporting": "下載 PDF 中...",
   "imagePdf.loading": "載入中…",
   "imagePdf.rotate": "旋轉 90°",
   "imagePdf.delete": "刪除",
@@ -276,7 +275,6 @@ export const zhTW: Record<TranslationKey, string> = {
 
   "layout.processing": "處理中…",
   "layout.exportingImage": "匯出圖片中...",
-  "layout.downloadAll": "下載全部",
   "layout.download": "下載",
   "layout.failed": "處理失敗",
   "layout.config": "設定",
@@ -286,6 +284,9 @@ export const zhTW: Record<TranslationKey, string> = {
   "layout.privacyDesc": "所有處理皆在瀏覽器本機完成，您的圖片不會上傳至伺服器",
   "layout.previewGenerateFailed": "預覽產生失敗",
   "layout.applyToAllNotImplemented": "套用到全部功能尚未實作",
+  "layout.reselectConfirmTitle": "重選圖片",
+  "layout.reselectConfirmMessage": "重選後將清空當前圖片，需要重新處理，是否繼續？",
+  "layout.reselectConfirmButton": "確認重選",
 
   "pdf.margin.none": "無邊距",
   "pdf.margin.narrow": "窄邊距",
@@ -332,3 +333,9 @@ export const zhTW: Record<TranslationKey, string> = {
   "theme.dark": "深色",
   "theme.auto": "自動",
 };
+
+
+
+
+
+

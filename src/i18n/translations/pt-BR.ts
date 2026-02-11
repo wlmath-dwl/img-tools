@@ -10,6 +10,7 @@ export const ptBR: Record<TranslationKey, string> = {
   "common.cancel": "Cancelar",
   "common.confirm": "Confirmar",
   "common.download": "Baixar",
+  "common.downloadAll": "Baixar todos",
   "common.upload": "Enviar",
   "common.loading": "Carregando...",
   "common.error": "Erro",
@@ -85,9 +86,9 @@ export const ptBR: Record<TranslationKey, string> = {
   "home.how.step2.desc":
     "Arraste as imagens para reordenar as páginas do PDF e obter resultados perfeitos.",
   "home.how.step3.title": "Exportar instantaneamente",
-  "home.how.step3.descPrefix": "Clique em 'Criar' e o PDF será salvo ",
-  "home.how.step3.descEmphasis": "localmente em segundos",
-  "home.how.step3.descSuffix": ", sem esperas.",
+  "home.how.step3.descPrefix": "Clique em 'Criar' e o PDF será ",
+  "home.how.step3.descEmphasis": "gerado localmente",
+  "home.how.step3.descSuffix": ", depois exportado e baixado.",
 
   "home.process.title": "Como funciona",
   "home.process.step1": "Enviar imagens",
@@ -143,7 +144,6 @@ export const ptBR: Record<TranslationKey, string> = {
   "imageConvert.supportedFormats": "Formatos suportados",
   "imageConvert.outputFormat": "Formato de saída",
   "imageConvert.quality": "Qualidade (JPG/WebP)",
-  "imageConvert.downloadAll": "Baixar todos",
   "imageConvert.clear": "Limpar",
   "imageConvert.addMore": "Adicionar mais",
   "imageConvert.formatJpg": "JPG (tamanho menor)",
@@ -243,7 +243,6 @@ export const ptBR: Record<TranslationKey, string> = {
 
   "imagePdf.title": "Imagem para PDF",
   "imagePdf.addImages": "Adicionar imagens",
-  "imagePdf.export": "Exportar",
   "imagePdf.uploadButton": "Enviar imagens",
   "imagePdf.uploadDesc":
     "Arraste aqui ou clique para selecionar. Suporta JPG / PNG / WEBP",
@@ -264,8 +263,8 @@ export const ptBR: Record<TranslationKey, string> = {
   "imagePdf.quality.lossless": "Sem perdas",
   "imagePdf.quality.lossy": "Com perdas",
   "imagePdf.filename": "Nome do arquivo",
-  "imagePdf.filename.placeholder": "Nome de exportação",
-  "imagePdf.exporting": "Exportando PDF...",
+  "imagePdf.filename.placeholder": "Nome do arquivo para baixar",
+  "imagePdf.exporting": "Baixando PDF...",
   "imagePdf.loading": "Carregando…",
   "imagePdf.rotate": "Rotacionar 90°",
   "imagePdf.delete": "Excluir",
@@ -287,7 +286,6 @@ export const ptBR: Record<TranslationKey, string> = {
 
   "layout.processing": "Processando…",
   "layout.exportingImage": "Exportando imagem...",
-  "layout.downloadAll": "Baixar todos",
   "layout.download": "Baixar",
   "layout.failed": "Falha no processamento",
   "layout.config": "Configurações",
@@ -299,6 +297,9 @@ export const ptBR: Record<TranslationKey, string> = {
   "layout.previewGenerateFailed": "Falha ao gerar visualização",
   "layout.applyToAllNotImplemented":
     "Função 'Aplicar a todos' ainda não implementada",
+  "layout.reselectConfirmTitle": "Reselecionar imagens",
+  "layout.reselectConfirmMessage": "Reselecionar irá limpar as imagens atuais e exigir novo processamento. Continuar?",
+  "layout.reselectConfirmButton": "Confirmar reseleção",
 
   "pdf.margin.none": "Nenhuma",
   "pdf.margin.narrow": "Pequena",
@@ -345,3 +346,8 @@ export const ptBR: Record<TranslationKey, string> = {
   "theme.dark": "Escuro",
   "theme.auto": "Automático",
 };
+
+
+
+
+

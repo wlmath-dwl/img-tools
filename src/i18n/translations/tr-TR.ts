@@ -10,6 +10,7 @@ export const trTR: Record<TranslationKey, string> = {
   "common.cancel": "İptal",
   "common.confirm": "Onayla",
   "common.download": "İndir",
+  "common.downloadAll": "Hepsini indir",
   "common.upload": "Yükle",
   "common.loading": "Yükleniyor…",
   "common.error": "Hata",
@@ -85,8 +86,8 @@ export const trTR: Record<TranslationKey, string> = {
     "Mükemmel sonuç için PDF sayfalarını sıralamak üzere resimleri sürükleyin.",
   "home.how.step3.title": "Anında dışa aktar",
   "home.how.step3.descPrefix": "«Oluştur» tıklayın ve PDF yerel olarak ",
-  "home.how.step3.descEmphasis": "birkaç saniye içinde kaydedilir",
-  "home.how.step3.descSuffix": ", bekleme yok.",
+  "home.how.step3.descEmphasis": "oluşturulacak",
+  "home.how.step3.descSuffix": ", ardından dışa aktarılıp indirilecek.",
 
   "home.process.title": "Nasıl çalışır",
   "home.process.step1": "Resimleri yükle",
@@ -142,7 +143,6 @@ export const trTR: Record<TranslationKey, string> = {
   "imageConvert.supportedFormats": "Desteklenen formatlar",
   "imageConvert.outputFormat": "Çıktı formatı",
   "imageConvert.quality": "Kalite (JPG/WebP)",
-  "imageConvert.downloadAll": "Hepsini indir",
   "imageConvert.clear": "Temizle",
   "imageConvert.addMore": "Daha ekle",
   "imageConvert.formatJpg": "JPG (daha küçük boyut)",
@@ -242,7 +242,6 @@ export const trTR: Record<TranslationKey, string> = {
 
   "imagePdf.title": "Resim → PDF",
   "imagePdf.addImages": "Resim ekle",
-  "imagePdf.export": "Dışa aktar",
   "imagePdf.uploadButton": "Resimleri yükle",
   "imagePdf.uploadDesc":
     "Buraya sürükleyin veya seçmek için tıklayın. JPG / PNG / WEBP destekli",
@@ -263,8 +262,8 @@ export const trTR: Record<TranslationKey, string> = {
   "imagePdf.quality.lossless": "Kayıpsız",
   "imagePdf.quality.lossy": "Kayıplı",
   "imagePdf.filename": "Dosya adı",
-  "imagePdf.filename.placeholder": "Dışa aktarılacak dosya adı",
-  "imagePdf.exporting": "PDF dışa aktarılıyor…",
+  "imagePdf.filename.placeholder": "İndirilecek dosya adı",
+  "imagePdf.exporting": "PDF indiriliyor…",
   "imagePdf.loading": "Yükleniyor…",
   "imagePdf.rotate": "90° döndür",
   "imagePdf.delete": "Sil",
@@ -286,7 +285,6 @@ export const trTR: Record<TranslationKey, string> = {
 
   "layout.processing": "İşleniyor…",
   "layout.exportingImage": "Resim dışa aktarılıyor…",
-  "layout.downloadAll": "Hepsini indir",
   "layout.download": "İndir",
   "layout.failed": "İşlem başarısız",
   "layout.config": "Ayarlar",
@@ -298,6 +296,9 @@ export const trTR: Record<TranslationKey, string> = {
   "layout.previewGenerateFailed": "Önizleme üretilemedi",
   "layout.applyToAllNotImplemented":
     "«Tümüne uygula» özelliği henüz uygulanmadı",
+  "layout.reselectConfirmTitle": "Resimleri yeniden seç",
+  "layout.reselectConfirmMessage": "Yeniden seçim mevcut resimleri silecek ve yeniden işleme gerektirecektir. Devam edilsin mi?",
+  "layout.reselectConfirmButton": "Yeniden seçimi onayla",
 
   "pdf.margin.none": "Yok",
   "pdf.margin.narrow": "Dar",
@@ -344,3 +345,8 @@ export const trTR: Record<TranslationKey, string> = {
   "theme.dark": "Koyu",
   "theme.auto": "Otomatik",
 };
+
+
+
+
+

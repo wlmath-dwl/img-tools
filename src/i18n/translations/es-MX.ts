@@ -10,6 +10,7 @@ export const esMX: Record<TranslationKey, string> = {
   "common.cancel": "Cancelar",
   "common.confirm": "Aceptar",
   "common.download": "Descargar",
+  "common.downloadAll": "Descargar todo",
   "common.upload": "Subir",
   "common.loading": "Cargando...",
   "common.error": "Error",
@@ -85,9 +86,9 @@ export const esMX: Record<TranslationKey, string> = {
   "home.how.step2.desc":
     "Arrastra las imágenes para reordenar las páginas del PDF y obtener resultados perfectos.",
   "home.how.step3.title": "Exportar al instante",
-  "home.how.step3.descPrefix": "Haz clic en 'Crear' y el PDF se guarda ",
-  "home.how.step3.descEmphasis": "localmente en segundos", // 補全缺失的屬性
-  "home.how.step3.descSuffix": ", sin esperas.", // 補全缺失的屬性
+  "home.how.step3.descPrefix": "Haz clic en 'Crear' y el PDF se ",
+  "home.how.step3.descEmphasis": "generará localmente", // 補全缺失的屬性
+  "home.how.step3.descSuffix": ", luego exporta y descarga.", // 補全缺失的屬性
   "home.process.title": "Cómo funciona",
   "home.process.step1": "Subir imágenes",
   "home.process.step2": "Elegir herramienta",
@@ -143,7 +144,6 @@ export const esMX: Record<TranslationKey, string> = {
   "imageConvert.supportedFormats": "Formatos admitidos",
   "imageConvert.outputFormat": "Formato de salida",
   "imageConvert.quality": "Calidad (JPG/WebP)",
-  "imageConvert.downloadAll": "Descargar todo",
   "imageConvert.clear": "Limpiar",
   "imageConvert.addMore": "Agregar más",
   "imageConvert.formatJpg": "JPG (menor tamaño)",
@@ -243,7 +243,6 @@ export const esMX: Record<TranslationKey, string> = {
 
   "imagePdf.title": "Imagen a PDF",
   "imagePdf.addImages": "Agregar imágenes",
-  "imagePdf.export": "Exportar",
   "imagePdf.uploadButton": "Subir imágenes",
   "imagePdf.uploadDesc":
     "Arrastra aquí o haz clic para seleccionar. Admite JPG / PNG / WEBP",
@@ -264,8 +263,8 @@ export const esMX: Record<TranslationKey, string> = {
   "imagePdf.quality.lossless": "Sin pérdidas",
   "imagePdf.quality.lossy": "Con pérdidas",
   "imagePdf.filename": "Nombre de archivo",
-  "imagePdf.filename.placeholder": "Nombre de exportación",
-  "imagePdf.exporting": "Exportando PDF...",
+  "imagePdf.filename.placeholder": "Nombre de descarga",
+  "imagePdf.exporting": "Descargando PDF...",
   "imagePdf.loading": "Cargando…",
   "imagePdf.rotate": "Rotar 90°",
   "imagePdf.delete": "Eliminar",
@@ -287,7 +286,6 @@ export const esMX: Record<TranslationKey, string> = {
 
   "layout.processing": "Procesando…",
   "layout.exportingImage": "Exportando imagen...",
-  "layout.downloadAll": "Descargar todo",
   "layout.download": "Descargar",
   "layout.failed": "Error en el procesamiento",
   "layout.config": "Configuración",
@@ -299,6 +297,9 @@ export const esMX: Record<TranslationKey, string> = {
   "layout.previewGenerateFailed": "Error al generar vista previa",
   "layout.applyToAllNotImplemented":
     "Función 'Aplicar a todos' no implementada aún",
+  "layout.reselectConfirmTitle": "Reseleccionar imágenes",
+  "layout.reselectConfirmMessage": "Al reseleccionar se borrarán las imágenes actuales y será necesario reprocesarlas. ¿Continuar?",
+  "layout.reselectConfirmButton": "Confirmar reselección",
 
   "pdf.margin.none": "Ninguno",
   "pdf.margin.narrow": "Estrecho",
@@ -345,3 +346,8 @@ export const esMX: Record<TranslationKey, string> = {
   "theme.dark": "Oscuro",
   "theme.auto": "Automático",
 };
+
+
+
+
+

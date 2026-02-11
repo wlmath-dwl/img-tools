@@ -10,6 +10,7 @@ export const ruRU: Record<TranslationKey, string> = {
   "common.cancel": "Отмена",
   "common.confirm": "Подтвердить",
   "common.download": "Скачать",
+  "common.downloadAll": "Скачать все",
   "common.upload": "Загрузить",
   "common.loading": "Загрузка…",
   "common.error": "Ошибка",
@@ -50,14 +51,15 @@ export const ruRU: Record<TranslationKey, string> = {
   "home.upload.desc":
     "Перетащите изображения сюда или нажмите для выбора. Поддерживается пакетная загрузка JPG / PNG / WEBP",
 
-  "home.usp.privacy.title": "Безопасно и конфиденциально",
+  "home.usp.privacy.title": "Конфиденциальность",
   "home.usp.privacy.desc":
-    "Файлы остаются на вашем устройстве, полностью обрабатываются в браузере",
-  "home.usp.fast.title": "Очень быстро",
-  "home.usp.fast.desc": "Без загрузки/скачивания, мгновенная обработка",
+    "Полностью локальная обработка, файлы никогда не загружаются на сервер - ваши данные остаются под вашим контролем",
+  "home.usp.global.title": "Глобальная поддержка",
+  "home.usp.global.desc":
+    "Поддержка более 10 языков, совместимость со светлой/темной темой - бесперебойная работа для пользователей по всему миру",
   "home.usp.free.title": "100% бесплатно",
   "home.usp.free.desc":
-    "Без водяных знаков, без ограничений по размеру, без регистрации",
+    "Без водяных знаков, без ограничений по размеру, без входа - основные функции всегда бесплатны",
 
   "home.tool.crop.desc":
     "Фиксированные соотношения 16:9, 4:3, 1:1, круглая обрезка и пиксельный контроль, синхронизация всех изображений одним кликом",
@@ -86,9 +88,9 @@ export const ruRU: Record<TranslationKey, string> = {
   "home.how.step2.desc":
     "Перетащите изображения, чтобы упорядочить страницы PDF и получить идеальный результат.",
   "home.how.step3.title": "Мгновенный экспорт",
-  "home.how.step3.descPrefix": "Нажмите «Создать», и PDF будет сохранен ",
-  "home.how.step3.descEmphasis": "локально за несколько секунд",
-  "home.how.step3.descSuffix": ", без ожидания.",
+  "home.how.step3.descPrefix": "Нажмите «Создать», и PDF будет ",
+  "home.how.step3.descEmphasis": "сгенерирован локально",
+  "home.how.step3.descSuffix": ", затем экспортирован и загружен.",
 
   "home.process.title": "Как это работает",
   "home.process.step1": "Загрузить изображения",
@@ -146,7 +148,6 @@ export const ruRU: Record<TranslationKey, string> = {
   "imageConvert.supportedFormats": "Поддерживаемые форматы",
   "imageConvert.outputFormat": "Выходной формат",
   "imageConvert.quality": "Качество (JPG/WebP)",
-  "imageConvert.downloadAll": "Скачать все",
   "imageConvert.clear": "Очистить",
   "imageConvert.addMore": "Добавить еще",
   "imageConvert.formatJpg": "JPG (меньший размер)",
@@ -246,7 +247,6 @@ export const ruRU: Record<TranslationKey, string> = {
 
   "imagePdf.title": "Изображение в PDF",
   "imagePdf.addImages": "Добавить изображения",
-  "imagePdf.export": "Экспорт",
   "imagePdf.uploadButton": "Загрузить изображения",
   "imagePdf.uploadDesc":
     "Перетащите сюда или нажмите для выбора. Поддерживаются JPG / PNG / WEBP",
@@ -267,8 +267,8 @@ export const ruRU: Record<TranslationKey, string> = {
   "imagePdf.quality.lossless": "Без потерь",
   "imagePdf.quality.lossy": "С потерями",
   "imagePdf.filename": "Имя файла",
-  "imagePdf.filename.placeholder": "Имя файла для экспорта",
-  "imagePdf.exporting": "Экспорт PDF…",
+  "imagePdf.filename.placeholder": "Имя файла для скачивания",
+  "imagePdf.exporting": "Скачивание PDF…",
   "imagePdf.loading": "Загрузка…",
   "imagePdf.rotate": "Повернуть на 90°",
   "imagePdf.delete": "Удалить",
@@ -290,7 +290,6 @@ export const ruRU: Record<TranslationKey, string> = {
 
   "layout.processing": "Обработка…",
   "layout.exportingImage": "Экспорт изображения…",
-  "layout.downloadAll": "Скачать все",
   "layout.download": "Скачать",
   "layout.failed": "Обработка не удалась",
   "layout.config": "Настройки",
@@ -302,6 +301,9 @@ export const ruRU: Record<TranslationKey, string> = {
   "layout.previewGenerateFailed": "Не удалось создать предпросмотр",
   "layout.applyToAllNotImplemented":
     "Функция «Применить ко всем» не реализована",
+  "layout.reselectConfirmTitle": "Выбрать изображения заново",
+  "layout.reselectConfirmMessage": "При повторном выборе текущие изображения будут удалены и потребуется новая обработка. Продолжить?",
+  "layout.reselectConfirmButton": "Подтвердить повторный выбор",
 
   "pdf.margin.none": "Без отступа",
   "pdf.margin.narrow": "Узкий",
@@ -348,3 +350,9 @@ export const ruRU: Record<TranslationKey, string> = {
   "theme.dark": "Темная",
   "theme.auto": "Автоматическая",
 };
+
+
+
+
+
+
