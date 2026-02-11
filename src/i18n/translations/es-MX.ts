@@ -1,6 +1,6 @@
 import type { TranslationKey } from "../types";
 
-export const esMX: Record<TranslationKey, string> = {
+export const esMX: Partial<Record<TranslationKey, string>> = {
   "common.close": "Cerrar",
   "common.preview": "Vista previa",
   "common.pickImage": "Seleccionar imagen",

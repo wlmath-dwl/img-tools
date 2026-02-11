@@ -1,6 +1,7 @@
 import { type ComponentChildren } from "preact";
 import { useEffect, useMemo, useRef, useState } from "preact/hooks";
 import { useI18n } from "../../i18n/context";
+import { locales } from "../../i18n/locales";
 import { Toolbar } from "./Toolbar";
 import { ImageUploadArea, type ImageUploadAreaTexts } from "./ImageUploadArea";
 import {
@@ -179,7 +180,64 @@ export function ImageToolLayout({
   getPreviewBlob,
   processingConfig,
 }: ImageToolLayoutProps) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
+
+  // 动态注入 SEO Meta 标签
+  useEffect(() => {
+    const seoTitle = t("seo.tool.title", { toolName: title });
+    const seoDescription = t("seo.tool.description", {
+      toolName: title,
+      toolHint:
+        t(`nav.${title.charAt(0).toLowerCase() + title.slice(1)}` as any) ||
+        title,
+      supportedFormats: acceptedTypes.replace(/image\//g, "").toUpperCase(),
+    });
+
+    document.title = seoTitle;
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", seoDescription);
+    }
+
+    // 动态生成 Canonical 和 Hreflang
+    const baseUrl = "https://imgtools365.com";
+    const currentPath = window.location.pathname;
+    const pageName = currentPath.split("/").pop() || "";
+
+    // Canonical
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+    const langPath = locale === "zh-CN" ? "" : `/${locale}`;
+    const pagePath =
+      pageName && pageName !== "index.html" ? `/pages/${pageName}` : "";
+    canonical.setAttribute("href", `${baseUrl}${langPath}${pagePath}`);
+
+    // Hreflang
+    // 先移除旧的
+    document
+      .querySelectorAll('link[rel="alternate"][hreflang]')
+      .forEach((el) => el.remove());
+
+    locales.forEach((l) => {
+      const link = document.createElement("link");
+      link.setAttribute("rel", "alternate");
+      link.setAttribute("hreflang", l);
+      const lPath = l === "zh-CN" ? "" : `/${l}`;
+      link.setAttribute("href", `${baseUrl}${lPath}${pagePath}`);
+      document.head.appendChild(link);
+    });
+
+    // x-default
+    const xDefault = document.createElement("link");
+    xDefault.setAttribute("rel", "alternate");
+    xDefault.setAttribute("hreflang", "x-default");
+    xDefault.setAttribute("href", `${baseUrl}${pagePath}`);
+    document.head.appendChild(xDefault);
+  }, [t, locale, title, acceptedTypes]);
 
   // 移动端底部抽屉开关
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -473,8 +531,9 @@ export function ImageToolLayout({
       ? (primaryActionLabelAll ?? t("common.downloadAll"))
       : t("common.download"));
   const topReselectLabel = secondaryActionLabel ?? t("common.reselect");
-  const showAddFilesButton =
-    Boolean(onFilesSelect && (toolbarConfig?.showAddFiles ?? true));
+  const showAddFilesButton = Boolean(
+    onFilesSelect && (toolbarConfig?.showAddFiles ?? true),
+  );
   const shouldUsePreview = Boolean(getPreviewBlob);
   const previewSource = shouldUsePreview
     ? (previewUrl ?? (previewError ? (effectiveInfo?.url ?? null) : null))
@@ -894,7 +953,3 @@ export function ImageToolLayout({
     </div>
   );
 }
-
-
-
-

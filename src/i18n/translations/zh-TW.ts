@@ -1,6 +1,6 @@
 import type { TranslationKey } from "../types";
 
-export const zhTW: Record<TranslationKey, string> = {
+export const zhTW: Partial<Record<TranslationKey, string>> = {
   "common.close": "關閉",
   "common.preview": "預覽",
   "common.pickImage": "選擇圖片",
@@ -29,7 +29,7 @@ export const zhTW: Record<TranslationKey, string> = {
   "imageCrop.height.label": "高",
   "imageCrop.currentCrop": "目前裁切：{width}×{height} px",
 
-  "site.title": "PDF圖片轉換工具",
+  "site.title": "PDF圖轉站",
   "site.subtitle": "專業線上圖片處理工具",
   "nav.home": "首頁",
   "nav.imageCrop": "圖片精確裁切",
@@ -40,9 +40,9 @@ export const zhTW: Record<TranslationKey, string> = {
   "nav.imageFilter": "圖片濾鏡調色",
   "nav.imagePdf": "圖片轉 PDF",
 
-  "home.title": "圖片轉 PDF - ImgTools365",
+  "home.title": "圖片轉 PDF - PDF圖轉站",
   "home.hero.subtitle":
-    "ImgTools365：免費隱私圖片工具箱。主打圖片轉 PDF，支援無失真壓縮、裁切與 WebP/JPG 轉換。所有處理皆在瀏覽器本機完成，保障隱私安全。",
+    "PDF圖轉站 (ImgTools365)：免費隱私圖片工具箱。主打圖片轉 PDF，支援無失真壓縮、裁切與 WebP/JPG 轉換。所有處理皆在瀏覽器本機完成，保障隱私安全。",
   "home.hero.primaryAction": "圖片轉 PDF",
   "home.trust.text":
     "🔒 所有圖片皆在瀏覽器本機處理，不會上傳至伺服器，不會儲存您的任何檔案",
@@ -73,7 +73,7 @@ export const zhTW: Record<TranslationKey, string> = {
 
   "home.how.title": "如何高效率轉換圖片？",
   "home.how.descPrefix":
-    "本工具針對辦公隱私設計，使用 Web 技術於本機完成處理，",
+    "PDF圖轉站針對辦公隱私設計，使用 Web 技術於本機完成處理，",
   "home.how.descEmphasis": "圖片絕不外傳",
   "home.how.descSuffix": "。",
   "home.how.step1.title": "選擇圖片",
@@ -330,11 +330,17 @@ export const zhTW: Record<TranslationKey, string> = {
   "footer.terms": "服務條款",
   "footer.cookie": "Cookie 政策",
   "footer.contact": "聯絡我們",
-  "footer.copyright": "© 2026 圖片工具箱 版權所有",
+  "footer.copyright": "© 2026 PDF圖轉站 版權所有",
 
   "theme.light": "淺色",
   "theme.dark": "深色",
   "theme.auto": "自動",
+  "seo.common.privacyPromise": "100% 瀏覽器本機處理，保障隱私安全",
+  "seo.common.batchSupport": "支援批量處理",
+  "seo.home.title": "PDF圖轉站 | 免費線上圖片轉PDF - 批量壓縮/裁剪/浮水印/格式轉換 - 100%在地隱私安全",
+  "seo.home.description": "PDF圖轉站 (ImgTools365) 是一個專業的線上圖片處理工具箱。主打圖片轉PDF，支援批量圖片壓縮、精確裁剪、隱私馬賽克、批量浮水印、格式轉換及濾鏡美化。所有操作均在瀏覽器本機完成，圖片不上傳伺服器，保護您的隱私安全。",
+  "seo.tool.title": "{toolName} | 線上免費批量處理 - PDF圖轉站",
+  "seo.tool.description": "專業的線上 {toolName} 工具。100% 瀏覽器本機處理，無需安裝插件，圖片永不上傳伺服器，極速且安全。支援 {supportedFormats} 等多種格式批量操作。PDF圖轉站 (ImgTools365) 為您提供極致隱私保障。"
 };
 
 

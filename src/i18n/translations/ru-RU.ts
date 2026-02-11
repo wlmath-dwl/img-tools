@@ -1,6 +1,6 @@
 import type { TranslationKey } from "../types";
 
-export const ruRU: Record<TranslationKey, string> = {
+export const ruRU: Partial<Record<TranslationKey, string>> = {
   "common.close": "Закрыть",
   "common.preview": "Предпросмотр",
   "common.pickImage": "Выбрать изображение",
@@ -30,7 +30,7 @@ export const ruRU: Record<TranslationKey, string> = {
   "imageCrop.height.label": "Высота",
   "imageCrop.currentCrop": "Текущая обрезка: {width}×{height} px",
 
-  "site.title": "Конвертер изображений в PDF",
+  "site.title": "ImgTools365 - Изображение в PDF",
   "site.subtitle":
     "Профессиональные инструменты редактирования изображений онлайн",
   "nav.home": "Главная",

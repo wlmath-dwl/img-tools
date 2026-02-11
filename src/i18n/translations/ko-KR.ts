@@ -1,6 +1,6 @@
 import type { TranslationKey } from "../types";
 
-export const koKR: Record<TranslationKey, string> = {
+export const koKR: Partial<Record<TranslationKey, string>> = {
   "common.close": "닫기",
   "common.preview": "미리보기",
   "common.pickImage": "이미지 선택",
@@ -29,7 +29,7 @@ export const koKR: Record<TranslationKey, string> = {
   "imageCrop.height.label": "세로",
   "imageCrop.currentCrop": "현재 자르기: {width}×{height} px",
 
-  "site.title": "PDF 이미지 변환 사이트",
+  "site.title": "ImgTools365",
   "site.subtitle": "전문 온라인 이미지 처리 도구",
   "nav.home": "홈",
   "nav.imageCrop": "정밀 이미지 자르기",
@@ -341,15 +341,15 @@ export const koKR: Record<TranslationKey, string> = {
   "footer.terms": "이용약관",
   "footer.cookie": "쿠키 정책",
   "footer.contact": "문의하기",
-  "footer.copyright": "© 2026 이미지 툴박스. 모든 권리 보유.",
+  "footer.copyright": "© 2026 ImgTools365. 모든 권리 보유.",
 
   "theme.light": "라이트",
   "theme.dark": "다크",
   "theme.auto": "자동",
+  "seo.common.privacyPromise": "100% 브라우저 로컬 처리, 개인정보 보호",
+  "seo.common.batchSupport": "일괄 처리 지원",
+  "seo.home.title": "ImgTools365 | 무료 온라인 이미지 PDF 변환기 - 일괄 압축/자르기/워터마크 - 100% 로컬 및 개인정보 보호",
+  "seo.home.description": "ImgTools365는 전문적인 온라인 이미지 도구입니다. 이미지를 PDF로 변환, 일괄 압축, 자르기, 개인정보 모자이크, 워터마크 및 형식 변환을 지원합니다. 모든 처리는 브라우저에서 로컬로 수행되며 이미지는 업로드되지 않아 100% 개인정보를 보호합니다.",
+  "seo.tool.title": "{toolName} | 무료 및 안전한 일괄 도구 - ImgTools365",
+  "seo.tool.description": "ImgTools365는 전문적이고 안전한 온라인 {toolName} 도구를 제공합니다. 설치가 필요 없으며 브라우저에서 로컬로 이미지를 빠르게 처리합니다. {supportedFormats} 일괄 처리를 지원하며 100% 개인정보 보호를 보장합니다."
 };
-
-
-
-
-
-

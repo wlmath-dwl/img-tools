@@ -27,7 +27,7 @@ export const jaJP: Record<TranslationKey, string> = {
   "imageCrop.width.label": "幅",
   "imageCrop.height.label": "高さ",
   "imageCrop.currentCrop": "現在のクロップ：{width}×{height} px",
-  "site.title": "PDF画像変換サイト",
+  "site.title": "ImgTools365",
   "site.subtitle": "専門的なオンライン画像処理ツール",
   "nav.home": "ホーム",
   "nav.imageCrop": "画像精密クロップ",
@@ -321,15 +321,14 @@ export const jaJP: Record<TranslationKey, string> = {
   "footer.terms": "利用規約",
   "footer.cookie": "Cookieポリシー",
   "footer.contact": "お問い合わせ",
-  "footer.copyright": "© 2026 画像ツールボックス 全著作権所有",
+  "footer.copyright": "© 2026 ImgTools365 全著作権所有",
   "theme.light": "ライト",
   "theme.dark": "ダーク",
   "theme.auto": "オート",
+  "seo.common.privacyPromise": "100% ブラウザローカル処理、プライバシー保護",
+  "seo.common.batchSupport": "一括処理対応",
+  "seo.home.title": "ImgTools365 | 無料の画像PDF変換ツール - 一括圧縮/クロップ/ウォーターマーク/形式変換 - 100%ローカル＆プライバシー保護",
+  "seo.home.description": "ImgTools365はプロ仕様のオンライン画像ツールボックスです。画像からPDFへの変換、一括圧縮、クロップ、プライバシーモザイク、ウォーターマーク、形式変換に対応。すべての処理はブラウザ内でローカルに行われ、画像がアップロードされることはありません。100%のプライバシーを保証します。",
+  "seo.tool.title": "{toolName} | 無料＆安全な一括ツール - ImgTools365",
+  "seo.tool.description": "ImgTools365は、プロフェッショナルで安全なオンライン {toolName} ツールを提供します。インストール不要で、ブラウザ内でローカルに画像を高速処理。{supportedFormats} の一括処理に対応し、100%のプライバシーを保護します。"
 };
-
-
-
-
-
-
-

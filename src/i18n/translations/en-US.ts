@@ -29,7 +29,7 @@ export const enUS: Record<TranslationKey, string> = {
   "imageCrop.height.label": "Height",
   "imageCrop.currentCrop": "Current Crop: {width}×{height} px",
 
-  "site.title": "PDF Image Converter",
+  "site.title": "ImgTools365",
   "site.subtitle": "Professional Online Image Tools",
   "nav.home": "Home",
   "nav.imageCrop": "Precise Image Crop",
@@ -345,11 +345,10 @@ export const enUS: Record<TranslationKey, string> = {
   "theme.light": "Light",
   "theme.dark": "Dark",
   "theme.auto": "Auto",
+  "seo.common.privacyPromise": "100% local browser processing, privacy guaranteed",
+  "seo.common.batchSupport": "Batch processing supported",
+  "seo.home.title": "ImgTools365 | Free Online Image to PDF - Batch Compress/Crop/Watermark - 100% Private",
+  "seo.home.description": "ImgTools365: Your professional online image toolkit. Convert images to PDF, batch compress, crop, watermark, and filter images 100% locally in your browser. No registration, no uploads, total privacy guaranteed.",
+  "seo.tool.title": "{toolName} | Free & Secure Batch Tool - ImgTools365",
+  "seo.tool.description": "Professional {toolName} online. 100% Secure local processing in your browser. No installation required, images never leave your device. Fast batch support for {supportedFormats}. ImgTools365 ensures your privacy."
 };
-
-
-
-
-
-
-

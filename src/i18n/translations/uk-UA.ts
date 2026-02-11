@@ -1,6 +1,6 @@
 import type { TranslationKey } from "../types";
 
-export const ukUA: Record<TranslationKey, string> = {
+export const ukUA: Partial<Record<TranslationKey, string>> = {
   "common.close": "Закрити",
   "common.preview": "Попередній перегляд",
   "common.pickImage": "Вибрати зображення",

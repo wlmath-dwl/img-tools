@@ -290,4 +290,10 @@ export type TranslationKey =
     | "footer.copyright"
     | "theme.light"
     | "theme.dark"
-    | "theme.auto";
+    | "theme.auto"
+    | "seo.common.privacyPromise"
+    | "seo.common.batchSupport"
+    | "seo.home.title"
+    | "seo.home.description"
+    | "seo.tool.title"
+    | "seo.tool.description";

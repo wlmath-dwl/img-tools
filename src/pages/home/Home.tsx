@@ -1,5 +1,7 @@
 import type { ComponentChildren } from "preact";
+import { useEffect } from "preact/hooks";
 import { useI18n } from "../../i18n/context";
+import { locales } from "../../i18n/locales";
 import type { TranslationKey } from "../../i18n/types";
 import { Header } from "../../shared/components/Header";
 import { Footer } from "../../shared/components/Footer";
@@ -12,6 +14,7 @@ import {
   FilterIcon,
   PrivacyShieldIcon,
   GlobeIcon,
+  FreeIcon,
 } from "../../shared/icons";
 import { ImageUploadArea } from "../../shared/components/ImageUploadArea";
 
@@ -41,7 +44,49 @@ async function storeFilesToSessionStorage(files: File[]): Promise<void> {
 }
 
 export function Home() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
+
+  // 动态注入 SEO Meta 标签
+  useEffect(() => {
+    document.title = t("seo.home.title");
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", t("seo.home.description"));
+    }
+
+    // 动态生成 Canonical 和 Hreflang
+    const baseUrl = "https://imgtools365.com";
+    
+    // Canonical
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+    const langPath = locale === "zh-CN" ? "" : `/${locale}`;
+    canonical.setAttribute("href", `${baseUrl}${langPath}/`);
+
+    // Hreflang
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(el => el.remove());
+    
+    locales.forEach(l => {
+      const link = document.createElement("link");
+      link.setAttribute("rel", "alternate");
+      link.setAttribute("hreflang", l);
+      const lPath = l === "zh-CN" ? "" : `/${l}`;
+      link.setAttribute("href", `${baseUrl}${lPath}/`);
+      document.head.appendChild(link);
+    });
+
+    // x-default
+    const xDefault = document.createElement("link");
+    xDefault.setAttribute("rel", "alternate");
+    xDefault.setAttribute("hreflang", "x-default");
+    xDefault.setAttribute("href", `${baseUrl}/`);
+    document.head.appendChild(xDefault);
+  }, [t, locale]);
+
   const compressNavKey: TranslationKey = "nav.imageCompress";
 
   // 上传图片后存储数据并跳转到PDF页面
@@ -58,7 +103,7 @@ export function Home() {
     }
   }
 
-  const tools: ToolCard[] = [
+  const allTools: ToolCard[] = [
     {
       title: t("nav.imageCrop"),
       description: t("home.tool.crop.desc"),
@@ -95,6 +140,12 @@ export function Home() {
       href: "./pages/image-filter.html",
       icon: <FilterIcon size={40} />,
     },
+    {
+      title: t("nav.imagePdf"),
+      description: t("home.how.step1.descPrefix") + t("home.how.step1.descEmphasis") + t("home.how.step1.descSuffix"),
+      href: "./pages/image-pdf.html",
+      icon: <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-lg text-primary"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg></div>,
+    }
   ];
 
   return (
@@ -108,6 +159,7 @@ export function Home() {
             <h1 class="text-4xl md:text-5xl font-bold mb-12 text-base-content">
               {t("home.title")}
             </h1>
+            
             <p class="text-lg mb-10 text-base-content/80 max-w-2xl mx-auto font-medium">
               {t("home.hero.subtitle")}
             </p>
@@ -127,7 +179,7 @@ export function Home() {
             {/* 为什么选择我们 */}
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
               <div class="flex flex-col items-center text-center gap-2">
-                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2 text-primary">
                   <PrivacyShieldIcon size={24} />
                 </div>
                 <h3 class="font-semibold text-base text-base-content">
@@ -138,7 +190,7 @@ export function Home() {
                 </p>
               </div>
               <div class="flex flex-col items-center text-center gap-2">
-                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2 text-primary">
                   <GlobeIcon size={24} />
                 </div>
                 <h3 class="font-semibold text-base text-base-content">
@@ -149,20 +201,8 @@ export function Home() {
                 </p>
               </div>
               <div class="flex flex-col items-center text-center gap-2">
-                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
-                  <svg
-                    class="w-6 h-6 text-primary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2 text-primary">
+                  <FreeIcon size={24} />
                 </div>
                 <h3 class="font-semibold text-base text-base-content">
                   {t("home.usp.free.title")}
@@ -176,7 +216,7 @@ export function Home() {
 
           {/* 工具卡片入口 */}
           <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {tools.map((tool) => (
+            {allTools.map((tool: ToolCard) => (
               <a
                 key={tool.href}
                 href={tool.href}

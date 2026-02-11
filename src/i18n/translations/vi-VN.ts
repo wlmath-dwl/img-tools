@@ -1,6 +1,6 @@
 import type { TranslationKey } from "../types";
 
-export const viVN: Record<TranslationKey, string> = {
+export const viVN: Partial<Record<TranslationKey, string>> = {
   "common.close": "Đóng",
   "common.preview": "Xem trước",
   "common.pickImage": "Chọn ảnh",

@@ -1,6 +1,6 @@
 import type { TranslationKey } from "../types";
 
-export const frFR: Record<TranslationKey, string> = {
+export const frFR: Partial<Record<TranslationKey, string>> = {
   "common.close": "Fermer",
   "common.preview": "Aperçu",
   "common.pickImage": "Choisir une image",
@@ -30,7 +30,7 @@ export const frFR: Record<TranslationKey, string> = {
   "imageCrop.height.label": "Hauteur",
   "imageCrop.currentCrop": "Recadrage actuel : {width}×{height} px",
 
-  "site.title": "Convertisseur Image vers PDF",
+  "site.title": "ImgTools365",
   "site.subtitle": "Outils d’édition d’images professionnels en ligne",
   "nav.home": "Accueil",
   "nav.imageCrop": "Recadrage précis",
@@ -351,10 +351,10 @@ export const frFR: Record<TranslationKey, string> = {
   "theme.light": "Clair",
   "theme.dark": "Sombre",
   "theme.auto": "Automatique",
+  "seo.common.privacyPromise": "Traitement 100% local, confidentialité garantie",
+  "seo.common.batchSupport": "Supporte le traitement par lot",
+  "seo.home.title": "ImgTools365 | Outils d’Image Gratuits et Privés - Sans Inscription",
+  "seo.home.description": "ImgTools365 : Votre boîte à outils d’image gratuite 365 jours par an. Traitement 100% local pour une sécurité maximale. Pas d’installation, pas d’inscription, performance ultra-rapide.",
+  "seo.tool.title": "{toolName} | Outil par Lot Gratuit & Sécurisé - ImgTools365",
+  "seo.tool.description": "{toolName} en ligne 100% sécurisé. Aucune installation requise. Vos photos ne quittent pas votre navigateur. La solution gratuite la plus rapide et privée pour {supportedFormats} par lot."
 };
-
-
-
-
-
-

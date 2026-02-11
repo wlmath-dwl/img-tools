@@ -1,6 +1,6 @@
 import type { TranslationKey } from "../types";
 
-export const ptBR: Record<TranslationKey, string> = {
+export const ptBR: Partial<Record<TranslationKey, string>> = {
   "common.close": "Fechar",
   "common.preview": "Visualizar",
   "common.pickImage": "Selecionar imagem",
@@ -30,7 +30,7 @@ export const ptBR: Record<TranslationKey, string> = {
   "imageCrop.height.label": "Altura",
   "imageCrop.currentCrop": "Corte atual: {width}×{height} px",
 
-  "site.title": "Conversor de Imagens para PDF",
+  "site.title": "ImgTools365 - Imagem para PDF",
   "site.subtitle": "Ferramentas profissionais de imagem online",
   "nav.home": "Início",
   "nav.imageCrop": "Corte preciso de imagem",

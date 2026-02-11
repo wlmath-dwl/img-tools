@@ -1,6 +1,6 @@
 import type { TranslationKey } from "../types";
 
-export const deDE: Record<TranslationKey, string> = {
+export const deDE: Partial<Record<TranslationKey, string>> = {
   "common.close": "Schließen",
   "common.preview": "Vorschau",
   "common.pickImage": "Bild auswählen",
@@ -30,7 +30,7 @@ export const deDE: Record<TranslationKey, string> = {
   "imageCrop.height.label": "Höhe",
   "imageCrop.currentCrop": "Aktueller Zuschnitt: {width}×{height} px",
 
-  "site.title": "Bild‑zu‑PDF‑Konverter",
+  "site.title": "ImgTools365",
   "site.subtitle": "Professionelle Bildbearbeitung online",
   "nav.home": "Startseite",
   "nav.imageCrop": "Präzises Bildzuschnitt",
@@ -149,7 +149,7 @@ export const deDE: Record<TranslationKey, string> = {
     "oder klicken zum Hochladen (Mehrfachauswahl)",
   "imageConvert.supportedFormats": "Unterstützte Formate",
   "imageConvert.outputFormat": "Ausgabeformat",
-  "imageConvert.quality": "Qualität (JPG/WebP)",
+  "imageConvert.quality": "Quality (JPG/WebP)",
   "imageConvert.clear": "Leeren",
   "imageConvert.addMore": "Weitere hinzufügen",
   "imageConvert.formatJpg": "JPG (kleinere Größe)",
@@ -251,7 +251,7 @@ export const deDE: Record<TranslationKey, string> = {
   "imagePdf.addImages": "Bilder hinzufügen",
   "imagePdf.uploadButton": "Bilder hochladen",
   "imagePdf.uploadDesc":
-    "Hierher ziehen oder klicken zum Auswählen. Unterstützt JPG / PNG / WEBP", // 修正：正确 key 是 imagePdf.uploadDesc 而非 imagePdf.upload.desc
+    "Hierher ziehen oder klicken zum Auswählen. Unterstützt JPG / PNG / WEBP",
   "imagePdf.pageSize": "Seitengröße",
   "imagePdf.pageSize.auto": "Automatisch an Bild anpassen",
   "imagePdf.pageSize.a4": "A4",
@@ -351,9 +351,10 @@ export const deDE: Record<TranslationKey, string> = {
   "theme.light": "Hell",
   "theme.dark": "Dunkel",
   "theme.auto": "Automatisch",
+  "seo.common.privacyPromise": "100% lokale Browser-Verarbeitung, Privatsphäre garantiert",
+  "seo.common.batchSupport": "Stapelverarbeitung unterstützt",
+  "seo.home.title": "ImgTools365 | Kostenlose & private Bild-Werkzeuge - Ohne Registrierung",
+  "seo.home.description": "ImgTools365: Ihr kostenloser Bild-Werkzeugkasten für 365 Tage. 100% lokale Verarbeitung für maximale Sicherheit. Keine Installation, keine Registrierung, blitzschnelle Performance.",
+  "seo.tool.title": "{toolName} - Kostenlos & Sicher - ImgTools365",
+  "seo.tool.description": "{toolName} online 100% sicher. Keine Installation erforderlich. Ihre Fotos verlassen niemals Ihren Browser. Die schnellste und privateste kostenlose Lösung für {supportedFormats} Stapelverarbeitung."
 };
-
-
-
-
-

@@ -1,6 +1,6 @@
 import type { TranslationKey } from "../types";
 
-export const nlNL: Record<TranslationKey, string> = {
+export const nlNL: Partial<Record<TranslationKey, string>> = {
   "common.close": "Sluiten",
   "common.preview": "Voorbeeld",
   "common.pickImage": "Afbeelding kiezen",

@@ -30,7 +30,7 @@ export const esES: Record<TranslationKey, string> = {
   "imageCrop.height.label": "Alto",
   "imageCrop.currentCrop": "Recorte actual: {width}×{height} px",
 
-  "site.title": "Conversor de Imágenes a PDF",
+  "site.title": "ImgTools365",
   "site.subtitle": "Herramientas profesionales de edición de imágenes online",
   "nav.home": "Inicio",
   "nav.imageCrop": "Recorte preciso de imágenes",
@@ -203,7 +203,7 @@ export const esES: Record<TranslationKey, string> = {
   "imageWatermark.selectLogo": "Seleccionar logotipo",
   "imageWatermark.logoHint": "Ninguna marca de imagen seleccionada",
   "imageWatermark.logoSize": "Tamaño del logotipo",
-  "imageWatermark.position": "Posición",
+  "imageWatermark.position": "Position",
   "imageWatermark.pos.lt": "Arriba izquierda",
   "imageWatermark.pos.t": "Arriba",
   "imageWatermark.pos.rt": "Arriba derecha",
@@ -350,10 +350,10 @@ export const esES: Record<TranslationKey, string> = {
   "theme.light": "Claro",
   "theme.dark": "Oscuro",
   "theme.auto": "Automático",
+  "seo.common.privacyPromise": "Procesamiento 100% local en el navegador, privacidad garantizada",
+  "seo.common.batchSupport": "Soporte para procesamiento por lotes",
+  "seo.home.title": "ImgTools365 | Free Online Image to PDF - Batch Compress/Crop/Watermark - 100% Private",
+  "seo.home.description": "ImgTools365: Your professional online image toolkit. Convert images to PDF, batch compress, crop, watermark, and filter images 100% locally in your browser. No registration, no uploads, total privacy guaranteed.",
+  "seo.tool.title": "{toolName} | Free & Secure Batch Tool - ImgTools365",
+  "seo.tool.description": "Professional {toolName} online. 100% Secure local processing in your browser. No installation required, images never leave your device. Fast batch support for {supportedFormats}. ImgTools365 ensures your privacy."
 };
-
-
-
-
-
-

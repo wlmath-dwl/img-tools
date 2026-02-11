@@ -22,27 +22,27 @@ export function PrivacyShieldIcon({
       class={className}
     >
       <path
-        d="M6 8.25564L24.0086 3L42 8.25564V19.0337C42 30.3622 34.7502 40.4194 24.0026 44.0005C13.2521 40.4195 6 30.36 6 19.0287V8.25564Z"
+        d="M6 9.25564L24.0086 4L42 9.25564V20.0337C42 31.3622 34.7502 41.4194 24.0026 45.0005C13.2521 41.4195 6 31.36 6 20.0287V9.25564Z"
         fill="none"
         stroke={color}
-        strokeWidth="4"
-        strokeLinejoin="round"
+        stroke-width="4"
+        stroke-linejoin="round"
       />
       <path
-        d="M23.9497 14.9497V30.9497"
+        d="M15 23L22 30L34 18"
         stroke={color}
-        strokeWidth="4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M15.9497 22.9497H31.9497"
-        stroke={color}
-        strokeWidth="4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
       />
     </svg>
   );
 }
+
+
+
+
+
+
+
 
