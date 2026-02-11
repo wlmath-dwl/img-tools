@@ -72,35 +72,15 @@ export function Header() {
   return (
     <header class="h-16 flex items-center justify-between gap-4 w-full mx-auto bg-white dark:bg-slate-800 p-4">
       <div class="flex items-center">
-        {/* 浅色模式 Logo */}
-        <svg
-          width="180"
-          height="40"
-          viewBox="0 0 180 40"
-          xmlns="http://www.w3.org/2000/svg"
-          class="block dark:hidden"
+        {/* logo 文案固定，不走多语言翻译 */}
+        <h1
+          class="h-10 flex items-center text-[24px] leading-none tracking-[-0.5px]"
+          style={{ fontFamily: "system-ui, sans-serif" }}
         >
-          <text y="28" font-family="system-ui, sans-serif" font-size="24" letter-spacing="-0.5">
-            <tspan font-weight="800" fill="#111111">Img</tspan>
-            <tspan font-weight="600" fill="#0891b2">Tools</tspan>
-            <tspan font-weight="800" fill="#111111">365</tspan>
-          </text>
-        </svg>
-
-        {/* 暗色模式 Logo */}
-        <svg
-          width="180"
-          height="40"
-          viewBox="0 0 180 40"
-          xmlns="http://www.w3.org/2000/svg"
-          class="hidden dark:block"
-        >
-          <text y="28" font-family="system-ui, sans-serif" font-size="24" letter-spacing="-0.5">
-            <tspan font-weight="800" fill="#ffffff">Img</tspan>
-            <tspan font-weight="600" fill="#22d3ee">Tools</tspan>
-            <tspan font-weight="800" fill="#ffffff">365</tspan>
-          </text>
-        </svg>
+          <span class="font-extrabold text-[#111111] dark:text-white">Img</span>
+          <span class="font-semibold text-[#0891b2] dark:text-cyan-400">Tools</span>
+          <span class="font-extrabold text-[#111111] dark:text-white">365</span>
+        </h1>
       </div>
       <div class="flex items-center gap-2.5">
         {/* 语言按钮：深色背景，地球图标 + 语言标识 */}

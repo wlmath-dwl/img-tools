@@ -37,9 +37,8 @@ export const jaJP: Record<TranslationKey, string> = {
   "nav.imageConvert": "画像形式相互変換",
   "nav.imageFilter": "画像フィルター調色",
   "nav.imagePdf": "画像をPDFに変換",
-  "home.title": "画像をPDFに変換 - ImgTools365",
-  "home.hero.subtitle":
-    "ImgTools365：無料プライバシー保護画像ツールボックス。画像からPDFへの変換を主とし、ロスレス圧縮、クロップ、WebP/JPG変換に対応。すべての処理はブラウザ上でローカル実行され、プライバシーを完全に保護します。",
+  "home.title": "アップロード不要。ブラウザ内で完結。",
+  "home.hero.subtitle": "ImgTools365 はローカル処理を採用。画像はサーバーに送信されず、プライバシーも安心。PDF変換、圧縮、加工がブラウザで一瞬で完了します。",
   "home.hero.primaryAction": "画像をPDFに変換",
   "home.trust.text":
     "🔒 すべての画像はブラウザ上でローカル処理され、サーバーにアップロードされることはなく、ファイルは保存されません",
@@ -332,3 +331,5 @@ export const jaJP: Record<TranslationKey, string> = {
   "seo.tool.title": "{toolName} | 無料＆安全な一括ツール - ImgTools365",
   "seo.tool.description": "ImgTools365は、プロフェッショナルで安全なオンライン {toolName} ツールを提供します。インストール不要で、ブラウザ内でローカルに画像を高速処理。{supportedFormats} の一括処理に対応し、100%のプライバシーを保護します。"
 };
+
+

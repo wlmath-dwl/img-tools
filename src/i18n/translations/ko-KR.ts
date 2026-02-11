@@ -40,9 +40,8 @@ export const koKR: Partial<Record<TranslationKey, string>> = {
   "nav.imageFilter": "이미지 필터 & 보정",
   "nav.imagePdf": "이미지를 PDF로",
 
-  "home.title": "이미지를 PDF로 - ImgTools365",
-  "home.hero.subtitle":
-    "ImgTools365: 무료 개인정보 보호 이미지 툴박스. 이미지 PDF 변환을 중심으로 무손실 압축, 자르기, WebP/JPG 변환을 지원합니다. 모든 처리는 브라우저 로컬에서 완료되어 개인정보를 안전하게 보호합니다.",
+  "home.title": "업로드 없이 브라우저에서 바로 완료",
+  "home.hero.subtitle": "ImgTools365는 로컬 처리 기술을 사용하여 이미지가 서버를 거치지 않습니다. PDF 변환, 압축, 편집을 브라우저에서 안전하고 빠르게 처리하세요.",
   "home.hero.primaryAction": "이미지를 PDF로",
   "home.trust.text":
     "🔒 모든 이미지는 브라우저 로컬에서 처리되며 서버에 업로드되거나 저장되지 않습니다.",
@@ -353,3 +352,5 @@ export const koKR: Partial<Record<TranslationKey, string>> = {
   "seo.tool.title": "{toolName} | 무료 및 안전한 일괄 도구 - ImgTools365",
   "seo.tool.description": "ImgTools365는 전문적이고 안전한 온라인 {toolName} 도구를 제공합니다. 설치가 필요 없으며 브라우저에서 로컬로 이미지를 빠르게 처리합니다. {supportedFormats} 일괄 처리를 지원하며 100% 개인정보 보호를 보장합니다."
 };
+
+

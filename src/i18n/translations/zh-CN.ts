@@ -37,8 +37,8 @@ export const zhCN: Record<TranslationKey, string> = {
     "nav.imageConvert": "图片格式互转",
     "nav.imageFilter": "图片滤镜调色",
     "nav.imagePdf": "图片转 PDF",
-    "home.title": "图片转 PDF - PDF图转站",
-    "home.hero.subtitle": "PDF图转站 (ImgTools365)：免费隐私图片工具箱。主打图片转 PDF，支持无损压缩、裁剪及 WebP/JPG 转换。所有处理均在浏览器本地完成，保障隐私安全。",
+    "home.title": "无需上传，在你的浏览器里完成",
+    "home.hero.subtitle": "ImgTools365 采用本地处理技术，图片不经过服务器，隐私 100% 安全。秒级完成图片转 PDF、无损压缩及格式转换，完全免费。",
     "home.hero.primaryAction": "图片转 PDF",
     "home.trust.text": "🔒 所有图片均在浏览器本地处理，不会上传到服务器，不会保存你的任何文件",
     "home.upload.button": "上传图片转PDF",
@@ -300,3 +300,5 @@ export const zhCN: Record<TranslationKey, string> = {
     "seo.tool.title": "{toolName} - 100%本地隐私安全 - PDF图转站",
     "seo.tool.description": "PDF图转站 (ImgTools365) 提供专业且安全的在线 {toolName} 工具。无需安装，直接在浏览器本地完成处理，图片永不上传，极致速度体验。支持 {supportedFormats} 批量处理，100%保护您的隐私安全。PDF图转站 (ImgTools365) 为您提供极致隐私保障。"
 };
+
+

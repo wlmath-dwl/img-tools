@@ -41,9 +41,8 @@ export const nlNL: Partial<Record<TranslationKey, string>> = {
   "nav.imageFilter": "Filters & aanpassingen",
   "nav.imagePdf": "Afbeelding naar PDF",
 
-  "home.title": "Afbeelding naar PDF - ImgTools365",
-  "home.hero.subtitle":
-    "ImgTools365: gratis en veilige tools. Gespecialiseerd in afbeelding-naar-PDF conversie, verliesloze compressie, bijsnijden en WebP/JPG conversie. Alle verwerking lokaal in je browser, voor maximale privacy en veiligheid.",
+  "home.title": "Geen uploads. Alles gebeurt in je browser.",
+  "home.hero.subtitle": "ImgTools365 verwerkt afbeeldingen lokaal. Je bestanden raken onze servers niet aan. Converteer naar PDF, comprimeer en bewerk veilig in seconden.",
   "home.hero.primaryAction": "Afbeelding naar PDF",
   "home.trust.text":
     "🔒 Alle afbeeldingen worden lokaal verwerkt, nooit naar een server verzonden, geen bestanden opgeslagen",
@@ -351,6 +350,8 @@ export const nlNL: Partial<Record<TranslationKey, string>> = {
   "theme.dark": "Donker",
   "theme.auto": "Automatisch",
 };
+
+
 
 
 

@@ -41,9 +41,8 @@ export const plPL: Partial<Record<TranslationKey, string>> = {
   "nav.imageFilter": "Filtry i ustawienia",
   "nav.imagePdf": "Obraz na PDF",
 
-  "home.title": "Obraz na PDF - ImgTools365",
-  "home.hero.subtitle":
-    "ImgTools365: darmowe i bezpieczne narzędzia. Specjalizujemy się w konwersji obrazów na PDF, kompresji bezstratnej, kadrowaniu i konwersji WebP/JPG. Wszystkie przetwarzania odbywają się lokalnie w przeglądarce, gwarantując prywatność i bezpieczeństwo.",
+  "home.title": "Bez przesyłania. Wszystko dzieje się w przeglądarce.",
+  "home.hero.subtitle": "ImgTools365 przetwarza obrazy lokalnie. Twoje pliki nie trafiają na serwer. Konwertuj do PDF, kompresuj i edytuj bezpiecznie w kilka sekund.",
   "home.hero.primaryAction": "Obraz na PDF",
   "home.trust.text":
     "🔒 Wszystkie obrazy są przetwarzane lokalnie w przeglądarce, nigdy nie wysyłane na serwer, żadne pliki nie są zapisywane",
@@ -352,6 +351,8 @@ export const plPL: Partial<Record<TranslationKey, string>> = {
   "theme.dark": "Ciemny",
   "theme.auto": "Automatyczny",
 };
+
+
 
 
 

@@ -40,9 +40,8 @@ export const zhTW: Partial<Record<TranslationKey, string>> = {
   "nav.imageFilter": "圖片濾鏡調色",
   "nav.imagePdf": "圖片轉 PDF",
 
-  "home.title": "圖片轉 PDF - PDF圖轉站",
-  "home.hero.subtitle":
-    "PDF圖轉站 (ImgTools365)：免費隱私圖片工具箱。主打圖片轉 PDF，支援無失真壓縮、裁切與 WebP/JPG 轉換。所有處理皆在瀏覽器本機完成，保障隱私安全。",
+  "home.title": "無需上傳，在您的瀏覽器內完成",
+  "home.hero.subtitle": "ImgTools365 採用本地處理技術，圖片不經過服務器，隱私 100% 安全。秒級完成圖片轉 PDF、無損壓縮及格式轉換，完全免費。",
   "home.hero.primaryAction": "圖片轉 PDF",
   "home.trust.text":
     "🔒 所有圖片皆在瀏覽器本機處理，不會上傳至伺服器，不會儲存您的任何檔案",
@@ -342,6 +341,8 @@ export const zhTW: Partial<Record<TranslationKey, string>> = {
   "seo.tool.title": "{toolName} | 線上免費批量處理 - PDF圖轉站",
   "seo.tool.description": "專業的線上 {toolName} 工具。100% 瀏覽器本機處理，無需安裝插件，圖片永不上傳伺服器，極速且安全。支援 {supportedFormats} 等多種格式批量操作。PDF圖轉站 (ImgTools365) 為您提供極致隱私保障。"
 };
+
+
 
 
 

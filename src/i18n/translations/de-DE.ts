@@ -41,9 +41,8 @@ export const deDE: Partial<Record<TranslationKey, string>> = {
   "nav.imageFilter": "Filter & Anpassung",
   "nav.imagePdf": "Bild zu PDF",
 
-  "home.title": "Bild zu PDF – ImgTools365",
-  "home.hero.subtitle":
-    "ImgTools365: Kostenlose & sichere Werkzeugsammlung. Spezialisiert auf Bild‑zu‑PDF‑Konvertierung, verlustfreie Kompression, Zuschnitt und WebP/JPG‑Konvertierung. Alle Vorgänge laufen lokal im Browser ab, um Privatsphäre und Sicherheit zu gewährleisten.",
+  "home.title": "Kein Upload. Alles direkt im Browser.",
+  "home.hero.subtitle": "ImgTools365 verarbeitet Bilder lokal im Browser – kein Server-Upload. Bild-zu-PDF, Kompression und Bearbeitung in Sekunden. Sicher und kostenlos.",
   "home.hero.primaryAction": "Bild zu PDF",
   "home.trust.text":
     "🔒 Alle Bilder werden lokal im Browser verarbeitet, nicht an Server gesendet, keine Dateien gespeichert",
@@ -358,3 +357,5 @@ export const deDE: Partial<Record<TranslationKey, string>> = {
   "seo.tool.title": "{toolName} - Kostenlos & Sicher - ImgTools365",
   "seo.tool.description": "{toolName} online 100% sicher. Keine Installation erforderlich. Ihre Fotos verlassen niemals Ihren Browser. Die schnellste und privateste kostenlose Lösung für {supportedFormats} Stapelverarbeitung."
 };
+
+

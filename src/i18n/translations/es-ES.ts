@@ -41,9 +41,8 @@ export const esES: Record<TranslationKey, string> = {
   "nav.imageFilter": "Filtros y ajustes",
   "nav.imagePdf": "Imagen a PDF",
 
-  "home.title": "Imagen a PDF - ImgTools365",
-  "home.hero.subtitle":
-    "ImgTools365: Caja de herramientas gratuita y privada. Especializada en imagen a PDF, con compresión sin pérdidas, recorte y conversión WebP/JPG. Todo el procesamiento se realiza localmente en tu navegador, garantizando privacidad y seguridad.",
+  "home.title": "Sin subidas. Todo ocurre en tu navegador.",
+  "home.hero.subtitle": "ImgTools365 procesa tus fotos en local. Tus archivos nunca pasan por nuestros servidores. Convierte a PDF y comprime imágenes al instante y de forma segura.",
   "home.hero.primaryAction": "Imagen a PDF",
   "home.trust.text":
     "🔒 Todas las imágenes se procesan localmente en el navegador, no se suben a servidores ni se guardan archivos",
@@ -357,3 +356,5 @@ export const esES: Record<TranslationKey, string> = {
   "seo.tool.title": "{toolName} | Free & Secure Batch Tool - ImgTools365",
   "seo.tool.description": "Professional {toolName} online. 100% Secure local processing in your browser. No installation required, images never leave your device. Fast batch support for {supportedFormats}. ImgTools365 ensures your privacy."
 };
+
+

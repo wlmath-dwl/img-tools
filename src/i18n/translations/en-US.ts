@@ -40,9 +40,8 @@ export const enUS: Record<TranslationKey, string> = {
   "nav.imageFilter": "Photo Filters & Adjust",
   "nav.imagePdf": "Image to PDF",
 
-  "home.title": "Image to PDF - ImgTools365",
-  "home.hero.subtitle":
-    "ImgTools365: Free private image toolkit. Focus on image to PDF, supports lossless compression, cropping, WebP/JPG conversion. All processing done locally in your browser, ensuring privacy and security.",
+  "home.title": "No uploads. Everything stays in your browser.",
+  "home.hero.subtitle": "ImgTools365 processes images locally—your files never touch our servers. Convert to PDF, compress, and edit in seconds. Fast, free, and secure.",
   "home.hero.primaryAction": "Image to PDF",
   "home.trust.text":
     "🔒 All images processed locally in browser, never uploaded to servers, no files saved",
@@ -352,3 +351,5 @@ export const enUS: Record<TranslationKey, string> = {
   "seo.tool.title": "{toolName} | Free & Secure Batch Tool - ImgTools365",
   "seo.tool.description": "Professional {toolName} online. 100% Secure local processing in your browser. No installation required, images never leave your device. Fast batch support for {supportedFormats}. ImgTools365 ensures your privacy."
 };
+
+

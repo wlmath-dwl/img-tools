@@ -41,9 +41,8 @@ export const frFR: Partial<Record<TranslationKey, string>> = {
   "nav.imageFilter": "Filtres & réglages",
   "nav.imagePdf": "Image vers PDF",
 
-  "home.title": "Image vers PDF - ImgTools365",
-  "home.hero.subtitle":
-    "ImgTools365 : outils gratuits et sécurisés. Spécialisé dans la conversion image vers PDF, compression sans perte, recadrage et conversion WebP/JPG. Tout le traitement se fait localement dans le navigateur, pour garantir confidentialité et sécurité.",
+  "home.title": "Aucun téléchargement. Tout se passe dans le navigateur.",
+  "home.hero.subtitle": "ImgTools365 traite vos images localement, sans passer par nos servers. Convertissez en PDF et compressez vos fichiers en quelques secondes, en toute sécurité.",
   "home.hero.primaryAction": "Image vers PDF",
   "home.trust.text":
     "🔒 Toutes les images sont traitées localement, jamais envoyées sur un serveur, aucun fichier enregistré",
@@ -358,3 +357,5 @@ export const frFR: Partial<Record<TranslationKey, string>> = {
   "seo.tool.title": "{toolName} | Outil par Lot Gratuit & Sécurisé - ImgTools365",
   "seo.tool.description": "{toolName} en ligne 100% sécurisé. Aucune installation requise. Vos photos ne quittent pas votre navigateur. La solution gratuite la plus rapide et privée pour {supportedFormats} par lot."
 };
+
+

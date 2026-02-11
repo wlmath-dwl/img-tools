@@ -40,9 +40,8 @@ export const idID: Partial<Record<TranslationKey, string>> = {
   "nav.imageFilter": "Filter & penyesuaian",
   "nav.imagePdf": "Gambar ke PDF",
 
-  "home.title": "Gambar ke PDF - ImgTools365",
-  "home.hero.subtitle":
-    "ImgTools365: Kumpulan alat gratis & aman. Fokus pada gambar ke PDF, kompres tanpa kehilangan, pemotongan, dan konversi WebP/JPG. Semua proses dilakukan lokal di browser, menjamin privasi dan keamanan.",
+  "home.title": "Tanpa unggah. Semua selesai di browser Anda.",
+  "home.hero.subtitle": "ImgTools365 menggunakan teknologi lokal. Gambar Anda tidak masuk ke server kami. Konversi ke PDF, kompres, dan edit dalam hitungan detik secara aman.",
   "home.hero.primaryAction": "Gambar ke PDF",
   "home.trust.text":
     "🔒 Semua gambar diproses lokal di browser, tidak diunggah ke server, tidak ada file disimpan",
@@ -348,6 +347,8 @@ export const idID: Partial<Record<TranslationKey, string>> = {
   "theme.dark": "Gelap",
   "theme.auto": "Otomatis",
 };
+
+
 
 
 

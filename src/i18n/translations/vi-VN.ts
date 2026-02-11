@@ -40,9 +40,8 @@ export const viVN: Partial<Record<TranslationKey, string>> = {
   "nav.imageFilter": "Bộ lọc & chỉnh ảnh",
   "nav.imagePdf": "Chuyển ảnh sang PDF",
 
-  "home.title": "Chuyển ảnh sang PDF - ImgTools365",
-  "home.hero.subtitle":
-    "ImgTools365: Bộ công cụ miễn phí & an toàn. Tập trung chuyển ảnh sang PDF, nén không mất dữ liệu, cắt ảnh và chuyển đổi WebP/JPG. Toàn bộ xử lý diễn ra cục bộ trên trình duyệt, đảm bảo bảo mật và an toàn.",
+  "home.title": "Không cần tải lên. Mọi thứ diễn ra trên trình duyệt.",
+  "home.hero.subtitle": "ImgTools365 xử lý ảnh cục bộ, ảnh không đi qua máy chủ, bảo mật 100%. Chuyển PDF, nén và đổi định dạng ảnh cực nhanh và hoàn toàn miễn phí.",
   "home.hero.primaryAction": "Chuyển ảnh sang PDF",
   "home.trust.text":
     "🔒 Tất cả ảnh được xử lý cục bộ trên trình duyệt, không tải lên máy chủ, không lưu trữ file",
@@ -348,6 +347,8 @@ export const viVN: Partial<Record<TranslationKey, string>> = {
   "theme.dark": "Tối",
   "theme.auto": "Tự động",
 };
+
+
 
 
 

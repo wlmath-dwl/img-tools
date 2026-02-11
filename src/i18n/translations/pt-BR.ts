@@ -41,9 +41,8 @@ export const ptBR: Partial<Record<TranslationKey, string>> = {
   "nav.imageFilter": "Filtros e ajustes",
   "nav.imagePdf": "Imagem para PDF",
 
-  "home.title": "Imagem para PDF - ImgTools365",
-  "home.hero.subtitle":
-    "ImgTools365: Kit de ferramentas gratuito e seguro. Foco em imagem para PDF, com compressão sem perdas, corte e conversão WebP/JPG. Todo processamento é feito localmente no navegador, garantindo privacidade e segurança.",
+  "home.title": "Sem uploads. Tudo é feito no seu navegador.",
+  "home.hero.subtitle": "O ImgTools365 processa tudo localmente. Seus arquivos não passam pelo servidor. Converta para PDF e comprima imagens em segundos, com total privacidade.",
   "home.hero.primaryAction": "Imagem para PDF",
   "home.trust.text":
     "🔒 Todas as imagens são processadas localmente no navegador, nunca enviadas para servidores, nenhum arquivo salvo",
@@ -350,6 +349,8 @@ export const ptBR: Partial<Record<TranslationKey, string>> = {
   "theme.dark": "Escuro",
   "theme.auto": "Automático",
 };
+
+
 
 
 

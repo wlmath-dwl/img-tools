@@ -41,9 +41,8 @@ export const trTR: Partial<Record<TranslationKey, string>> = {
   "nav.imageFilter": "Filtreler & ayarlar",
   "nav.imagePdf": "Resim → PDF",
 
-  "home.title": "Resim PDF Dönüştürücü - ImgTools365",
-  "home.hero.subtitle":
-    "ImgTools365: ücretsiz ve güvenli araçlar. Resim PDF dönüştürme, kayıpsız sıkıştırma, kırpma ve WebP/JPG dönüştürme uzmanlığı. Tüm işlemler tarayıcınızda yerel olarak yapılır, gizlilik ve güvenlik garanti edilir.",
+  "home.title": "Yükleme yok. Her şey tarayıcınızda biter.",
+  "home.hero.subtitle": "ImgTools365 resimleri yerel olarak işler. Dosyalarınız sunucularımıza gitmez. PDF'ye dönüştürme, sıkıştırma ve düzenleme işlemlerini güvenle yapın.",
   "home.hero.primaryAction": "Resim PDF yap",
   "home.trust.text":
     "🔒 Tüm resimler sadece cihazınızda işlenir, sunucuya gönderilmez, dosyalar kaydedilmez",
@@ -349,6 +348,8 @@ export const trTR: Partial<Record<TranslationKey, string>> = {
   "theme.dark": "Koyu",
   "theme.auto": "Otomatik",
 };
+
+
 
 
 
